@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		832393541CD979F700F5A511 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393531CD979F700F5A511 /* main.m */; };
 		832393571CD979F700F5A511 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393561CD979F700F5A511 /* AppDelegate.m */; };
-		8323935A1CD979F700F5A511 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393591CD979F700F5A511 /* ViewController.m */; };
-		8323935D1CD979F700F5A511 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8323935B1CD979F700F5A511 /* Main.storyboard */; };
 		8323935F1CD979F800F5A511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8323935E1CD979F800F5A511 /* Assets.xcassets */; };
-		832393621CD979F800F5A511 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832393601CD979F800F5A511 /* LaunchScreen.storyboard */; };
 		8323936D1CD979F800F5A511 /* ______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8323936C1CD979F800F5A511 /* ______Tests.m */; };
 		832393781CD979F800F5A511 /* ______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393771CD979F800F5A511 /* ______UITests.m */; };
+		832393C81CD9897E00F5A511 /* LCKtabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393C71CD9897E00F5A511 /* LCKtabBarController.m */; };
+		832393CB1CD99A8D00F5A511 /* LCKEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393CA1CD99A8D00F5A511 /* LCKEssenceViewController.m */; };
+		832393CE1CD99B1800F5A511 /* LCKNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393CD1CD99B1800F5A511 /* LCKNewViewController.m */; };
+		832393D11CD99B3D00F5A511 /* LCKFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393D01CD99B3D00F5A511 /* LCKFriendTrendsViewController.m */; };
+		832393D41CD99B5400F5A511 /* LCKMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393D31CD99B5400F5A511 /* LCKMeViewController.m */; };
+		832393D71CD99E9300F5A511 /* LCKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393D61CD99E9300F5A511 /* LCKTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,11 +42,7 @@
 		832393531CD979F700F5A511 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		832393551CD979F700F5A511 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		832393561CD979F700F5A511 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		832393581CD979F700F5A511 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		832393591CD979F700F5A511 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8323935C1CD979F700F5A511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8323935E1CD979F800F5A511 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		832393611CD979F800F5A511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		832393631CD979F800F5A511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		832393681CD979F800F5A511 /* 百思不得骑姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得骑姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8323936C1CD979F800F5A511 /* ______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______Tests.m"; sourceTree = "<group>"; };
@@ -51,6 +50,18 @@
 		832393731CD979F800F5A511 /* 百思不得骑姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得骑姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		832393771CD979F800F5A511 /* ______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______UITests.m"; sourceTree = "<group>"; };
 		832393791CD979F800F5A511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		832393C61CD9897E00F5A511 /* LCKtabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKtabBarController.h; sourceTree = "<group>"; };
+		832393C71CD9897E00F5A511 /* LCKtabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKtabBarController.m; sourceTree = "<group>"; };
+		832393C91CD99A8D00F5A511 /* LCKEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKEssenceViewController.h; sourceTree = "<group>"; };
+		832393CA1CD99A8D00F5A511 /* LCKEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKEssenceViewController.m; sourceTree = "<group>"; };
+		832393CC1CD99B1800F5A511 /* LCKNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKNewViewController.h; sourceTree = "<group>"; };
+		832393CD1CD99B1800F5A511 /* LCKNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKNewViewController.m; sourceTree = "<group>"; };
+		832393CF1CD99B3D00F5A511 /* LCKFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKFriendTrendsViewController.h; sourceTree = "<group>"; };
+		832393D01CD99B3D00F5A511 /* LCKFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKFriendTrendsViewController.m; sourceTree = "<group>"; };
+		832393D21CD99B5400F5A511 /* LCKMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMeViewController.h; sourceTree = "<group>"; };
+		832393D31CD99B5400F5A511 /* LCKMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMeViewController.m; sourceTree = "<group>"; };
+		832393D51CD99E9300F5A511 /* LCKTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTabBar.h; sourceTree = "<group>"; };
+		832393D61CD99E9300F5A511 /* LCKTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +114,18 @@
 			children = (
 				832393551CD979F700F5A511 /* AppDelegate.h */,
 				832393561CD979F700F5A511 /* AppDelegate.m */,
-				832393581CD979F700F5A511 /* ViewController.h */,
-				832393591CD979F700F5A511 /* ViewController.m */,
-				8323935B1CD979F700F5A511 /* Main.storyboard */,
-				8323935E1CD979F800F5A511 /* Assets.xcassets */,
-				832393601CD979F800F5A511 /* LaunchScreen.storyboard */,
-				832393631CD979F800F5A511 /* Info.plist */,
+				832393C61CD9897E00F5A511 /* LCKtabBarController.h */,
+				832393C71CD9897E00F5A511 /* LCKtabBarController.m */,
+				832393C91CD99A8D00F5A511 /* LCKEssenceViewController.h */,
+				832393CA1CD99A8D00F5A511 /* LCKEssenceViewController.m */,
+				832393CC1CD99B1800F5A511 /* LCKNewViewController.h */,
+				832393CD1CD99B1800F5A511 /* LCKNewViewController.m */,
+				832393CF1CD99B3D00F5A511 /* LCKFriendTrendsViewController.h */,
+				832393D01CD99B3D00F5A511 /* LCKFriendTrendsViewController.m */,
+				832393D21CD99B5400F5A511 /* LCKMeViewController.h */,
+				832393D31CD99B5400F5A511 /* LCKMeViewController.m */,
+				832393D51CD99E9300F5A511 /* LCKTabBar.h */,
+				832393D61CD99E9300F5A511 /* LCKTabBar.m */,
 				832393521CD979F700F5A511 /* Supporting Files */,
 			);
 			path = "百思不得骑姐";
@@ -117,6 +134,8 @@
 		832393521CD979F700F5A511 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8323935E1CD979F800F5A511 /* Assets.xcassets */,
+				832393631CD979F800F5A511 /* Info.plist */,
 				832393531CD979F700F5A511 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -202,6 +221,7 @@
 		832393471CD979F700F5A511 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LCK;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "黄海良";
 				TargetAttributes = {
@@ -243,9 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				832393621CD979F800F5A511 /* LaunchScreen.storyboard in Resources */,
 				8323935F1CD979F800F5A511 /* Assets.xcassets in Resources */,
-				8323935D1CD979F700F5A511 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +288,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8323935A1CD979F700F5A511 /* ViewController.m in Sources */,
+				832393D41CD99B5400F5A511 /* LCKMeViewController.m in Sources */,
+				832393CB1CD99A8D00F5A511 /* LCKEssenceViewController.m in Sources */,
+				832393C81CD9897E00F5A511 /* LCKtabBarController.m in Sources */,
+				832393CE1CD99B1800F5A511 /* LCKNewViewController.m in Sources */,
+				832393D71CD99E9300F5A511 /* LCKTabBar.m in Sources */,
 				832393571CD979F700F5A511 /* AppDelegate.m in Sources */,
 				832393541CD979F700F5A511 /* main.m in Sources */,
+				832393D11CD99B3D00F5A511 /* LCKFriendTrendsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,25 +329,6 @@
 			targetProxy = 832393741CD979F800F5A511 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		8323935B1CD979F700F5A511 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8323935C1CD979F700F5A511 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		832393601CD979F800F5A511 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				832393611CD979F800F5A511 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8323937A1CD979F800F5A511 /* Debug */ = {
@@ -413,6 +417,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = "百思不得骑姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liangcku.sister.------";
@@ -424,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = "百思不得骑姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liangcku.sister.------";
