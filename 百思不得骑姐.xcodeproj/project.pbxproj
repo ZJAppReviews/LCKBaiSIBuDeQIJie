@@ -22,6 +22,7 @@
 		832394171CD9D8A100F5A511 /* LCKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 832394091CD9D8A100F5A511 /* LCKTabBar.m */; };
 		8323941B1CD9E1DC00F5A511 /* LCKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8323941A1CD9E1DC00F5A511 /* LCKNavigationController.m */; };
 		8323941E1CD9E88700F5A511 /* LCKTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8323941D1CD9E88700F5A511 /* LCKTestViewController.m */; };
+		832394221CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832394211CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		8323941A1CD9E1DC00F5A511 /* LCKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKNavigationController.m; sourceTree = "<group>"; };
 		8323941C1CD9E88700F5A511 /* LCKTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTestViewController.h; sourceTree = "<group>"; };
 		8323941D1CD9E88700F5A511 /* LCKTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTestViewController.m; sourceTree = "<group>"; };
+		832394211CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKFriendTrendsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +223,7 @@
 			children = (
 				832393E81CD9D8A100F5A511 /* LCKFriendTrendsViewController.h */,
 				832393E91CD9D8A100F5A511 /* LCKFriendTrendsViewController.m */,
+				832394211CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8323935F1CD979F800F5A511 /* Assets.xcassets in Resources */,
+				832394221CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
