@@ -10,8 +10,26 @@
 
 @implementation LCKNavigationController
 
+/**
+ *当第一次使用这个类时会调用一次
+ */
+
++(void)initialize{
+    //当导航栏用在LCKNavigationController中appearance才会生效
+//    UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:[self class],nil];
+    
+    UINavigationBar *bar = [UINavigationBar appearance];
+    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    
+//    LCKLogFunc;
+}
+
 -(void)viewDidLoad{
     [super viewDidLoad];
+    
+    //设置导航控制器的背景颜色
+//    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+
 }
 
 //为了将导航栏控制器的样式进行统一，需要重写pushViewController将其进行拦截，并定制样式

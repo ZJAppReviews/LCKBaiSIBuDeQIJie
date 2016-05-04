@@ -20,9 +20,8 @@
 
 @implementation LCKtabBarController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
++(void)initialize{
+    
     //文字的属性
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
@@ -36,6 +35,10 @@
     UITabBarItem *item = [UITabBarItem appearance];
     [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
     [item setTitleTextAttributes:selectAtrrs forState:UIControlStateSelected];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
     //添加子控制器(自定义的控件)
     [self initChildVC:[[LCKEssenceViewController alloc] init] title:@"精华" image:@"tabBar_essence_icon" selectImage:@"tabBar_essence_click_icon"];
@@ -81,9 +84,6 @@
     
     LCKNavigationController *nav = [[LCKNavigationController alloc] initWithRootViewController:vc];
     
-    //设置导航控制器的背景颜色
-    [nav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
-
     [self addChildViewController:nav];
 }
 
