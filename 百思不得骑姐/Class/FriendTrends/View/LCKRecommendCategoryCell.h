@@ -12,4 +12,6 @@
 @interface LCKRecommendCategoryCell : UITableViewCell
 /** 类别模型 */
 @property (nonatomic , strong) LCKRecommendCategory *category;
+
+@property (weak, nonatomic) IBOutlet UIView *selectedIndictor;
 @end

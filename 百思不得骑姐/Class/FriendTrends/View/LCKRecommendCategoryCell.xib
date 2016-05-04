@@ -3,17 +3,39 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="category" id="KGk-i7-Jjw" customClass="LCKRecommendCategoryCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="category" id="KGk-i7-Jjw" customClass="LCKRecommendCategoryCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ozS-vh-EpA">
+                        <rect key="frame" x="0.0" y="8" width="5" height="27"/>
+                        <color key="backgroundColor" red="0.92537221859999996" green="0.39282910920000003" blue="0.34827812870000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="W4Z-6I-G38"/>
+                            <constraint firstAttribute="width" constant="5" id="ofb-1e-ZNK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ozS-vh-EpA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8Hh-jy-Gwu"/>
+                    <constraint firstItem="ozS-vh-EpA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="9MO-RW-W2L"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ozS-vh-EpA" secondAttribute="bottom" id="WYL-E9-jD0"/>
+                    <constraint firstItem="ozS-vh-EpA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="xRj-Xj-ZLk"/>
+                </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="selectedIndictor" destination="ozS-vh-EpA" id="WTH-rt-LOL"/>
+            </connections>
+            <point key="canvasLocation" x="178" y="267"/>
         </tableViewCell>
     </objects>
 </document>

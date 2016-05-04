@@ -63,6 +63,9 @@ static NSString *const LCKCategoryId = @"category";
         //刷新表格
         [self.categoryTableView reloadData];
         
+        //默认选中category的第一个选目
+        [self.categoryTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 //        LCKLog(@"failure = %@",error);
         
