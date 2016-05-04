@@ -31,9 +31,17 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
     
+    CGFloat width = self.width;
+    CGFloat height = self.height;
+    
     //设置发布按钮的frame
-    self.publishButton.bounds = CGRectMake(0, 0, self.publishButton.currentBackgroundImage.size.width, self.publishButton.currentBackgroundImage.size.height);
-    self.publishButton.center = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5);
+//    self.publishButton.bounds = CGRectMake(0, 0, self.publishButton.currentBackgroundImage.size.width, self.publishButton.currentBackgroundImage.size.height);
+    //通过封装frame来进行设置的
+    self.publishButton.width = self.publishButton.currentImage.size.width;
+    self.publishButton.height = self.publishButton.currentImage.size.height;
+    
+    
+    self.publishButton.center = CGPointMake(width * 0.5, height * 0.5);
     
     //设置其它按钮的frame
     CGFloat buttonW = self.frame.size.width / 5 ;
