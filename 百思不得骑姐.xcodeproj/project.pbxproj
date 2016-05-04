@@ -19,6 +19,7 @@
 		832393D41CD99B5400F5A511 /* LCKMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393D31CD99B5400F5A511 /* LCKMeViewController.m */; };
 		832393D71CD99E9300F5A511 /* LCKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393D61CD99E9300F5A511 /* LCKTabBar.m */; };
 		832393DA1CD9AB1600F5A511 /* UIView+LCKExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393D91CD9AB1600F5A511 /* UIView+LCKExtention.m */; };
+		832393DE1CD9CC7900F5A511 /* UIBarButtonItem+LCKExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393DD1CD9CC7900F5A511 /* UIBarButtonItem+LCKExtention.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		832393D81CD9AB1600F5A511 /* UIView+LCKExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LCKExtention.h"; sourceTree = "<group>"; };
 		832393D91CD9AB1600F5A511 /* UIView+LCKExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LCKExtention.m"; sourceTree = "<group>"; };
 		832393DB1CD9ABC300F5A511 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		832393DC1CD9CC7900F5A511 /* UIBarButtonItem+LCKExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LCKExtention.h"; sourceTree = "<group>"; };
+		832393DD1CD9CC7900F5A511 /* UIBarButtonItem+LCKExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LCKExtention.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 				832393D61CD99E9300F5A511 /* LCKTabBar.m */,
 				832393D81CD9AB1600F5A511 /* UIView+LCKExtention.h */,
 				832393D91CD9AB1600F5A511 /* UIView+LCKExtention.m */,
+				832393DC1CD9CC7900F5A511 /* UIBarButtonItem+LCKExtention.h */,
+				832393DD1CD9CC7900F5A511 /* UIBarButtonItem+LCKExtention.m */,
 				832393521CD979F700F5A511 /* Supporting Files */,
 			);
 			path = "百思不得骑姐";
@@ -295,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832393DE1CD9CC7900F5A511 /* UIBarButtonItem+LCKExtention.m in Sources */,
 				832393D41CD99B5400F5A511 /* LCKMeViewController.m in Sources */,
 				832393CB1CD99A8D00F5A511 /* LCKEssenceViewController.m in Sources */,
 				832393C81CD9897E00F5A511 /* LCKtabBarController.m in Sources */,

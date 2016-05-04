@@ -10,8 +10,14 @@
 #define PrefixHeader_pch
 
 #import "UIView+LCKExtention.h" //分类一般都是放在pch中的，因为放在这里的东西在整个项目中都可以引用得到,需要在prefix head中设置
+#import "UIBarButtonItem+LCKExtention.h"
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef DEBUG
+#define LCKLog(...) NSLog(__VA_ARGS__)
+#else
+#define LCKLog(...)
+#endif
+
+#define LCKLogFunc LCKLog(@"%s",__func__)
 
 #endif /* PrefixHeader_pch */

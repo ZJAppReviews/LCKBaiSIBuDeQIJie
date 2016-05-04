@@ -34,6 +34,14 @@
     frame.origin.y = y;
     self.frame = frame;
 }
+
+-(void)setSize:(CGSize)size{
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+}
+
+
 //重写get方法
 -(CGFloat)width{
     return self.frame.size.width;
@@ -52,5 +60,8 @@
     return self.frame.origin.y;
 }
 
+-(CGSize)size{
+    return self.frame.size;
+}
 
 @end

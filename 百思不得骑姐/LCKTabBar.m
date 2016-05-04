@@ -36,9 +36,12 @@
     
     //设置发布按钮的frame
 //    self.publishButton.bounds = CGRectMake(0, 0, self.publishButton.currentBackgroundImage.size.width, self.publishButton.currentBackgroundImage.size.height);
+    
+    self.publishButton.size = self.publishButton.currentBackgroundImage.size;
+    
     //通过封装frame来进行设置的
-    self.publishButton.width = self.publishButton.currentImage.size.width;
-    self.publishButton.height = self.publishButton.currentImage.size.height;
+//    self.publishButton.width = self.publishButton.currentImage.size.width;
+//    self.publishButton.height = self.publishButton.currentImage.size.height;
     
     
     self.publishButton.center = CGPointMake(width * 0.5, height * 0.5);

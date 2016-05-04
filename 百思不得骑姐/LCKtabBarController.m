@@ -62,6 +62,7 @@
 {
 //    UIViewController *vc = [[class alloc] init];//这样对未来创建的控制器的扩展性不哈奥，因为有些控制器并不是通过init来创建的。
     
+    vc.navigationItem.title = title;
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image];
     
@@ -71,7 +72,11 @@
     
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectImage];
     vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
-    [self addChildViewController:vc];
+//    [self addChildViewController:vc];//由于导航控制器的不同，因此我们需要先加载上导航控制器后，才将其控制器加入上去
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+
+    [self addChildViewController:nav];
 }
 
 @end
