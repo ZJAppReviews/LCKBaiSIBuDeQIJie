@@ -7,6 +7,7 @@
 //
 
 #import "LCKFriendTrendsViewController.h"
+#import "LCKRecommendViewController.h"
 
 @interface LCKFriendTrendsViewController ()
 
@@ -26,7 +27,9 @@
 }
 
 -(void)friendClick{
-    LCKLogFunc;
+    LCKRecommendViewController *recommendVC = [[LCKRecommendViewController alloc] init];
+    [self.navigationController pushViewController:recommendVC animated:YES];
+    
 }
 
 
