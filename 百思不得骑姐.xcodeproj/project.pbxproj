@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		832393541CD979F700F5A511 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393531CD979F700F5A511 /* main.m */; };
-		832393571CD979F700F5A511 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393561CD979F700F5A511 /* AppDelegate.m */; };
 		8323935F1CD979F800F5A511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8323935E1CD979F800F5A511 /* Assets.xcassets */; };
 		8323936D1CD979F800F5A511 /* ______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8323936C1CD979F800F5A511 /* ______Tests.m */; };
 		832393781CD979F800F5A511 /* ______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393771CD979F800F5A511 /* ______UITests.m */; };
-		832393C81CD9897E00F5A511 /* LCKtabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393C71CD9897E00F5A511 /* LCKtabBarController.m */; };
-		832393CB1CD99A8D00F5A511 /* LCKEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393CA1CD99A8D00F5A511 /* LCKEssenceViewController.m */; };
-		832393CE1CD99B1800F5A511 /* LCKNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393CD1CD99B1800F5A511 /* LCKNewViewController.m */; };
-		832393D11CD99B3D00F5A511 /* LCKFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393D01CD99B3D00F5A511 /* LCKFriendTrendsViewController.m */; };
-		832393D41CD99B5400F5A511 /* LCKMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393D31CD99B5400F5A511 /* LCKMeViewController.m */; };
-		832393D71CD99E9300F5A511 /* LCKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393D61CD99E9300F5A511 /* LCKTabBar.m */; };
-		832393DA1CD9AB1600F5A511 /* UIView+LCKExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393D91CD9AB1600F5A511 /* UIView+LCKExtention.m */; };
-		832393DE1CD9CC7900F5A511 /* UIBarButtonItem+LCKExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393DD1CD9CC7900F5A511 /* UIBarButtonItem+LCKExtention.m */; };
+		8323940E1CD9D8A100F5A511 /* LCKEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393E31CD9D8A100F5A511 /* LCKEssenceViewController.m */; };
+		8323940F1CD9D8A100F5A511 /* LCKFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393E91CD9D8A100F5A511 /* LCKFriendTrendsViewController.m */; };
+		832394101CD9D8A100F5A511 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393EE1CD9D8A100F5A511 /* AppDelegate.m */; };
+		832394111CD9D8A100F5A511 /* LCKMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393F21CD9D8A100F5A511 /* LCKMeViewController.m */; };
+		832394121CD9D8A100F5A511 /* LCKNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393F81CD9D8A100F5A511 /* LCKNewViewController.m */; };
+		832394131CD9D8A100F5A511 /* UIBarButtonItem+LCKExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393FE1CD9D8A100F5A511 /* UIBarButtonItem+LCKExtention.m */; };
+		832394141CD9D8A100F5A511 /* UIView+LCKExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 832394001CD9D8A100F5A511 /* UIView+LCKExtention.m */; };
+		832394151CD9D8A100F5A511 /* LCKtabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832394031CD9D8A100F5A511 /* LCKtabBarController.m */; };
+		832394161CD9D8A100F5A511 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 832394041CD9D8A100F5A511 /* main.m */; };
+		832394171CD9D8A100F5A511 /* LCKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 832394091CD9D8A100F5A511 /* LCKTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +41,6 @@
 
 /* Begin PBXFileReference section */
 		8323934F1CD979F700F5A511 /* 百思不得骑姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得骑姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		832393531CD979F700F5A511 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		832393551CD979F700F5A511 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		832393561CD979F700F5A511 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8323935E1CD979F800F5A511 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		832393631CD979F800F5A511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		832393681CD979F800F5A511 /* 百思不得骑姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得骑姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,23 +49,26 @@
 		832393731CD979F800F5A511 /* 百思不得骑姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得骑姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		832393771CD979F800F5A511 /* ______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______UITests.m"; sourceTree = "<group>"; };
 		832393791CD979F800F5A511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		832393C61CD9897E00F5A511 /* LCKtabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKtabBarController.h; sourceTree = "<group>"; };
-		832393C71CD9897E00F5A511 /* LCKtabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKtabBarController.m; sourceTree = "<group>"; };
-		832393C91CD99A8D00F5A511 /* LCKEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKEssenceViewController.h; sourceTree = "<group>"; };
-		832393CA1CD99A8D00F5A511 /* LCKEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKEssenceViewController.m; sourceTree = "<group>"; };
-		832393CC1CD99B1800F5A511 /* LCKNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKNewViewController.h; sourceTree = "<group>"; };
-		832393CD1CD99B1800F5A511 /* LCKNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKNewViewController.m; sourceTree = "<group>"; };
-		832393CF1CD99B3D00F5A511 /* LCKFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKFriendTrendsViewController.h; sourceTree = "<group>"; };
-		832393D01CD99B3D00F5A511 /* LCKFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKFriendTrendsViewController.m; sourceTree = "<group>"; };
-		832393D21CD99B5400F5A511 /* LCKMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMeViewController.h; sourceTree = "<group>"; };
-		832393D31CD99B5400F5A511 /* LCKMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMeViewController.m; sourceTree = "<group>"; };
-		832393D51CD99E9300F5A511 /* LCKTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTabBar.h; sourceTree = "<group>"; };
-		832393D61CD99E9300F5A511 /* LCKTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTabBar.m; sourceTree = "<group>"; };
-		832393D81CD9AB1600F5A511 /* UIView+LCKExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LCKExtention.h"; sourceTree = "<group>"; };
-		832393D91CD9AB1600F5A511 /* UIView+LCKExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LCKExtention.m"; sourceTree = "<group>"; };
-		832393DB1CD9ABC300F5A511 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		832393DC1CD9CC7900F5A511 /* UIBarButtonItem+LCKExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LCKExtention.h"; sourceTree = "<group>"; };
-		832393DD1CD9CC7900F5A511 /* UIBarButtonItem+LCKExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LCKExtention.m"; sourceTree = "<group>"; };
+		832393E21CD9D8A100F5A511 /* LCKEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKEssenceViewController.h; sourceTree = "<group>"; };
+		832393E31CD9D8A100F5A511 /* LCKEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKEssenceViewController.m; sourceTree = "<group>"; };
+		832393E81CD9D8A100F5A511 /* LCKFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKFriendTrendsViewController.h; sourceTree = "<group>"; };
+		832393E91CD9D8A100F5A511 /* LCKFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKFriendTrendsViewController.m; sourceTree = "<group>"; };
+		832393ED1CD9D8A100F5A511 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		832393EE1CD9D8A100F5A511 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		832393F11CD9D8A100F5A511 /* LCKMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMeViewController.h; sourceTree = "<group>"; };
+		832393F21CD9D8A100F5A511 /* LCKMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMeViewController.m; sourceTree = "<group>"; };
+		832393F71CD9D8A100F5A511 /* LCKNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKNewViewController.h; sourceTree = "<group>"; };
+		832393F81CD9D8A100F5A511 /* LCKNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKNewViewController.m; sourceTree = "<group>"; };
+		832393FD1CD9D8A100F5A511 /* UIBarButtonItem+LCKExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LCKExtention.h"; sourceTree = "<group>"; };
+		832393FE1CD9D8A100F5A511 /* UIBarButtonItem+LCKExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LCKExtention.m"; sourceTree = "<group>"; };
+		832393FF1CD9D8A100F5A511 /* UIView+LCKExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LCKExtention.h"; sourceTree = "<group>"; };
+		832394001CD9D8A100F5A511 /* UIView+LCKExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LCKExtention.m"; sourceTree = "<group>"; };
+		832394021CD9D8A100F5A511 /* LCKtabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKtabBarController.h; sourceTree = "<group>"; };
+		832394031CD9D8A100F5A511 /* LCKtabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKtabBarController.m; sourceTree = "<group>"; };
+		832394041CD9D8A100F5A511 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		832394081CD9D8A100F5A511 /* LCKTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTabBar.h; sourceTree = "<group>"; };
+		832394091CD9D8A100F5A511 /* LCKTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTabBar.m; sourceTree = "<group>"; };
+		832394181CD9D8EE00F5A511 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,24 +119,7 @@
 		832393511CD979F700F5A511 /* 百思不得骑姐 */ = {
 			isa = PBXGroup;
 			children = (
-				832393551CD979F700F5A511 /* AppDelegate.h */,
-				832393561CD979F700F5A511 /* AppDelegate.m */,
-				832393C61CD9897E00F5A511 /* LCKtabBarController.h */,
-				832393C71CD9897E00F5A511 /* LCKtabBarController.m */,
-				832393C91CD99A8D00F5A511 /* LCKEssenceViewController.h */,
-				832393CA1CD99A8D00F5A511 /* LCKEssenceViewController.m */,
-				832393CC1CD99B1800F5A511 /* LCKNewViewController.h */,
-				832393CD1CD99B1800F5A511 /* LCKNewViewController.m */,
-				832393CF1CD99B3D00F5A511 /* LCKFriendTrendsViewController.h */,
-				832393D01CD99B3D00F5A511 /* LCKFriendTrendsViewController.m */,
-				832393D21CD99B5400F5A511 /* LCKMeViewController.h */,
-				832393D31CD99B5400F5A511 /* LCKMeViewController.m */,
-				832393D51CD99E9300F5A511 /* LCKTabBar.h */,
-				832393D61CD99E9300F5A511 /* LCKTabBar.m */,
-				832393D81CD9AB1600F5A511 /* UIView+LCKExtention.h */,
-				832393D91CD9AB1600F5A511 /* UIView+LCKExtention.m */,
-				832393DC1CD9CC7900F5A511 /* UIBarButtonItem+LCKExtention.h */,
-				832393DD1CD9CC7900F5A511 /* UIBarButtonItem+LCKExtention.m */,
+				832393DF1CD9D8A100F5A511 /* Class */,
 				832393521CD979F700F5A511 /* Supporting Files */,
 			);
 			path = "百思不得骑姐";
@@ -145,10 +128,9 @@
 		832393521CD979F700F5A511 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				832393DB1CD9ABC300F5A511 /* PrefixHeader.pch */,
 				8323935E1CD979F800F5A511 /* Assets.xcassets */,
+				832394181CD9D8EE00F5A511 /* PrefixHeader.pch */,
 				832393631CD979F800F5A511 /* Info.plist */,
-				832393531CD979F700F5A511 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -169,6 +151,240 @@
 				832393791CD979F800F5A511 /* Info.plist */,
 			);
 			path = "百思不得骑姐UITests";
+			sourceTree = "<group>";
+		};
+		832393DF1CD9D8A100F5A511 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				832393EC1CD9D8A100F5A511 /* Main */,
+				832393E01CD9D8A100F5A511 /* Essence */,
+				832393E61CD9D8A100F5A511 /* FriendTrends */,
+				8323940A1CD9D8A100F5A511 /* Publish */,
+				832393EF1CD9D8A100F5A511 /* Me */,
+				832393F51CD9D8A100F5A511 /* New */,
+				832393FB1CD9D8A100F5A511 /* Other */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		832393E01CD9D8A100F5A511 /* Essence */ = {
+			isa = PBXGroup;
+			children = (
+				832393E11CD9D8A100F5A511 /* Controller */,
+				832393E41CD9D8A100F5A511 /* Model */,
+				832393E51CD9D8A100F5A511 /* View */,
+			);
+			path = Essence;
+			sourceTree = "<group>";
+		};
+		832393E11CD9D8A100F5A511 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				832393E21CD9D8A100F5A511 /* LCKEssenceViewController.h */,
+				832393E31CD9D8A100F5A511 /* LCKEssenceViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		832393E41CD9D8A100F5A511 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		832393E51CD9D8A100F5A511 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		832393E61CD9D8A100F5A511 /* FriendTrends */ = {
+			isa = PBXGroup;
+			children = (
+				832393E71CD9D8A100F5A511 /* Controller */,
+				832393EA1CD9D8A100F5A511 /* Model */,
+				832393EB1CD9D8A100F5A511 /* View */,
+			);
+			path = FriendTrends;
+			sourceTree = "<group>";
+		};
+		832393E71CD9D8A100F5A511 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				832393E81CD9D8A100F5A511 /* LCKFriendTrendsViewController.h */,
+				832393E91CD9D8A100F5A511 /* LCKFriendTrendsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		832393EA1CD9D8A100F5A511 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		832393EB1CD9D8A100F5A511 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		832393EC1CD9D8A100F5A511 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				832393ED1CD9D8A100F5A511 /* AppDelegate.h */,
+				832393EE1CD9D8A100F5A511 /* AppDelegate.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		832393EF1CD9D8A100F5A511 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				832393F01CD9D8A100F5A511 /* Controller */,
+				832393F31CD9D8A100F5A511 /* Model */,
+				832393F41CD9D8A100F5A511 /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		832393F01CD9D8A100F5A511 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				832393F11CD9D8A100F5A511 /* LCKMeViewController.h */,
+				832393F21CD9D8A100F5A511 /* LCKMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		832393F31CD9D8A100F5A511 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		832393F41CD9D8A100F5A511 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		832393F51CD9D8A100F5A511 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				832393F61CD9D8A100F5A511 /* Controller */,
+				832393F91CD9D8A100F5A511 /* Model */,
+				832393FA1CD9D8A100F5A511 /* View */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		832393F61CD9D8A100F5A511 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				832393F71CD9D8A100F5A511 /* LCKNewViewController.h */,
+				832393F81CD9D8A100F5A511 /* LCKNewViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		832393F91CD9D8A100F5A511 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		832393FA1CD9D8A100F5A511 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		832393FB1CD9D8A100F5A511 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				832393FC1CD9D8A100F5A511 /* Category */,
+				832394011CD9D8A100F5A511 /* Controller */,
+				832394041CD9D8A100F5A511 /* main.m */,
+				832394051CD9D8A100F5A511 /* Model */,
+				832394071CD9D8A100F5A511 /* View */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		832393FC1CD9D8A100F5A511 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				832393FD1CD9D8A100F5A511 /* UIBarButtonItem+LCKExtention.h */,
+				832393FE1CD9D8A100F5A511 /* UIBarButtonItem+LCKExtention.m */,
+				832393FF1CD9D8A100F5A511 /* UIView+LCKExtention.h */,
+				832394001CD9D8A100F5A511 /* UIView+LCKExtention.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		832394011CD9D8A100F5A511 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				832394021CD9D8A100F5A511 /* LCKtabBarController.h */,
+				832394031CD9D8A100F5A511 /* LCKtabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		832394051CD9D8A100F5A511 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		832394071CD9D8A100F5A511 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				832394081CD9D8A100F5A511 /* LCKTabBar.h */,
+				832394091CD9D8A100F5A511 /* LCKTabBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8323940A1CD9D8A100F5A511 /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				8323940B1CD9D8A100F5A511 /* Controller */,
+				8323940C1CD9D8A100F5A511 /* Model */,
+				8323940D1CD9D8A100F5A511 /* View */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
+		8323940B1CD9D8A100F5A511 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8323940C1CD9D8A100F5A511 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8323940D1CD9D8A100F5A511 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,16 +516,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				832393DE1CD9CC7900F5A511 /* UIBarButtonItem+LCKExtention.m in Sources */,
-				832393D41CD99B5400F5A511 /* LCKMeViewController.m in Sources */,
-				832393CB1CD99A8D00F5A511 /* LCKEssenceViewController.m in Sources */,
-				832393C81CD9897E00F5A511 /* LCKtabBarController.m in Sources */,
-				832393CE1CD99B1800F5A511 /* LCKNewViewController.m in Sources */,
-				832393DA1CD9AB1600F5A511 /* UIView+LCKExtention.m in Sources */,
-				832393D71CD99E9300F5A511 /* LCKTabBar.m in Sources */,
-				832393571CD979F700F5A511 /* AppDelegate.m in Sources */,
-				832393541CD979F700F5A511 /* main.m in Sources */,
-				832393D11CD99B3D00F5A511 /* LCKFriendTrendsViewController.m in Sources */,
+				832394141CD9D8A100F5A511 /* UIView+LCKExtention.m in Sources */,
+				8323940E1CD9D8A100F5A511 /* LCKEssenceViewController.m in Sources */,
+				832394151CD9D8A100F5A511 /* LCKtabBarController.m in Sources */,
+				8323940F1CD9D8A100F5A511 /* LCKFriendTrendsViewController.m in Sources */,
+				832394171CD9D8A100F5A511 /* LCKTabBar.m in Sources */,
+				832394131CD9D8A100F5A511 /* UIBarButtonItem+LCKExtention.m in Sources */,
+				832394121CD9D8A100F5A511 /* LCKNewViewController.m in Sources */,
+				832394101CD9D8A100F5A511 /* AppDelegate.m in Sources */,
+				832394161CD9D8A100F5A511 /* main.m in Sources */,
+				832394111CD9D8A100F5A511 /* LCKMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

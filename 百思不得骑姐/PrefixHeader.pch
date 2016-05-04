@@ -20,4 +20,10 @@
 
 #define LCKLogFunc LCKLog(@"%s",__func__)
 
+//设置控制器的统一颜色，在pch中定义是因为在使用到控制器时才会创建像对应的控制器，在这里能够实现
+#define LCKRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+//由于是全局颜色，因此再封装一层宏
+#define LCKGlobalBackground LCKRGBColor(223, 223, 223)
+
 #endif /* PrefixHeader_pch */

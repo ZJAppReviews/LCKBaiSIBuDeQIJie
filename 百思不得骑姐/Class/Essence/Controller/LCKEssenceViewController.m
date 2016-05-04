@@ -24,6 +24,9 @@
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" hightImage:@"MainTagSubIconClick" target:self action:@selector(tagClick)];
     
+    //设置背景颜色
+    self.view.backgroundColor = LCKGlobalBackground;
+    
 }
 
 -(void)tagClick{

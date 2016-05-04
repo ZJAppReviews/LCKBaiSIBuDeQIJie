@@ -24,6 +24,9 @@
     self.navigationItem.rightBarButtonItems = @[settingItem,moonItem];
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"nav_coin_icon" hightImage:@"nav_coin_icon_click" target:self action:@selector(momenyClick)];
+    
+    //设置背景颜色
+    self.view.backgroundColor = LCKGlobalBackground;
 }
 
 -(void)settingClick{

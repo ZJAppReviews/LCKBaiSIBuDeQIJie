@@ -52,6 +52,8 @@
     //在布局Tabbar的控件时因为拿不到字控件的对象，因此可以通过更换自定义的tabBar来实现，并通过layoutSubViews方法来进行布局  (由于tabBar时read－only的，要修改则可使用KVC来进行修改［KVC能直接访问成员变量的］)
 //    self.tabBar = [[LCKTabBar alloc] init];
     [self setValue:[[LCKTabBar alloc] init] forKey:@"tabBar"];
+    //设置tabbar的背景颜色
+    [self.tabBar setBackgroundImage:[UIImage imageNamed:@"tabbar-light"]];
 
 }
 
@@ -71,10 +73,15 @@
     //    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectImage];
-    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
+    
+//    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0]; //这行代码将会提前创建出4个控制器，这是不合理的。因为View创建将会懒加载4个控制器。
+    
 //    [self addChildViewController:vc];//由于导航控制器的不同，因此我们需要先加载上导航控制器后，才将其控制器加入上去
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    //设置导航控制器的背景颜色
+    [nav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
 
     [self addChildViewController:nav];
 }

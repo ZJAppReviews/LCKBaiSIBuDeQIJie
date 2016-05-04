@@ -20,6 +20,9 @@
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" hightImage:@"MainTagSubIconClick" target:self action:@selector(newsClick)];
+    
+    //设置背景颜色
+    self.view.backgroundColor = LCKGlobalBackground;
    
 }
 

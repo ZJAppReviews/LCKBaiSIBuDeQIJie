@@ -20,6 +20,9 @@
     self.navigationItem.title = @"我的关注";
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon" hightImage:@"friendsRecommentIcon-click" target:self action:@selector(friendClick)];
+    
+    //设置背景颜色
+    self.view.backgroundColor = LCKGlobalBackground;
 }
 
 -(void)friendClick{
