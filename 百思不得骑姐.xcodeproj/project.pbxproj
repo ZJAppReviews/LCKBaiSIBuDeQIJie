@@ -78,6 +78,9 @@
 		838FB4E41CDA3BCF00917F90 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 838FB4AD1CDA3BCF00917F90 /* SVProgressHUD.bundle */; };
 		838FB4E51CDA3BCF00917F90 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FB4AF1CDA3BCF00917F90 /* SVProgressHUD.m */; };
 		838FB4E71CDA3C8200917F90 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FB4E61CDA3C8200917F90 /* Foundation+Log.m */; };
+		838FB4EA1CDA43C000917F90 /* LCKRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FB4E91CDA43C000917F90 /* LCKRecommendCategory.m */; };
+		838FB4EE1CDA472700917F90 /* LCKRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FB4EC1CDA472700917F90 /* LCKRecommendCategoryCell.m */; };
+		838FB4EF1CDA472700917F90 /* LCKRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 838FB4ED1CDA472700917F90 /* LCKRecommendCategoryCell.xib */; };
 		83AD49E21CDA312500B1A884 /* LCKRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AD49E01CDA312500B1A884 /* LCKRecommendViewController.m */; };
 		83AD49E31CDA312500B1A884 /* LCKRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AD49E11CDA312500B1A884 /* LCKRecommendViewController.xib */; };
 /* End PBXBuildFile section */
@@ -245,6 +248,11 @@
 		838FB4AE1CDA3BCF00917F90 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		838FB4AF1CDA3BCF00917F90 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		838FB4E61CDA3C8200917F90 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		838FB4E81CDA43C000917F90 /* LCKRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKRecommendCategory.h; sourceTree = "<group>"; };
+		838FB4E91CDA43C000917F90 /* LCKRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKRecommendCategory.m; sourceTree = "<group>"; };
+		838FB4EB1CDA472700917F90 /* LCKRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKRecommendCategoryCell.h; sourceTree = "<group>"; };
+		838FB4EC1CDA472700917F90 /* LCKRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKRecommendCategoryCell.m; sourceTree = "<group>"; };
+		838FB4ED1CDA472700917F90 /* LCKRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKRecommendCategoryCell.xib; sourceTree = "<group>"; };
 		83AD49DF1CDA312500B1A884 /* LCKRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKRecommendViewController.h; sourceTree = "<group>"; };
 		83AD49E01CDA312500B1A884 /* LCKRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKRecommendViewController.m; sourceTree = "<group>"; };
 		83AD49E11CDA312500B1A884 /* LCKRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKRecommendViewController.xib; sourceTree = "<group>"; };
@@ -406,6 +414,8 @@
 		832393EA1CD9D8A100F5A511 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				838FB4E81CDA43C000917F90 /* LCKRecommendCategory.h */,
+				838FB4E91CDA43C000917F90 /* LCKRecommendCategory.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -413,6 +423,9 @@
 		832393EB1CD9D8A100F5A511 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				838FB4EB1CDA472700917F90 /* LCKRecommendCategoryCell.h */,
+				838FB4EC1CDA472700917F90 /* LCKRecommendCategoryCell.m */,
+				838FB4ED1CDA472700917F90 /* LCKRecommendCategoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -886,6 +899,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				838FB4E41CDA3BCF00917F90 /* SVProgressHUD.bundle in Resources */,
+				838FB4EF1CDA472700917F90 /* LCKRecommendCategoryCell.xib in Resources */,
 				83AD49E31CDA312500B1A884 /* LCKRecommendViewController.xib in Resources */,
 				8323935F1CD979F800F5A511 /* Assets.xcassets in Resources */,
 				838FB4CE1CDA3BCF00917F90 /* MJRefresh.bundle in Resources */,
@@ -925,6 +939,8 @@
 				832394151CD9D8A100F5A511 /* LCKtabBarController.m in Sources */,
 				838FB4DF1CDA3BCF00917F90 /* UIImage+WebP.m in Sources */,
 				838FB4C61CDA3BCF00917F90 /* MJRefreshAutoNormalFooter.m in Sources */,
+				838FB4EE1CDA472700917F90 /* LCKRecommendCategoryCell.m in Sources */,
+				838FB4EA1CDA43C000917F90 /* LCKRecommendCategory.m in Sources */,
 				8323941E1CD9E88700F5A511 /* LCKTestViewController.m in Sources */,
 				838FB4B01CDA3BCF00917F90 /* AFHTTPSessionManager.m in Sources */,
 				838FB4D21CDA3BCF00917F90 /* UIView+MJExtension.m in Sources */,

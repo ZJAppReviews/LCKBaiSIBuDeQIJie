@@ -9,15 +9,28 @@
 #import "LCKRecommendViewController.h"
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
+#import "MJExtension.h"
+#import "LCKRecommendCategoryCell.h"
+#import "LCKRecommendCategory.h"
 
-@interface LCKRecommendViewController ()
-
+@interface LCKRecommendViewController ()<UITableViewDelegate,UITableViewDataSource>
+/** 左边的类别数据 */
+@property (nonatomic , strong) NSArray *categories;
+/** 左边的类别表格 */
+@property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 @end
 
 @implementation LCKRecommendViewController
 
+static NSString *const LCKCategoryId = @"category";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //注册
+    [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([LCKRecommendCategoryCell class]) bundle:nil] forCellReuseIdentifier:LCKCategoryId];
+    
+    
     self.title = @"推荐关注";
     
     self.view.backgroundColor = LCKGlobalBackground;
@@ -37,19 +50,40 @@
     params[@"c"] = @"subscribe";
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
-        LCKLog(@"progress = %@",downloadProgress);
+//        LCKLog(@"progress = %@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        LCKLog(@"success = %@",responseObject);
+//        LCKLog(@"success = %@",responseObject);
         
         //隐藏指示器
         [SVProgressHUD dismiss];
         
+        //服务器返回的是JSON数据(字典转模型：使用MJExtentiion第三方框架)
+        self.categories = [LCKRecommendCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        //刷新表格
+        [self.categoryTableView reloadData];
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        LCKLog(@"failure = %@",error);
+//        LCKLog(@"failure = %@",error);
         
         //隐藏指示器，并显示错误
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败！"];
     }];
+}
+
+#pragma mark -- UITableViewDataSource
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return self.categories.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    LCKRecommendCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:LCKCategoryId];
+    cell.category = self.categories[indexPath.row];
+    
+    
+    return cell;
 }
 
 
