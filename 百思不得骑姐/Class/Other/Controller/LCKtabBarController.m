@@ -12,6 +12,7 @@
 #import "LCKFriendTrendsViewController.h"
 #import "LCKMeViewController.h"
 #import "LCKTabBar.h"
+#import "LCKNavigationController.h"
 
 @interface LCKtabBarController ()
 
@@ -78,7 +79,7 @@
     
 //    [self addChildViewController:vc];//由于导航控制器的不同，因此我们需要先加载上导航控制器后，才将其控制器加入上去
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    LCKNavigationController *nav = [[LCKNavigationController alloc] initWithRootViewController:vc];
     
     //设置导航控制器的背景颜色
     [nav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];

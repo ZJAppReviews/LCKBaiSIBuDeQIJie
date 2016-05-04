@@ -7,6 +7,7 @@
 //
 
 #import "LCKEssenceViewController.h"
+#import "LCKTestViewController.h"
 
 @interface LCKEssenceViewController ()
 
@@ -32,6 +33,12 @@
 -(void)tagClick{
 //    LCKLog(@"LCKEssenceViewController");
     LCKLogFunc;
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    LCKTestViewController *vc = [[LCKTestViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

@@ -20,6 +20,8 @@
 		832394151CD9D8A100F5A511 /* LCKtabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832394031CD9D8A100F5A511 /* LCKtabBarController.m */; };
 		832394161CD9D8A100F5A511 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 832394041CD9D8A100F5A511 /* main.m */; };
 		832394171CD9D8A100F5A511 /* LCKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 832394091CD9D8A100F5A511 /* LCKTabBar.m */; };
+		8323941B1CD9E1DC00F5A511 /* LCKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8323941A1CD9E1DC00F5A511 /* LCKNavigationController.m */; };
+		8323941E1CD9E88700F5A511 /* LCKTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8323941D1CD9E88700F5A511 /* LCKTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,10 @@
 		832394081CD9D8A100F5A511 /* LCKTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTabBar.h; sourceTree = "<group>"; };
 		832394091CD9D8A100F5A511 /* LCKTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTabBar.m; sourceTree = "<group>"; };
 		832394181CD9D8EE00F5A511 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		832394191CD9E1DC00F5A511 /* LCKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKNavigationController.h; sourceTree = "<group>"; };
+		8323941A1CD9E1DC00F5A511 /* LCKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKNavigationController.m; sourceTree = "<group>"; };
+		8323941C1CD9E88700F5A511 /* LCKTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTestViewController.h; sourceTree = "<group>"; };
+		8323941D1CD9E88700F5A511 /* LCKTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +317,8 @@
 		832393FB1CD9D8A100F5A511 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				8323941C1CD9E88700F5A511 /* LCKTestViewController.h */,
+				8323941D1CD9E88700F5A511 /* LCKTestViewController.m */,
 				832393FC1CD9D8A100F5A511 /* Category */,
 				832394011CD9D8A100F5A511 /* Controller */,
 				832394041CD9D8A100F5A511 /* main.m */,
@@ -336,6 +344,8 @@
 			children = (
 				832394021CD9D8A100F5A511 /* LCKtabBarController.h */,
 				832394031CD9D8A100F5A511 /* LCKtabBarController.m */,
+				832394191CD9E1DC00F5A511 /* LCKNavigationController.h */,
+				8323941A1CD9E1DC00F5A511 /* LCKNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -519,6 +529,8 @@
 				832394141CD9D8A100F5A511 /* UIView+LCKExtention.m in Sources */,
 				8323940E1CD9D8A100F5A511 /* LCKEssenceViewController.m in Sources */,
 				832394151CD9D8A100F5A511 /* LCKtabBarController.m in Sources */,
+				8323941E1CD9E88700F5A511 /* LCKTestViewController.m in Sources */,
+				8323941B1CD9E1DC00F5A511 /* LCKNavigationController.m in Sources */,
 				8323940F1CD9D8A100F5A511 /* LCKFriendTrendsViewController.m in Sources */,
 				832394171CD9D8A100F5A511 /* LCKTabBar.m in Sources */,
 				832394131CD9D8A100F5A511 /* UIBarButtonItem+LCKExtention.m in Sources */,
