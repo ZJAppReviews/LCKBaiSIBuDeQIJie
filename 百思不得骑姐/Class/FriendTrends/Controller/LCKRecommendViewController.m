@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "SVProgressHUD.h"
 #import "MJExtension.h"
+#import "MJRefresh.h"
 #import "LCKRecommendCategoryCell.h"
 #import "LCKRecommendCategory.h"
 #import "LCKRecommendUserCell.h"
@@ -50,6 +51,9 @@ static NSString *const LCKUserId = @"user";
     
     self.view.backgroundColor = LCKGlobalBackground;
     
+    //添加刷新控件（集成的MJRefresh框架）
+    [self setupRefresh];
+    
     //显示指示器
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     /**
@@ -89,16 +93,64 @@ static NSString *const LCKUserId = @"user";
     }];
 }
 
+/**
+ *  添加刷新控件（集成的MJRefresh框架）
+ */
+-(void)setupRefresh{
+    self.userTableView.mj_footer =[MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
+
+    //当数据出来后，刷新按钮才出来
+    self.userTableView.mj_footer.hidden = YES;
+}
+
+/**
+ *  刷新加载更多的数据
+ */
+-(void)loadMoreUsers{
+    LCKRecommendCategory *category = LCKSelectedCategory;
+    
+    //发送请求给服务器，加载右侧的数据
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"list";
+    params[@"c"] = @"subscribe";
+    params[@"category_id"] = @([LCKSelectedCategory id]);
+    params[@"page"] = @"2";//加载第二页数据
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+
+        NSArray *users = [LCKRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        //添加到当前类别对应的数组中
+        [category.users addObjectsFromArray:users];
+        
+        [self.userTableView reloadData];
+        
+        //数据更新完毕，结束刷新
+        [self.userTableView.mj_footer endRefreshing];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败！"];
+    }];
+
+}
+
 #pragma mark -- UITableViewDataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     if (tableView == self.categoryTableView) {
         return self.categories.count;
     }else{
-        //左边被选中的类别模型
-        LCKRecommendCategory *c = self.categories[self.categoryTableView.indexPathForSelectedRow.row];
+        NSInteger count = [LCKSelectedCategory users].count;
         
-        return c.users.count;
+        //左边被选中的类别模型(这句被抽成为宏)
+//        LCKRecommendCategory *c = self.categories[self.categoryTableView.indexPathForSelectedRow.row];
+        
+        
+        //每次刷新右边数据时，控制footer是否显示(有数据显示，没数据不显示)
+        self.userTableView.mj_footer.hidden = (count == 0);
+        return count;
     }
     
 }
@@ -131,12 +183,15 @@ static NSString *const LCKUserId = @"user";
         //显示曾经的数据
         [self.userTableView reloadData];
     }else{
+        //马上刷新表格，目的：马上显示category中的用户数据，不让客户看到上一个category的残留数据()
+        [self.userTableView reloadData];
         
     //发送请求给服务器，加载右侧的数据
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @(c.id);
+        
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
         
