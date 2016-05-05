@@ -21,7 +21,6 @@
 		832394161CD9D8A100F5A511 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 832394041CD9D8A100F5A511 /* main.m */; };
 		832394171CD9D8A100F5A511 /* LCKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 832394091CD9D8A100F5A511 /* LCKTabBar.m */; };
 		8323941B1CD9E1DC00F5A511 /* LCKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8323941A1CD9E1DC00F5A511 /* LCKNavigationController.m */; };
-		8323941E1CD9E88700F5A511 /* LCKTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8323941D1CD9E88700F5A511 /* LCKTestViewController.m */; };
 		832394221CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832394211CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib */; };
 		838FB4B01CDA3BCF00917F90 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FB4391CDA3BCF00917F90 /* AFHTTPSessionManager.m */; };
 		838FB4B11CDA3BCF00917F90 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FB43C1CDA3BCF00917F90 /* AFNetworkReachabilityManager.m */; };
@@ -86,6 +85,10 @@
 		83AEE06A1CDAE040002E9C63 /* LCKRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AEE0681CDAE040002E9C63 /* LCKRecommendUserCell.m */; };
 		83AEE06B1CDAE040002E9C63 /* LCKRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AEE0691CDAE040002E9C63 /* LCKRecommendUserCell.xib */; };
 		83AEE06E1CDAE81A002E9C63 /* LCKRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AEE06D1CDAE81A002E9C63 /* LCKRecommendUser.m */; };
+		83DB8F7D1CDB805700A22D75 /* LCKRecommendTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB8F7C1CDB805700A22D75 /* LCKRecommendTagViewController.m */; };
+		83DB8F801CDB855700A22D75 /* LCKRecommendTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB8F7F1CDB855700A22D75 /* LCKRecommendTags.m */; };
+		83DB8F841CDB8CDC00A22D75 /* LCKRecommendTagViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB8F821CDB8CDC00A22D75 /* LCKRecommendTagViewCell.m */; };
+		83DB8F851CDB8CDC00A22D75 /* LCKRecommendTagViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83DB8F831CDB8CDC00A22D75 /* LCKRecommendTagViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,8 +140,6 @@
 		832394181CD9D8EE00F5A511 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		832394191CD9E1DC00F5A511 /* LCKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKNavigationController.h; sourceTree = "<group>"; };
 		8323941A1CD9E1DC00F5A511 /* LCKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKNavigationController.m; sourceTree = "<group>"; };
-		8323941C1CD9E88700F5A511 /* LCKTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTestViewController.h; sourceTree = "<group>"; };
-		8323941D1CD9E88700F5A511 /* LCKTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTestViewController.m; sourceTree = "<group>"; };
 		832394211CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKFriendTrendsViewController.xib; sourceTree = "<group>"; };
 		838FB4381CDA3BCF00917F90 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		838FB4391CDA3BCF00917F90 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
@@ -264,6 +265,13 @@
 		83AEE0691CDAE040002E9C63 /* LCKRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKRecommendUserCell.xib; sourceTree = "<group>"; };
 		83AEE06C1CDAE81A002E9C63 /* LCKRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKRecommendUser.h; sourceTree = "<group>"; };
 		83AEE06D1CDAE81A002E9C63 /* LCKRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKRecommendUser.m; sourceTree = "<group>"; };
+		83DB8F7B1CDB805700A22D75 /* LCKRecommendTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKRecommendTagViewController.h; sourceTree = "<group>"; };
+		83DB8F7C1CDB805700A22D75 /* LCKRecommendTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKRecommendTagViewController.m; sourceTree = "<group>"; };
+		83DB8F7E1CDB855700A22D75 /* LCKRecommendTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKRecommendTags.h; sourceTree = "<group>"; };
+		83DB8F7F1CDB855700A22D75 /* LCKRecommendTags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKRecommendTags.m; sourceTree = "<group>"; };
+		83DB8F811CDB8CDC00A22D75 /* LCKRecommendTagViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKRecommendTagViewCell.h; sourceTree = "<group>"; };
+		83DB8F821CDB8CDC00A22D75 /* LCKRecommendTagViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKRecommendTagViewCell.m; sourceTree = "<group>"; };
+		83DB8F831CDB8CDC00A22D75 /* LCKRecommendTagViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKRecommendTagViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,6 +386,8 @@
 			children = (
 				832393E21CD9D8A100F5A511 /* LCKEssenceViewController.h */,
 				832393E31CD9D8A100F5A511 /* LCKEssenceViewController.m */,
+				83DB8F7B1CDB805700A22D75 /* LCKRecommendTagViewController.h */,
+				83DB8F7C1CDB805700A22D75 /* LCKRecommendTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -385,6 +395,8 @@
 		832393E41CD9D8A100F5A511 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				83DB8F7E1CDB855700A22D75 /* LCKRecommendTags.h */,
+				83DB8F7F1CDB855700A22D75 /* LCKRecommendTags.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -392,6 +404,9 @@
 		832393E51CD9D8A100F5A511 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				83DB8F811CDB8CDC00A22D75 /* LCKRecommendTagViewCell.h */,
+				83DB8F821CDB8CDC00A22D75 /* LCKRecommendTagViewCell.m */,
+				83DB8F831CDB8CDC00A22D75 /* LCKRecommendTagViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -521,8 +536,6 @@
 		832393FB1CD9D8A100F5A511 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				8323941C1CD9E88700F5A511 /* LCKTestViewController.h */,
-				8323941D1CD9E88700F5A511 /* LCKTestViewController.m */,
 				832393FC1CD9D8A100F5A511 /* Category */,
 				832394011CD9D8A100F5A511 /* Controller */,
 				832394041CD9D8A100F5A511 /* main.m */,
@@ -918,6 +931,7 @@
 				8323935F1CD979F800F5A511 /* Assets.xcassets in Resources */,
 				838FB4CE1CDA3BCF00917F90 /* MJRefresh.bundle in Resources */,
 				832394221CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib in Resources */,
+				83DB8F851CDB8CDC00A22D75 /* LCKRecommendTagViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -955,7 +969,6 @@
 				838FB4C61CDA3BCF00917F90 /* MJRefreshAutoNormalFooter.m in Sources */,
 				838FB4EE1CDA472700917F90 /* LCKRecommendCategoryCell.m in Sources */,
 				838FB4EA1CDA43C000917F90 /* LCKRecommendCategory.m in Sources */,
-				8323941E1CD9E88700F5A511 /* LCKTestViewController.m in Sources */,
 				838FB4B01CDA3BCF00917F90 /* AFHTTPSessionManager.m in Sources */,
 				838FB4D21CDA3BCF00917F90 /* UIView+MJExtension.m in Sources */,
 				838FB4CF1CDA3BCF00917F90 /* MJRefreshConst.m in Sources */,
@@ -974,6 +987,7 @@
 				838FB4C41CDA3BCF00917F90 /* MJRefreshHeader.m in Sources */,
 				838FB4BA1CDA3BCF00917F90 /* MJPropertyType.m in Sources */,
 				838FB4E31CDA3BCF00917F90 /* SVIndefiniteAnimatedView.m in Sources */,
+				83DB8F841CDB8CDC00A22D75 /* LCKRecommendTagViewCell.m in Sources */,
 				838FB4D11CDA3BCF00917F90 /* UIScrollView+MJRefresh.m in Sources */,
 				838FB4C01CDA3BCF00917F90 /* MJRefreshAutoFooter.m in Sources */,
 				8323940F1CD9D8A100F5A511 /* LCKFriendTrendsViewController.m in Sources */,
@@ -993,6 +1007,7 @@
 				83AEE06E1CDAE81A002E9C63 /* LCKRecommendUser.m in Sources */,
 				832394121CD9D8A100F5A511 /* LCKNewViewController.m in Sources */,
 				838FB4C51CDA3BCF00917F90 /* MJRefreshAutoGifFooter.m in Sources */,
+				83DB8F801CDB855700A22D75 /* LCKRecommendTags.m in Sources */,
 				838FB4DD1CDA3BCF00917F90 /* UIImage+GIF.m in Sources */,
 				838FB4B31CDA3BCF00917F90 /* AFURLRequestSerialization.m in Sources */,
 				838FB4B71CDA3BCF00917F90 /* MJFoundation.m in Sources */,
@@ -1012,6 +1027,7 @@
 				838FB4B81CDA3BCF00917F90 /* MJProperty.m in Sources */,
 				83AEE06A1CDAE040002E9C63 /* LCKRecommendUserCell.m in Sources */,
 				838FB4D51CDA3BCF00917F90 /* SDImageCache.m in Sources */,
+				83DB8F7D1CDB805700A22D75 /* LCKRecommendTagViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
