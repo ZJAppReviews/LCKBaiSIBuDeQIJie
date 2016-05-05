@@ -25,12 +25,32 @@
 
 /** 右边的用户表格 */
 @property (weak, nonatomic) IBOutlet UITableView *userTableView;
+
+/** 请求参数（连续点击左侧按钮，右侧只返还最后一次点击时点按钮所返还点数据） */
+@property (weak, nonatomic) NSMutableDictionary *params;
+
+/** AFN的请求管理者（声明这个属性的好处：将所有的manager进行统一的管理） */
+@property (nonatomic , strong) AFHTTPSessionManager *manager;
+
 @end
 
 @implementation LCKRecommendViewController
 
 static NSString *const LCKCategoryId = @"category";
 static NSString *const LCKUserId = @"user";
+
+/**
+ *  所有请求都交给manager管理（处理控制器销毁导致的程序崩溃的情况）
+ *
+ *  @return <#return value description#>
+ */
+-(AFHTTPSessionManager *)manager{
+    if(!_manager){
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -67,7 +87,7 @@ static NSString *const LCKUserId = @"user";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"category";
     params[@"c"] = @"subscribe";
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
 //        LCKLog(@"progress = %@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -125,15 +145,19 @@ static NSString *const LCKUserId = @"user";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @(rc.id);
     params[@"page"] = @(rc.currentPage);
+    self.params = params;
     
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        //        self.users = [LCKRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];//这个数组只能保存这次的数据并不能保存上次的数据，也就时说能够解决问题点2.要想保存所有类别的数据，可以再定义一个数组模型来存储每个类别对应的数据。
-        //字典转模型数组
+        if (self.params != params) return ;//多次点击导致频繁请求点解决方案
+        
         NSArray *users = [LCKRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        //清除所有的旧数据
+        [rc.users removeAllObjects];
         
         //添加到当前类别对应的数组中
         [rc.users addObjectsFromArray:users];
@@ -147,6 +171,9 @@ static NSString *const LCKUserId = @"user";
         [self.userTableView.mj_header endRefreshing];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        if (self.params != params) return ;
+        
         [SVProgressHUD showErrorWithStatus:@"加载用户数据失败！"];
         //结束刷新
         [self.userTableView.mj_header endRefreshing];
@@ -167,10 +194,12 @@ static NSString *const LCKUserId = @"user";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @([LCKSelectedCategory id]);
     params[@"page"] = @(++category.currentPage);
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        if (self.params != params) return ;
 
         NSArray *users = [LCKRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
@@ -187,6 +216,9 @@ static NSString *const LCKUserId = @"user";
             [self.userTableView.mj_footer endRefreshing];
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+         if (self.params != params) return ;
+        
         [SVProgressHUD showErrorWithStatus:@"加载详细信息失败！"];
     }];
 
@@ -247,6 +279,11 @@ static NSString *const LCKUserId = @"user";
 
 #pragma mark -- UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //结束刷新
+    [self.userTableView.mj_header endRefreshing];
+    [self.userTableView.mj_footer endRefreshing];
+    
     LCKRecommendCategory *c = self.categories[indexPath.row];
     //点击其它左侧按钮时马上停止刷新上一页面的数据
     [self.userTableView.mj_footer endRefreshing];
@@ -282,4 +319,13 @@ static NSString *const LCKUserId = @"user";
  2.
  3. 点击时，若网络慢，可以加载上一次请求点数据
  */
+
+#pragma mark -- 控制器的销毁
+/**
+ *  当控制器退出时，请求都需要停止，否则出现程序崩溃
+ */
+-(void)dealloc{
+    //停止所有的操作
+    [self.manager.operationQueue cancelAllOperations];
+}
 @end
