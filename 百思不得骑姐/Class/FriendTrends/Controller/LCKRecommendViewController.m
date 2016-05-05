@@ -42,7 +42,7 @@ static NSString *const LCKUserId = @"user";
 /**
  *  所有请求都交给manager管理（处理控制器销毁导致的程序崩溃的情况）
  *
- *  @return <#return value description#>
+ *  @return return value description
  */
 -(AFHTTPSessionManager *)manager{
     if(!_manager){
@@ -104,6 +104,9 @@ static NSString *const LCKUserId = @"user";
         
         //默认选中category的第一个选目
         [self.categoryTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
+        
+        //加载首行的数据到右侧用户列表中
+        [self.userTableView.mj_header beginRefreshing];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 //        LCKLog(@"failure = %@",error);
@@ -186,6 +189,7 @@ static NSString *const LCKUserId = @"user";
  *  刷新加载更多的数据
  */
 -(void)loadMoreUsers{
+
     LCKRecommendCategory *category = LCKSelectedCategory;
     
     //发送请求给服务器，加载右侧的数据
@@ -194,6 +198,9 @@ static NSString *const LCKUserId = @"user";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @([LCKSelectedCategory id]);
     params[@"page"] = @(++category.currentPage);
+    
+    self.params = params;//缺失这段代码会导致不能上拉刷新，因为params永远都不同，那么下面的那句将一直return，不能执行到下面的代码
+    
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
         
