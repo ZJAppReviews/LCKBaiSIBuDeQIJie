@@ -93,14 +93,66 @@ static NSString *const LCKUserId = @"user";
     }];
 }
 
+
+#pragma mark -- 刷新更新数据
 /**
  *  添加刷新控件（集成的MJRefresh框架）
  */
 -(void)setupRefresh{
+    //下拉刷新
+    self.userTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadMoreNewUsers)];
+    
     self.userTableView.mj_footer =[MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
 
     //当数据出来后，刷新按钮才出来
     self.userTableView.mj_footer.hidden = YES;
+}
+/**
+ *  下拉刷新，加载更多最新的资源
+ */
+-(void)loadMoreNewUsers{
+    
+    LCKRecommendCategory *rc = LCKSelectedCategory;
+    
+    
+    //设置当前页码为1（首次加载数据）
+    rc.currentPage = 1;
+    
+    
+    //发送请求给服务器，加载右侧的数据
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"list";
+    params[@"c"] = @"subscribe";
+    params[@"category_id"] = @(rc.id);
+    params[@"page"] = @(rc.currentPage);
+    
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        //        self.users = [LCKRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];//这个数组只能保存这次的数据并不能保存上次的数据，也就时说能够解决问题点2.要想保存所有类别的数据，可以再定义一个数组模型来存储每个类别对应的数据。
+        //字典转模型数组
+        NSArray *users = [LCKRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        //添加到当前类别对应的数组中
+        [rc.users addObjectsFromArray:users];
+        
+        //保存总数
+        rc.total = [responseObject[@"total"] integerValue];
+        
+        [self.userTableView reloadData];
+        
+       //结束刷新
+        [self.userTableView.mj_header endRefreshing];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD showErrorWithStatus:@"加载用户数据失败！"];
+        //结束刷新
+        [self.userTableView.mj_header endRefreshing];
+        //判断底部控件
+        [self checkFooterState];
+    }];
 }
 
 /**
@@ -114,7 +166,7 @@ static NSString *const LCKUserId = @"user";
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @([LCKSelectedCategory id]);
-    params[@"page"] = @"2";//加载第二页数据
+    params[@"page"] = @(++category.currentPage);
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
         
@@ -127,13 +179,36 @@ static NSString *const LCKUserId = @"user";
         
         [self.userTableView reloadData];
         
-        //数据更新完毕，结束刷新
-        [self.userTableView.mj_footer endRefreshing];
-        
+        //提示footer加载完毕
+        if (category.users.count == category.total) {//全部数据结束加载
+            [self.userTableView.mj_footer endRefreshingWithNoMoreData];
+        }else{
+            //数据更新完毕，结束刷新
+            [self.userTableView.mj_footer endRefreshing];
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败！"];
+        [SVProgressHUD showErrorWithStatus:@"加载详细信息失败！"];
     }];
 
+}
+
+/**
+ *  检测底部控件的状态
+ */
+-(void)checkFooterState{
+    
+    LCKRecommendCategory *category = LCKSelectedCategory;
+    
+    //每次刷新右侧数据时，都监测footeer的显示和隐藏
+    self.userTableView.mj_footer.hidden = (category.users.count == 0 );
+    
+    //底部控件结束刷新
+    if (category.users.count == category.total) {//全部数据结束加载
+        [self.userTableView.mj_footer endRefreshingWithNoMoreData];
+    }else{
+        //数据更新完毕，结束刷新
+        [self.userTableView.mj_footer endRefreshing];
+    }
 }
 
 #pragma mark -- UITableViewDataSource
@@ -142,15 +217,12 @@ static NSString *const LCKUserId = @"user";
     if (tableView == self.categoryTableView) {
         return self.categories.count;
     }else{
-        NSInteger count = [LCKSelectedCategory users].count;
+        //监测footer状态
+        [self checkFooterState];
         
-        //左边被选中的类别模型(这句被抽成为宏)
-//        LCKRecommendCategory *c = self.categories[self.categoryTableView.indexPathForSelectedRow.row];
-        
-        
-        //每次刷新右边数据时，控制footer是否显示(有数据显示，没数据不显示)
-        self.userTableView.mj_footer.hidden = (count == 0);
-        return count;
+        LCKRecommendCategory *category = LCKSelectedCategory;
+     
+        return [category users].count;
     }
     
 }
@@ -176,8 +248,9 @@ static NSString *const LCKUserId = @"user";
 #pragma mark -- UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     LCKRecommendCategory *c = self.categories[indexPath.row];
-    
-    LCKLog(@"C = %@",c.name);
+    //点击其它左侧按钮时马上停止刷新上一页面的数据
+    [self.userTableView.mj_footer endRefreshing];
+//    LCKLog(@"C = %@",c.name);
     
     if (c.users.count) {
         //显示曾经的数据
@@ -186,29 +259,10 @@ static NSString *const LCKUserId = @"user";
         //马上刷新表格，目的：马上显示category中的用户数据，不让客户看到上一个category的残留数据()
         [self.userTableView reloadData];
         
-    //发送请求给服务器，加载右侧的数据
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
-    params[@"c"] = @"subscribe";
-    params[@"category_id"] = @(c.id);
+        //进入下行啦刷新状态
+        [self.userTableView.mj_header beginRefreshing];
         
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-
-//        self.users = [LCKRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];//这个数组只能保存这次的数据并不能保存上次的数据，也就时说能够解决问题点2.要想保存所有类别的数据，可以再定义一个数组模型来存储每个类别对应的数据。
-        //字典转模型数组
-        NSArray *users = [LCKRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        
-        //添加到当前类别对应的数组中
-        [c.users addObjectsFromArray:users];
-        
-        [self.userTableView reloadData];
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败！"];
-    }];
+     
     }
 }
 
