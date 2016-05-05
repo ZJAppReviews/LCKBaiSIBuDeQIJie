@@ -9,5 +9,15 @@
 #import "LCKRecommendCategory.h"
 
 @implementation LCKRecommendCategory
-
+/**
+ *  懒加载
+ *
+ *  @return return value description
+ */
+-(NSMutableArray *)users{
+    if (!_users) {
+        _users = [NSMutableArray array];
+    }
+    return _users;
+}
 @end

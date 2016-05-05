@@ -18,8 +18,7 @@
 @interface LCKRecommendViewController ()<UITableViewDelegate,UITableViewDataSource>
 /** 左边的类别数据 */
 @property (nonatomic , strong) NSArray *categories;
-/** 右边的用户数据（用来暂时存储的用户数据） */
-@property (nonatomic , strong) NSArray *users;
+
 /** 左边的类别表格 */
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 
@@ -96,7 +95,10 @@ static NSString *const LCKUserId = @"user";
     if (tableView == self.categoryTableView) {
         return self.categories.count;
     }else{
-        return self.users.count;
+        //左边被选中的类别模型
+        LCKRecommendCategory *c = self.categories[self.categoryTableView.indexPathForSelectedRow.row];
+        
+        return c.users.count;
     }
     
 }
@@ -109,7 +111,11 @@ static NSString *const LCKUserId = @"user";
         return cell;
     }else{//右边的用户表格数据(这里处理用户数据，但是需要在请求中处理用户请求返还来的数据)
         LCKRecommendUserCell *cell = [tableView dequeueReusableCellWithIdentifier:LCKUserId];
-        cell.user = self.users[indexPath.row];
+        
+        //左边被选中的类别模型
+        LCKRecommendCategory *c = self.categories[self.categoryTableView.indexPathForSelectedRow.row];
+        
+        cell.user = c.users[indexPath.row];
         return cell;
     }
  
@@ -121,6 +127,11 @@ static NSString *const LCKUserId = @"user";
     
     LCKLog(@"C = %@",c.name);
     
+    if (c.users.count) {
+        //显示曾经的数据
+        [self.userTableView reloadData];
+    }else{
+        
     //发送请求给服务器，加载右侧的数据
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
@@ -130,14 +141,20 @@ static NSString *const LCKUserId = @"user";
         
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+
+//        self.users = [LCKRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];//这个数组只能保存这次的数据并不能保存上次的数据，也就时说能够解决问题点2.要想保存所有类别的数据，可以再定义一个数组模型来存储每个类别对应的数据。
+        //字典转模型数组
+        NSArray *users = [LCKRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
-        self.users = [LCKRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        //添加到当前类别对应的数组中
+        [c.users addObjectsFromArray:users];
         
         [self.userTableView reloadData];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败！"];
     }];
+    }
 }
 
 //-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
