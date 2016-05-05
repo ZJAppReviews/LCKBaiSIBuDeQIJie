@@ -15,7 +15,7 @@
     [super awakeFromNib];
     // xib中调用的左侧，可在这里设置背景颜色
     self.backgroundColor = LCKRGBColor(244, 244, 244);
-    
+    //当cell的selection为None时，即使cell被选中时，内部的子控件就不会进入高亮状态
 //    self.textLabel.textColor = LCKRGBColor(78, 78, 78);
 //    self.textLabel.highlightedTextColor = LCKRGBColor(219, 21, 26);
     
@@ -30,7 +30,7 @@
     self.textLabel.text = category.name;
     
 }
-
+/** 这这个方法中监听cell的选择或取消选中 */
 //当cell进入选中状态时，会调用此方法
 -(void)setSelected:(BOOL)selected animated:(BOOL)animated{
     [super setSelected:selected animated:animated];

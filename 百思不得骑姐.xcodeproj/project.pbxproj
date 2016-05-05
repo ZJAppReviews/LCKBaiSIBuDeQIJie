@@ -83,6 +83,9 @@
 		838FB4EF1CDA472700917F90 /* LCKRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 838FB4ED1CDA472700917F90 /* LCKRecommendCategoryCell.xib */; };
 		83AD49E21CDA312500B1A884 /* LCKRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AD49E01CDA312500B1A884 /* LCKRecommendViewController.m */; };
 		83AD49E31CDA312500B1A884 /* LCKRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AD49E11CDA312500B1A884 /* LCKRecommendViewController.xib */; };
+		83AEE06A1CDAE040002E9C63 /* LCKRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AEE0681CDAE040002E9C63 /* LCKRecommendUserCell.m */; };
+		83AEE06B1CDAE040002E9C63 /* LCKRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AEE0691CDAE040002E9C63 /* LCKRecommendUserCell.xib */; };
+		83AEE06E1CDAE81A002E9C63 /* LCKRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AEE06D1CDAE81A002E9C63 /* LCKRecommendUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,6 +259,11 @@
 		83AD49DF1CDA312500B1A884 /* LCKRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKRecommendViewController.h; sourceTree = "<group>"; };
 		83AD49E01CDA312500B1A884 /* LCKRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKRecommendViewController.m; sourceTree = "<group>"; };
 		83AD49E11CDA312500B1A884 /* LCKRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKRecommendViewController.xib; sourceTree = "<group>"; };
+		83AEE0671CDAE040002E9C63 /* LCKRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKRecommendUserCell.h; sourceTree = "<group>"; };
+		83AEE0681CDAE040002E9C63 /* LCKRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKRecommendUserCell.m; sourceTree = "<group>"; };
+		83AEE0691CDAE040002E9C63 /* LCKRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKRecommendUserCell.xib; sourceTree = "<group>"; };
+		83AEE06C1CDAE81A002E9C63 /* LCKRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKRecommendUser.h; sourceTree = "<group>"; };
+		83AEE06D1CDAE81A002E9C63 /* LCKRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKRecommendUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -416,6 +424,8 @@
 			children = (
 				838FB4E81CDA43C000917F90 /* LCKRecommendCategory.h */,
 				838FB4E91CDA43C000917F90 /* LCKRecommendCategory.m */,
+				83AEE06C1CDAE81A002E9C63 /* LCKRecommendUser.h */,
+				83AEE06D1CDAE81A002E9C63 /* LCKRecommendUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -426,6 +436,9 @@
 				838FB4EB1CDA472700917F90 /* LCKRecommendCategoryCell.h */,
 				838FB4EC1CDA472700917F90 /* LCKRecommendCategoryCell.m */,
 				838FB4ED1CDA472700917F90 /* LCKRecommendCategoryCell.xib */,
+				83AEE0671CDAE040002E9C63 /* LCKRecommendUserCell.h */,
+				83AEE0681CDAE040002E9C63 /* LCKRecommendUserCell.m */,
+				83AEE0691CDAE040002E9C63 /* LCKRecommendUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -901,6 +914,7 @@
 				838FB4E41CDA3BCF00917F90 /* SVProgressHUD.bundle in Resources */,
 				838FB4EF1CDA472700917F90 /* LCKRecommendCategoryCell.xib in Resources */,
 				83AD49E31CDA312500B1A884 /* LCKRecommendViewController.xib in Resources */,
+				83AEE06B1CDAE040002E9C63 /* LCKRecommendUserCell.xib in Resources */,
 				8323935F1CD979F800F5A511 /* Assets.xcassets in Resources */,
 				838FB4CE1CDA3BCF00917F90 /* MJRefresh.bundle in Resources */,
 				832394221CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib in Resources */,
@@ -976,6 +990,7 @@
 				838FB4CB1CDA3BCF00917F90 /* MJRefreshGifHeader.m in Sources */,
 				838FB4C91CDA3BCF00917F90 /* MJRefreshBackNormalFooter.m in Sources */,
 				838FB4D81CDA3BCF00917F90 /* SDWebImageDownloader.m in Sources */,
+				83AEE06E1CDAE81A002E9C63 /* LCKRecommendUser.m in Sources */,
 				832394121CD9D8A100F5A511 /* LCKNewViewController.m in Sources */,
 				838FB4C51CDA3BCF00917F90 /* MJRefreshAutoGifFooter.m in Sources */,
 				838FB4DD1CDA3BCF00917F90 /* UIImage+GIF.m in Sources */,
@@ -995,6 +1010,7 @@
 				832394111CD9D8A100F5A511 /* LCKMeViewController.m in Sources */,
 				838FB4BB1CDA3BCF00917F90 /* NSObject+MJClass.m in Sources */,
 				838FB4B81CDA3BCF00917F90 /* MJProperty.m in Sources */,
+				83AEE06A1CDAE040002E9C63 /* LCKRecommendUserCell.m in Sources */,
 				838FB4D51CDA3BCF00917F90 /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

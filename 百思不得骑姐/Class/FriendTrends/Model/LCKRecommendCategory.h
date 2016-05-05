@@ -10,9 +10,9 @@
 
 @interface LCKRecommendCategory : NSObject
 /** id */
-@property (nonatomic , assign) NSUInteger *id;
+@property (nonatomic , assign) NSInteger id;
 /** name */
 @property (nonatomic , copy) NSString *name;
 /** count */
-@property (nonatomic , assign) NSUInteger *count;
+@property (nonatomic , assign) NSInteger count;
 @end

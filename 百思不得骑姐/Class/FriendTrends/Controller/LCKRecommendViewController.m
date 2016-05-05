@@ -12,17 +12,25 @@
 #import "MJExtension.h"
 #import "LCKRecommendCategoryCell.h"
 #import "LCKRecommendCategory.h"
+#import "LCKRecommendUserCell.h"
+#import "LCKRecommendUser.h"
 
 @interface LCKRecommendViewController ()<UITableViewDelegate,UITableViewDataSource>
 /** 左边的类别数据 */
 @property (nonatomic , strong) NSArray *categories;
+/** 右边的用户数据（用来暂时存储的用户数据） */
+@property (nonatomic , strong) NSArray *users;
 /** 左边的类别表格 */
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
+
+/** 右边的用户表格 */
+@property (weak, nonatomic) IBOutlet UITableView *userTableView;
 @end
 
 @implementation LCKRecommendViewController
 
 static NSString *const LCKCategoryId = @"category";
+static NSString *const LCKUserId = @"user";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,6 +38,14 @@ static NSString *const LCKCategoryId = @"category";
     //注册
     [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([LCKRecommendCategoryCell class]) bundle:nil] forCellReuseIdentifier:LCKCategoryId];
     
+    //注册user.xib
+    [self.userTableView registerNib:[UINib nibWithNibName:NSStringFromClass([LCKRecommendUserCell class]) bundle:nil] forCellReuseIdentifier:LCKUserId];
+    
+    //设置inset(在导航栏控制器中，只有一个View是默认有inset为64，其它都不会有)
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.categoryTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    self.userTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    self.userTableView.rowHeight = 70;
     
     self.title = @"推荐关注";
     
@@ -77,17 +93,67 @@ static NSString *const LCKCategoryId = @"category";
 #pragma mark -- UITableViewDataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return self.categories.count;
+    if (tableView == self.categoryTableView) {
+        return self.categories.count;
+    }else{
+        return self.users.count;
+    }
+    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    LCKRecommendCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:LCKCategoryId];
-    cell.category = self.categories[indexPath.row];
-    
-    
-    return cell;
+    if (tableView == self.categoryTableView) {
+        LCKRecommendCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:LCKCategoryId];
+        cell.category = self.categories[indexPath.row];
+        return cell;
+    }else{//右边的用户表格数据(这里处理用户数据，但是需要在请求中处理用户请求返还来的数据)
+        LCKRecommendUserCell *cell = [tableView dequeueReusableCellWithIdentifier:LCKUserId];
+        cell.user = self.users[indexPath.row];
+        return cell;
+    }
+ 
 }
 
+#pragma mark -- UITableViewDelegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    LCKRecommendCategory *c = self.categories[indexPath.row];
+    
+    LCKLog(@"C = %@",c.name);
+    
+    //发送请求给服务器，加载右侧的数据
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"list";
+    params[@"c"] = @"subscribe";
+    params[@"category_id"] = @(c.id);
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        self.users = [LCKRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        [self.userTableView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败！"];
+    }];
+}
 
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    //由于cell中的高度为55，而磨人的tableViewCell默认的高度为44，因此会到导致出现变形
+//    
+//}
+
+/**
+ *  问题点：
+ 1. 目前只能显示一页数据
+ 2. 重复请求
+ 3. 网络慢，所带来的细节问题
+ 
+ 解决点：
+ 1. 发送请求加上页码
+ 2.
+ 3. 点击时，若网络慢，可以加载上一次请求点数据
+ */
 @end

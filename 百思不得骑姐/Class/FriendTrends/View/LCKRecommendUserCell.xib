@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="user" rowHeight="89" id="KGk-i7-Jjw" customClass="LCKRecommendUserCell">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="89"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="88"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DMX-EF-17o">
+                        <rect key="frame" x="18" y="18" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="DSo-wm-dPZ"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Ghv-Ww-i5x"/>
+                            <constraint firstAttribute="height" constant="50" id="pn9-CY-3kh"/>
+                            <constraint firstAttribute="width" constant="50" id="xv5-Ws-RuF"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pid-55-Jp2">
+                        <rect key="frame" x="78" y="18" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HY-Rx-uQY">
+                        <rect key="frame" x="78" y="51" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocf-Wp-jtg">
+                        <rect key="frame" x="290" y="30" width="75" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="3q3-9P-gXk"/>
+                            <constraint firstAttribute="height" constant="25" id="zt4-S4-0kw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="＋ 关注" backgroundImage="FollowBtnBg">
+                            <color key="titleColor" red="0.92537221859999996" green="0.39282910920000003" blue="0.34827812870000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="highlighted" backgroundImage="FollowBtnClickBg">
+                            <color key="titleColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsi-pb-clC">
+                        <rect key="frame" x="0.0" y="85" width="393" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="G2s-pg-suP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Pid-55-Jp2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="AJR-RZ-A6h"/>
+                    <constraint firstItem="Pid-55-Jp2" firstAttribute="leading" secondItem="DMX-EF-17o" secondAttribute="trailing" constant="10" id="IMp-Mx-kmP"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ocf-Wp-jtg" secondAttribute="trailing" constant="20" id="Jxs-an-tjc"/>
+                    <constraint firstItem="DMX-EF-17o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="TJ6-jj-xOq"/>
+                    <constraint firstItem="DMX-EF-17o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="eDc-qa-9sG"/>
+                    <constraint firstItem="ocf-Wp-jtg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fJF-Se-pFa"/>
+                    <constraint firstItem="6HY-Rx-uQY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="70" id="hJS-dp-Z6F"/>
+                    <constraint firstAttribute="trailing" secondItem="vsi-pb-clC" secondAttribute="trailing" id="haR-YJ-SPP"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="DMX-EF-17o" secondAttribute="bottom" constant="10" id="pXS-E8-qAu"/>
+                    <constraint firstItem="vsi-pb-clC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="q7K-Y8-X5W"/>
+                    <constraint firstAttribute="bottom" secondItem="vsi-pb-clC" secondAttribute="bottom" id="rCP-aO-rtg"/>
+                    <constraint firstItem="DMX-EF-17o" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sLL-cx-yJR"/>
+                    <constraint firstItem="6HY-Rx-uQY" firstAttribute="leading" secondItem="Pid-55-Jp2" secondAttribute="leading" id="uH6-LS-FLv"/>
+                    <constraint firstItem="6HY-Rx-uQY" firstAttribute="bottom" secondItem="DMX-EF-17o" secondAttribute="bottom" id="vvf-hh-hAb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="fansCountLabel" destination="6HY-Rx-uQY" id="X3x-Jw-0X8"/>
+                <outlet property="headerImageView" destination="DMX-EF-17o" id="vSk-us-Kq5"/>
+                <outlet property="screenNameLabel" destination="Pid-55-Jp2" id="Uc0-dJ-yds"/>
+            </connections>
+            <point key="canvasLocation" x="424.5" y="383.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="FollowBtnBg" width="51" height="25"/>
+        <image name="FollowBtnClickBg" width="51" height="25"/>
+    </resources>
+</document>
