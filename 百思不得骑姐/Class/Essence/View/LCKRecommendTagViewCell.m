@@ -35,7 +35,19 @@
     }
     self.subNumberLabel.text = subNumbedr;
 }
-
+/**
+ *  外面修改的位置，都需要通过这个方法来进行过滤。在这里修改的位置都会被修改掉的（因为这是最后进行位置排列的方法
+ *
+ *  一般自定义cell的位置都是通过重写这个方法来定位位置的
+ */
+-(void)setFrame:(CGRect)frame{
+   
+    frame.origin.x = 10;
+    frame.size.width -=20;
+    frame.size.height -=1;
+    
+    [super setFrame:frame];//这个是在最后的时候加上去的
+}
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
