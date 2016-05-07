@@ -12,9 +12,38 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UITextField *phoneField;
+/**
+ *  登录狂距离控制器view左边的变局
+ */
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginViewLeftMargin;
+@property (weak, nonatomic) IBOutlet UIButton *registerButton;
 @end
 
 @implementation LCKLoginRegisterViewController
+
+- (IBAction)dissLoginView:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)showLoginOrRegister {
+    //退出键盘
+    [self.view endEditing:YES];
+    
+    //设置将登录模块进行整体的布局等移动
+    if (self.loginViewLeftMargin.constant == 0) {//显示注册页面
+        
+        self.loginViewLeftMargin.constant = -self.view.width;
+        [self.registerButton setTitle:@"帐号登录" forState:UIControlStateNormal];
+        
+    }else{
+        self.loginViewLeftMargin.constant = 0;
+        [self.registerButton setTitle:@"注册帐号" forState:UIControlStateNormal];
+    }
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.view layoutIfNeeded];
+    }];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
