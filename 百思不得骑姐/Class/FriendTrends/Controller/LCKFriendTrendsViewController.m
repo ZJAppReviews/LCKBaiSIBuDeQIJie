@@ -8,6 +8,7 @@
 
 #import "LCKFriendTrendsViewController.h"
 #import "LCKRecommendViewController.h"
+#import "LCKLoginRegisterViewController.h"
 
 @interface LCKFriendTrendsViewController ()
 
@@ -32,5 +33,10 @@
     
 }
 
+- (IBAction)loginRegister {
+    LCKLoginRegisterViewController *login = [[LCKLoginRegisterViewController alloc] init];
+    //要想从底部弹出控制器，需要使用presentViewController
+    [self presentViewController:login animated:YES completion:nil];
+}
 
 @end
