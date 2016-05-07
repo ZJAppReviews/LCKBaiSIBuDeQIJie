@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LCKLoginRegisterViewController">
             <connections>
+                <outlet property="loginButton" destination="pxI-r3-ZCU" id="JGN-sm-u6Y"/>
+                <outlet property="phoneField" destination="fgv-CH-wsR" id="ZfH-4f-mQf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,18 +20,10 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_register_background" translatesAutoresizingMaskIntoConstraints="NO" id="ZmT-z9-fyr">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgv-CH-wsR">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="fgv-CH-wsR" customClass="LCKTextField">
                     <rect key="frame" x="20" y="120" width="560" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="ISF-AQ-Yap"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQm-xP-1Mc">
-                    <rect key="frame" x="20" y="168" width="560" height="44"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="44" id="SJp-ze-73C"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -41,6 +35,12 @@
                     </constraints>
                     <state key="normal" title="登录" backgroundImage="login_register_button"/>
                     <state key="highlighted" backgroundImage="login_register_button_click"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UT-un-iFq">
                     <rect key="frame" x="505" y="282" width="75" height="30"/>
@@ -54,7 +54,7 @@
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CB-Rl-d9J">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CB-Rl-d9J" customClass="LCKVerticalButton">
                     <rect key="frame" x="265" y="450" width="70" height="90"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="90" id="ICm-0j-1vy"/>
@@ -63,7 +63,7 @@
                     <state key="normal" title="微博登录" image="login_sina_icon"/>
                     <state key="highlighted" image="login_sina_icon_click"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0A-SE-E0N">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0A-SE-E0N" customClass="LCKVerticalButton">
                     <rect key="frame" x="510" y="450" width="70" height="90"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="bcD-2z-FmL"/>
@@ -72,7 +72,7 @@
                     <state key="normal" title="腾讯登录" image="login_tecent_icon"/>
                     <state key="highlighted" image="login_tecent_icon_click"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1g1-Zd-779">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1g1-Zd-779" customClass="LCKVerticalButton">
                     <rect key="frame" x="20" y="450" width="70" height="90"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="90" id="GFj-97-tCG"/>
@@ -81,7 +81,7 @@
                     <state key="normal" title="QQ登录" image="login_QQ_icon"/>
                     <state key="highlighted" image="login_QQ_icon_click"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tre-Hc-v90">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tre-Hc-v90">
                     <rect key="frame" x="20" y="24" width="16" height="16"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="16" id="QkE-v8-mHU"/>
@@ -95,6 +95,14 @@
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="TQm-xP-1Mc">
+                    <rect key="frame" x="20" y="170" width="560" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="SJp-ze-73C"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
