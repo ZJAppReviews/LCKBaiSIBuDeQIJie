@@ -8,8 +8,13 @@
 
 #import "LCKEssenceViewController.h"
 #import "LCKRecommendTagViewController.h"
+#import "LCKAllViewController.h"
+#import "LCKVideoViewController.h"
+#import "LCKSoundViewController.h"
+#import "LCKPictureViewController.h"
+#import "LCKWordViewController.h"
 
-@interface LCKEssenceViewController ()
+@interface LCKEssenceViewController ()<UIScrollViewDelegate>
 /** 底部标签栏的指示器 */
 @property(nonatomic, weak) UIView *indicatorView;
 
@@ -18,6 +23,8 @@
 
 /** 所有分类的标签 */
 @property(nonatomic, weak) UIView *categoryView;
+/** 底部的所有内容 */
+@property(nonatomic, weak) UIScrollView *contentView;
 
 @end
 
@@ -28,77 +35,70 @@
     //设置导航栏
     [self setupNavigation];
     
+    //初始化子控件
+    [self setupChildViewController];
+    
     //设置顶部精华部分分类
     [self setupCategoryEssence];
     
     //底部的scrollView
     [self setupContentScrollView];
-
+    
 }
 
-/** 底部的scrollView */
--(void)setupContentScrollView{
-    //不要自动调整inset
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    
-    UIScrollView *contentView = [[UIScrollView alloc] init];
-    contentView.frame = self.view.bounds;
-//    contentView.backgroundColor = [UIColor redColor];
-    
-//    //这样做会缺失穿透的效果
-//    contentView.width = self.view.width;
-//    contentView.y = 64 + 35;
-//    contentView.height = self.view.height - self.tabBarController.tabBar.height - contentView.y;
-    
-    //设置内边距
-    CGFloat bottom = self.tabBarController.tabBar.height;
-    CGFloat top = CGRectGetMaxY(self.categoryView.frame);
-
-    contentView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
-
-    [self.view insertSubview:contentView atIndex:0];
+-(void)setupChildViewController{
+    LCKAllViewController *allVC = [[LCKAllViewController alloc] init];
+    [self addChildViewController:allVC];
+    LCKVideoViewController *videoVC = [[LCKVideoViewController alloc] init];
+    [self addChildViewController:videoVC];
+    LCKSoundViewController *soundVC = [[LCKSoundViewController alloc] init];
+    [self addChildViewController:soundVC];
+    LCKPictureViewController *pictureVC = [[LCKPictureViewController alloc] init];
+    [self addChildViewController:pictureVC];
+    LCKWordViewController *wordVC = [[LCKWordViewController alloc] init];
+    [self addChildViewController:wordVC];
 }
 
 /** 设置顶部精华部分分类 */
 -(void)setupCategoryEssence{
-
+    
     //标签栏分类的整体
     UIView *categoryView = [[UIView alloc] init];
     categoryView.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.5];
     categoryView.y = 64;
-    categoryView.x = 0;
     categoryView.width = self.view.width;
     categoryView.height = 35;
-    
     [self.view addSubview:categoryView];
+    self.categoryView = categoryView;
     
     
     //底部红色指示器
     UIView *indicatorView = [[UIView alloc] init];
     indicatorView.backgroundColor = [UIColor redColor];
     indicatorView.height = 2;
+    indicatorView.tag = -1;
     indicatorView.y = categoryView.height - indicatorView.height;
-    indicatorView.x = categoryView.x;
-    [categoryView addSubview:indicatorView];
     
     self.indicatorView = indicatorView;
     
     
     //在分类中添加按钮
-    NSInteger categoryCount = 5;
-    NSArray *array = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
+    NSArray *titles = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
+    CGFloat width = categoryView.width / titles.count;
+    CGFloat height = categoryView.height;
     
-    for (NSInteger i = 0; i < categoryCount; i++) {
+    for (NSInteger i = 0; i < titles.count; i++) {
         UIButton *btn = [[UIButton alloc] init];
-        btn.height = categoryView.height;
-        btn.width = categoryView.width / categoryCount;
-        btn.x = i *btn.width;
+        btn.tag = i;
+        btn.height = height;
+        btn.width = width;
+        btn.x = i * width;
         
-        [btn setTitle:array[i] forState:UIControlStateNormal];
+        [btn setTitle:titles[i] forState:UIControlStateNormal];
         btn.titleLabel.font = [UIFont systemFontOfSize:14];
         
-//        //强制设置大小（因为在这里还没创建按钮的位置）,也叫强制布局
-//        [btn layoutIfNeeded];
+        //        //强制设置大小（因为在这里还没创建按钮的位置）,也叫强制布局
+        //        [btn layoutIfNeeded];
         
         [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];
@@ -115,23 +115,51 @@
             self.indicatorView.centerX = btn.centerX;
         }
     }
-
+    
+    [categoryView addSubview:indicatorView];
+    
 }
 
 -(void)categoryClick:(UIButton *)button{
     //修改按钮的状态
-//    self.selectedButton.selected = NO;
-//    button.selected = YES;
+    //    self.selectedButton.selected = NO;
+    //    button.selected = YES;
     self.selectedButton.enabled = YES;
     button.enabled = NO;
     self.selectedButton = button;
     
     [UIView animateWithDuration:0.5 animations:^{
-        self.indicatorView.centerX = button.centerX;
         self.indicatorView.width = button.titleLabel.width;
+        self.indicatorView.centerX = button.centerX;
     }];
     
+    //滚动
+    CGPoint offset = self.contentView.contentOffset;
+    offset.x = button.tag * self.contentView.width;
+    [self.contentView setContentOffset:offset animated:YES];
+    //切换子控制器
+    
 }
+
+/** 底部的scrollView */
+-(void)setupContentScrollView{
+    //不要自动调整inset
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    UIScrollView *contentView = [[UIScrollView alloc] init];
+    contentView.frame = self.view.bounds;
+    
+    contentView.delegate = self;
+    contentView.pagingEnabled = YES;
+     [self.view insertSubview:contentView atIndex:0];
+    //设置scrollView的contentSize
+    contentView.contentSize = CGSizeMake(contentView.width * self.childViewControllers.count, 0);
+    self.contentView = contentView;
+    
+    //默认添加一个控制器View
+    [self scrollViewDidEndScrollingAnimation:contentView];
+}
+
 
 -(void)setupNavigation{
     //设置标题
@@ -152,4 +180,35 @@
     
 }
 
+
+#pragma mark --- <UIScrollViewDelegate>
+-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    
+    //拿出当前的索引
+    NSInteger index = scrollView.contentOffset.x / scrollView.width;
+    
+    //取出当前的控制器
+    UITableViewController *vc = self.childViewControllers[index];
+    vc.view.x = scrollView.contentOffset.x;
+    
+    vc.view.y = 0; // 设置控制器view的y值为0(默认是20)
+    vc.view.height = scrollView.height; // 设置控制器view的height值为整个屏幕的高度(默认是比屏幕高度少个20)
+    // 设置内边距
+    CGFloat bottom = self.tabBarController.tabBar.height;
+    CGFloat top = CGRectGetMaxY(self.categoryView.frame);
+    vc.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    // 设置滚动条的内边距
+    vc.tableView.scrollIndicatorInsets = vc.tableView.contentInset;
+    [scrollView addSubview:vc.view];
+
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self scrollViewDidEndScrollingAnimation:scrollView];
+    
+    // 点击按钮
+    NSInteger index = scrollView.contentOffset.x / scrollView.width;
+    [self categoryClick:self.categoryView.subviews[index]];
+}
 @end
