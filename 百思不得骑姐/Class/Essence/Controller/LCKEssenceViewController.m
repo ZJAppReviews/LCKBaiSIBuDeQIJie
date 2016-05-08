@@ -16,6 +16,9 @@
 /** 当前选择的按钮 */
 @property(nonatomic, weak) UIButton *selectedButton;
 
+/** 所有分类的标签 */
+@property(nonatomic, weak) UIView *categoryView;
+
 @end
 
 @implementation LCKEssenceViewController
@@ -28,10 +31,35 @@
     //设置顶部精华部分分类
     [self setupCategoryEssence];
     
+    //底部的scrollView
+    [self setupContentScrollView];
+
 }
-/**
- *  设置顶部精华部分分类
- */
+
+/** 底部的scrollView */
+-(void)setupContentScrollView{
+    //不要自动调整inset
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    UIScrollView *contentView = [[UIScrollView alloc] init];
+    contentView.frame = self.view.bounds;
+//    contentView.backgroundColor = [UIColor redColor];
+    
+//    //这样做会缺失穿透的效果
+//    contentView.width = self.view.width;
+//    contentView.y = 64 + 35;
+//    contentView.height = self.view.height - self.tabBarController.tabBar.height - contentView.y;
+    
+    //设置内边距
+    CGFloat bottom = self.tabBarController.tabBar.height;
+    CGFloat top = CGRectGetMaxY(self.categoryView.frame);
+
+    contentView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+
+    [self.view insertSubview:contentView atIndex:0];
+}
+
+/** 设置顶部精华部分分类 */
 -(void)setupCategoryEssence{
 
     //标签栏分类的整体
