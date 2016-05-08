@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8314E3461CDF7E1700706C8F /* LCKConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314E3451CDF7E1700706C8F /* LCKConst.m */; };
+		8314E34A1CDF88DF00706C8F /* LCKTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314E3481CDF88DF00706C8F /* LCKTopicCell.m */; };
+		8314E34B1CDF88DF00706C8F /* LCKTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8314E3491CDF88DF00706C8F /* LCKTopicCell.xib */; };
 		8323935F1CD979F800F5A511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8323935E1CD979F800F5A511 /* Assets.xcassets */; };
 		8323936D1CD979F800F5A511 /* ______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8323936C1CD979F800F5A511 /* ______Tests.m */; };
 		832393781CD979F800F5A511 /* ______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393771CD979F800F5A511 /* ______UITests.m */; };
@@ -124,6 +126,9 @@
 /* Begin PBXFileReference section */
 		8314E3441CDF7E1700706C8F /* LCKConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKConst.h; sourceTree = "<group>"; };
 		8314E3451CDF7E1700706C8F /* LCKConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKConst.m; sourceTree = "<group>"; };
+		8314E3471CDF88DF00706C8F /* LCKTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTopicCell.h; sourceTree = "<group>"; };
+		8314E3481CDF88DF00706C8F /* LCKTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTopicCell.m; sourceTree = "<group>"; };
+		8314E3491CDF88DF00706C8F /* LCKTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKTopicCell.xib; sourceTree = "<group>"; };
 		8323934F1CD979F700F5A511 /* 百思不得骑姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得骑姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8323935E1CD979F800F5A511 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		832393631CD979F800F5A511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -456,6 +461,9 @@
 				83DB8F811CDB8CDC00A22D75 /* LCKRecommendTagViewCell.h */,
 				83DB8F821CDB8CDC00A22D75 /* LCKRecommendTagViewCell.m */,
 				83DB8F831CDB8CDC00A22D75 /* LCKRecommendTagViewCell.xib */,
+				8314E3471CDF88DF00706C8F /* LCKTopicCell.h */,
+				8314E3481CDF88DF00706C8F /* LCKTopicCell.m */,
+				8314E3491CDF88DF00706C8F /* LCKTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -994,6 +1002,7 @@
 				83B3A12D1CDEC7DA00773786 /* LCKPushGuideView.xib in Resources */,
 				838FB4CE1CDA3BCF00917F90 /* MJRefresh.bundle in Resources */,
 				832394221CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib in Resources */,
+				8314E34B1CDF88DF00706C8F /* LCKTopicCell.xib in Resources */,
 				83DB8F851CDB8CDC00A22D75 /* LCKRecommendTagViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1033,6 +1042,7 @@
 				838FB4C61CDA3BCF00917F90 /* MJRefreshAutoNormalFooter.m in Sources */,
 				83C99A6E1CDE13DB00FC5638 /* LCKLoginRegisterViewController.m in Sources */,
 				838FB4EE1CDA472700917F90 /* LCKRecommendCategoryCell.m in Sources */,
+				8314E34A1CDF88DF00706C8F /* LCKTopicCell.m in Sources */,
 				838FB4EA1CDA43C000917F90 /* LCKRecommendCategory.m in Sources */,
 				838FB4B01CDA3BCF00917F90 /* AFHTTPSessionManager.m in Sources */,
 				83B3A1301CDF1BE600773786 /* LCKAllViewController.m in Sources */,

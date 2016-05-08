@@ -13,6 +13,7 @@
 #import "LCKTopic.h"
 #import "MJExtension.h"
 #import "MJRefresh.h"
+#import "LCKTopicCell.h"
 
 @interface LCKWordViewController ()
 /** 帖子到数目 */
@@ -56,6 +57,13 @@
     self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
     // 设置滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = [UIColor clearColor];
+    
+    //注册nib
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LCKTopicCell class]) bundle:nil] forCellReuseIdentifier:@"Topic"];
+    
 }
 
 /**
@@ -197,19 +205,26 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString * const CellID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
+    static NSString * const CellID = @"Topic";
+    LCKTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellID];
+        cell = [[LCKTopicCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellID];
     }
     
-    LCKTopic *topic = self.topics[indexPath.row];
-    cell.textLabel.text = topic.name;
-    cell.detailTextLabel.text = topic.text;
-    NSString *url = topic.profile_image;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+//    LCKTopic *topic = self.topics[indexPath.row];
+//    cell.textLabel.text = topic.name;
+//    cell.detailTextLabel.text = topic.text;
+//    NSString *url = topic.profile_image;
+//    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+//    cell.topic = self.topics[indexPath.row];
     return cell;
+}
+
+#pragma mark ---代理方法
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 200;
 }
 
 @end
