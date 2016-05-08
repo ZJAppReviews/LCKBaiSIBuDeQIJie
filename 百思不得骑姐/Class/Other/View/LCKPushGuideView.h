@@ -11,4 +11,6 @@
 @interface LCKPushGuideView : UIView
 //为了屏蔽xib的创建过程，需要在这里写一个类方法
 +(instancetype)guideView;
+
++(void)showGuideView;
 @end

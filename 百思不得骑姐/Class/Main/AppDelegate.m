@@ -25,27 +25,9 @@
     //显示窗口
     [self.window makeKeyAndVisible];
     
-    //版本号(或者是软件新特性的都可以在这里设置)
+    //显示推送引导(在相关类中封装起来)
+    [LCKPushGuideView showGuideView];
     
-    NSString *keyVersion = @"CFBundleVersion";
-    
-    NSDictionary *dict = [NSBundle mainBundle].infoDictionary;//plist中的
-
-    NSString *currentVersion = dict[keyVersion];
-    
-    //沙盒中保存的版本号
-    NSString *sandboxVersion = [[NSUserDefaults standardUserDefaults] stringForKey:keyVersion];
-    if (![currentVersion isEqualToString:sandboxVersion]) {
-        
-        LCKPushGuideView *guideView = [LCKPushGuideView guideView];//通过在类中定义一个类方法，屏蔽xib的创建过程
-        guideView.frame = self.window.bounds;
-        
-        [self.window addSubview:guideView];
-        
-        //存储最新的版本号
-        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:keyVersion];
-        [[NSUserDefaults standardUserDefaults] synchronize];//马上同步存储版本号
-    }
     return YES;
 }
 

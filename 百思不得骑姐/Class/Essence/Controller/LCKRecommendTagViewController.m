@@ -30,7 +30,7 @@ static NSString * const LCKTagsId = @"tagCell";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LCKRecommendTagViewCell class]) bundle:nil] forCellReuseIdentifier:LCKTagsId];
     
     self.title = @"推荐订阅";
-    self.tableView.height = 70 ;
+//    self.tableView.height = 100 ;
     //去掉分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = LCKGlobalBackground;
@@ -74,6 +74,12 @@ static NSString * const LCKTagsId = @"tagCell";
     cell.recommendTag = self.tags[indexPath.row];
     return cell;
 
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 100;
+    
 }
 
 @end
