@@ -92,6 +92,7 @@
 		83B3A1361CDF1C2200773786 /* LCKSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B3A1351CDF1C2200773786 /* LCKSoundViewController.m */; };
 		83B3A1391CDF1C3400773786 /* LCKPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B3A1381CDF1C3400773786 /* LCKPictureViewController.m */; };
 		83B3A13C1CDF1C5900773786 /* LCKWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B3A13B1CDF1C5900773786 /* LCKWordViewController.m */; };
+		83B3A13F1CDF4BFD00773786 /* LCKTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B3A13E1CDF4BFD00773786 /* LCKTopic.m */; };
 		83C99A6E1CDE13DB00FC5638 /* LCKLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C99A6C1CDE13DB00FC5638 /* LCKLoginRegisterViewController.m */; };
 		83C99A6F1CDE13DB00FC5638 /* LCKLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C99A6D1CDE13DB00FC5638 /* LCKLoginRegisterViewController.xib */; };
 		83C99A721CDE2C5400FC5638 /* LCKVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C99A711CDE2C5400FC5638 /* LCKVerticalButton.m */; };
@@ -289,6 +290,8 @@
 		83B3A1381CDF1C3400773786 /* LCKPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKPictureViewController.m; sourceTree = "<group>"; };
 		83B3A13A1CDF1C5900773786 /* LCKWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKWordViewController.h; sourceTree = "<group>"; };
 		83B3A13B1CDF1C5900773786 /* LCKWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKWordViewController.m; sourceTree = "<group>"; };
+		83B3A13D1CDF4BFD00773786 /* LCKTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTopic.h; sourceTree = "<group>"; };
+		83B3A13E1CDF4BFD00773786 /* LCKTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTopic.m; sourceTree = "<group>"; };
 		83C99A6B1CDE13DB00FC5638 /* LCKLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKLoginRegisterViewController.h; sourceTree = "<group>"; };
 		83C99A6C1CDE13DB00FC5638 /* LCKLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKLoginRegisterViewController.m; sourceTree = "<group>"; };
 		83C99A6D1CDE13DB00FC5638 /* LCKLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKLoginRegisterViewController.xib; sourceTree = "<group>"; };
@@ -438,6 +441,8 @@
 			children = (
 				83DB8F7E1CDB855700A22D75 /* LCKRecommendTags.h */,
 				83DB8F7F1CDB855700A22D75 /* LCKRecommendTags.m */,
+				83B3A13D1CDF4BFD00773786 /* LCKTopic.h */,
+				83B3A13E1CDF4BFD00773786 /* LCKTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1071,6 +1076,7 @@
 				83DB8F801CDB855700A22D75 /* LCKRecommendTags.m in Sources */,
 				838FB4DD1CDA3BCF00917F90 /* UIImage+GIF.m in Sources */,
 				838FB4B31CDA3BCF00917F90 /* AFURLRequestSerialization.m in Sources */,
+				83B3A13F1CDF4BFD00773786 /* LCKTopic.m in Sources */,
 				838FB4B71CDA3BCF00917F90 /* MJFoundation.m in Sources */,
 				838FB4C31CDA3BCF00917F90 /* MJRefreshFooter.m in Sources */,
 				838FB4D91CDA3BCF00917F90 /* SDWebImageDownloaderOperation.m in Sources */,
