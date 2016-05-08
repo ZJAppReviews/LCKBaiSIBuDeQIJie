@@ -101,7 +101,7 @@
                                 <constraint firstAttribute="height" constant="44" id="ISF-AQ-Yap"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
                     </subviews>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -152,7 +152,7 @@
                                 <constraint firstAttribute="height" constant="44" id="fS1-7C-bBQ"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
                     </subviews>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

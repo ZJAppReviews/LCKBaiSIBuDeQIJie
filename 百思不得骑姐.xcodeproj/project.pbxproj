@@ -85,6 +85,8 @@
 		83AEE06A1CDAE040002E9C63 /* LCKRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AEE0681CDAE040002E9C63 /* LCKRecommendUserCell.m */; };
 		83AEE06B1CDAE040002E9C63 /* LCKRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AEE0691CDAE040002E9C63 /* LCKRecommendUserCell.xib */; };
 		83AEE06E1CDAE81A002E9C63 /* LCKRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AEE06D1CDAE81A002E9C63 /* LCKRecommendUser.m */; };
+		83B3A12B1CDEC7C000773786 /* LCKPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B3A12A1CDEC7C000773786 /* LCKPushGuideView.m */; };
+		83B3A12D1CDEC7DA00773786 /* LCKPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83B3A12C1CDEC7DA00773786 /* LCKPushGuideView.xib */; };
 		83C99A6E1CDE13DB00FC5638 /* LCKLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C99A6C1CDE13DB00FC5638 /* LCKLoginRegisterViewController.m */; };
 		83C99A6F1CDE13DB00FC5638 /* LCKLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C99A6D1CDE13DB00FC5638 /* LCKLoginRegisterViewController.xib */; };
 		83C99A721CDE2C5400FC5638 /* LCKVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C99A711CDE2C5400FC5638 /* LCKVerticalButton.m */; };
@@ -269,6 +271,9 @@
 		83AEE0691CDAE040002E9C63 /* LCKRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKRecommendUserCell.xib; sourceTree = "<group>"; };
 		83AEE06C1CDAE81A002E9C63 /* LCKRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKRecommendUser.h; sourceTree = "<group>"; };
 		83AEE06D1CDAE81A002E9C63 /* LCKRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKRecommendUser.m; sourceTree = "<group>"; };
+		83B3A1291CDEC7C000773786 /* LCKPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKPushGuideView.h; sourceTree = "<group>"; };
+		83B3A12A1CDEC7C000773786 /* LCKPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKPushGuideView.m; sourceTree = "<group>"; };
+		83B3A12C1CDEC7DA00773786 /* LCKPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKPushGuideView.xib; sourceTree = "<group>"; };
 		83C99A6B1CDE13DB00FC5638 /* LCKLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKLoginRegisterViewController.h; sourceTree = "<group>"; };
 		83C99A6C1CDE13DB00FC5638 /* LCKLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKLoginRegisterViewController.m; sourceTree = "<group>"; };
 		83C99A6D1CDE13DB00FC5638 /* LCKLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKLoginRegisterViewController.xib; sourceTree = "<group>"; };
@@ -598,6 +603,9 @@
 			children = (
 				832394081CD9D8A100F5A511 /* LCKTabBar.h */,
 				832394091CD9D8A100F5A511 /* LCKTabBar.m */,
+				83B3A1291CDEC7C000773786 /* LCKPushGuideView.h */,
+				83B3A12A1CDEC7C000773786 /* LCKPushGuideView.m */,
+				83B3A12C1CDEC7DA00773786 /* LCKPushGuideView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -948,6 +956,7 @@
 				83AEE06B1CDAE040002E9C63 /* LCKRecommendUserCell.xib in Resources */,
 				8323935F1CD979F800F5A511 /* Assets.xcassets in Resources */,
 				83C99A6F1CDE13DB00FC5638 /* LCKLoginRegisterViewController.xib in Resources */,
+				83B3A12D1CDEC7DA00773786 /* LCKPushGuideView.xib in Resources */,
 				838FB4CE1CDA3BCF00917F90 /* MJRefresh.bundle in Resources */,
 				832394221CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib in Resources */,
 				83DB8F851CDB8CDC00A22D75 /* LCKRecommendTagViewCell.xib in Resources */,
@@ -1023,6 +1032,7 @@
 				838FB4BF1CDA3BCF00917F90 /* NSString+MJExtension.m in Sources */,
 				838FB4CC1CDA3BCF00917F90 /* MJRefreshNormalHeader.m in Sources */,
 				838FB4CD1CDA3BCF00917F90 /* MJRefreshStateHeader.m in Sources */,
+				83B3A12B1CDEC7C000773786 /* LCKPushGuideView.m in Sources */,
 				838FB4CB1CDA3BCF00917F90 /* MJRefreshGifHeader.m in Sources */,
 				838FB4C91CDA3BCF00917F90 /* MJRefreshBackNormalFooter.m in Sources */,
 				838FB4D81CDA3BCF00917F90 /* SDWebImageDownloader.m in Sources */,
