@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8314E3461CDF7E1700706C8F /* LCKConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314E3451CDF7E1700706C8F /* LCKConst.m */; };
 		8323935F1CD979F800F5A511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8323935E1CD979F800F5A511 /* Assets.xcassets */; };
 		8323936D1CD979F800F5A511 /* ______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8323936C1CD979F800F5A511 /* ______Tests.m */; };
 		832393781CD979F800F5A511 /* ______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 832393771CD979F800F5A511 /* ______UITests.m */; };
@@ -121,6 +122,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8314E3441CDF7E1700706C8F /* LCKConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKConst.h; sourceTree = "<group>"; };
+		8314E3451CDF7E1700706C8F /* LCKConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKConst.m; sourceTree = "<group>"; };
 		8323934F1CD979F700F5A511 /* 百思不得骑姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得骑姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8323935E1CD979F800F5A511 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		832393631CD979F800F5A511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -594,6 +597,8 @@
 				832394041CD9D8A100F5A511 /* main.m */,
 				832394051CD9D8A100F5A511 /* Model */,
 				832394071CD9D8A100F5A511 /* View */,
+				8314E3441CDF7E1700706C8F /* LCKConst.h */,
+				8314E3451CDF7E1700706C8F /* LCKConst.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -1090,6 +1095,7 @@
 				838FB4BE1CDA3BCF00917F90 /* NSObject+MJProperty.m in Sources */,
 				832394161CD9D8A100F5A511 /* main.m in Sources */,
 				838FB4CA1CDA3BCF00917F90 /* MJRefreshBackStateFooter.m in Sources */,
+				8314E3461CDF7E1700706C8F /* LCKConst.m in Sources */,
 				832394111CD9D8A100F5A511 /* LCKMeViewController.m in Sources */,
 				838FB4BB1CDA3BCF00917F90 /* NSObject+MJClass.m in Sources */,
 				838FB4B81CDA3BCF00917F90 /* MJProperty.m in Sources */,

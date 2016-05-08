@@ -39,6 +39,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //初始化表格
+    [self setupTableView];
+    
     //请求加载数据
     [self loadDatas];
     
@@ -46,6 +49,15 @@
     [self setupRefresh];
 
 }
+-(void)setupTableView{
+    // 设置内边距
+    CGFloat bottom = self.tabBarController.tabBar.height;
+    CGFloat top = LCKTitleViewH + LCKTitleViewY;
+    self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    // 设置滚动条的内边距
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+}
+
 /**
  *  请求加载数据
  */
@@ -89,6 +101,7 @@
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopics)];
     
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
+    self.tableView.mj_footer.hidden = YES;
     //一进入就开始刷新
     [self.tableView.mj_header setAutomaticallyChangeAlpha:YES];//自动改变透明度
     [self.tableView.mj_header beginRefreshing];
@@ -163,7 +176,7 @@
         //刷新表格
         [self.tableView reloadData];
         //结束刷新
-        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
          if (self.params != params) return;
@@ -175,14 +188,10 @@
 }
 
 
-
-
-
-
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
+    self.tableView.mj_footer.hidden = self.topics.count == 0;
     return self.topics.count;
 }
 

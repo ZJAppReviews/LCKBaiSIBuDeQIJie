@@ -65,9 +65,9 @@
     //标签栏分类的整体
     UIView *categoryView = [[UIView alloc] init];
     categoryView.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.5];
-    categoryView.y = 64;
+    categoryView.y = LCKTitleViewY;
     categoryView.width = self.view.width;
-    categoryView.height = 35;
+    categoryView.height = LCKTitleViewH;
     [self.view addSubview:categoryView];
     self.categoryView = categoryView;
     
@@ -193,12 +193,7 @@
     
     vc.view.y = 0; // 设置控制器view的y值为0(默认是20)
     vc.view.height = scrollView.height; // 设置控制器view的height值为整个屏幕的高度(默认是比屏幕高度少个20)
-    // 设置内边距
-    CGFloat bottom = self.tabBarController.tabBar.height;
-    CGFloat top = CGRectGetMaxY(self.categoryView.frame);
-    vc.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
-    // 设置滚动条的内边距
-    vc.tableView.scrollIndicatorInsets = vc.tableView.contentInset;
+
     [scrollView addSubview:vc.view];
 
 }
