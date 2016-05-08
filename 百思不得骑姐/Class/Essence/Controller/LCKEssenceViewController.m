@@ -47,16 +47,28 @@
 }
 
 -(void)setupChildViewController{
-    LCKAllViewController *allVC = [[LCKAllViewController alloc] init];
-    [self addChildViewController:allVC];
-    LCKVideoViewController *videoVC = [[LCKVideoViewController alloc] init];
-    [self addChildViewController:videoVC];
-    LCKSoundViewController *soundVC = [[LCKSoundViewController alloc] init];
-    [self addChildViewController:soundVC];
-    LCKPictureViewController *pictureVC = [[LCKPictureViewController alloc] init];
-    [self addChildViewController:pictureVC];
+    
     LCKWordViewController *wordVC = [[LCKWordViewController alloc] init];
     [self addChildViewController:wordVC];
+    wordVC.title = @"段子";
+    
+    LCKAllViewController *allVC = [[LCKAllViewController alloc] init];
+    allVC.title = @"全部";
+    [self addChildViewController:allVC];
+    
+    LCKVideoViewController *videoVC = [[LCKVideoViewController alloc] init];
+    [self addChildViewController:videoVC];
+    videoVC.title = @"视频";
+    
+    LCKSoundViewController *soundVC = [[LCKSoundViewController alloc] init];
+    [self addChildViewController:soundVC];
+    soundVC.title = @"声音";
+    
+    LCKPictureViewController *pictureVC = [[LCKPictureViewController alloc] init];
+    [self addChildViewController:pictureVC];
+    pictureVC.title = @"图片";
+    
+
 }
 
 /** 设置顶部精华部分分类 */
@@ -83,18 +95,19 @@
     
     
     //在分类中添加按钮
-    NSArray *titles = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
-    CGFloat width = categoryView.width / titles.count;
+//    NSArray *titles = @[@"全部",@"视频",@"声音",@"图片",@"段子"];//去除这段的目的时为了不让控制器和控制器的名字之间断离
+    CGFloat width = categoryView.width / self.childViewControllers.count;
     CGFloat height = categoryView.height;
     
-    for (NSInteger i = 0; i < titles.count; i++) {
+    for (NSInteger i = 0; i < self.childViewControllers.count; i++) {
         UIButton *btn = [[UIButton alloc] init];
         btn.tag = i;
         btn.height = height;
         btn.width = width;
         btn.x = i * width;
         
-        [btn setTitle:titles[i] forState:UIControlStateNormal];
+        UIViewController *vc = self.childViewControllers[i];
+        [btn setTitle:vc.title forState:UIControlStateNormal];
         btn.titleLabel.font = [UIFont systemFontOfSize:14];
         
         //        //强制设置大小（因为在这里还没创建按钮的位置）,也叫强制布局

@@ -218,7 +218,7 @@
 //    NSString *url = topic.profile_image;
 //    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     
-//    cell.topic = self.topics[indexPath.row];
+    cell.topic = self.topics[indexPath.row];
     return cell;
 }
 

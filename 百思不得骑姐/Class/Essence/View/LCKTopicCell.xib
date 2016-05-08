@@ -171,6 +171,15 @@
                     <constraint firstAttribute="trailing" secondItem="Xi7-cX-Wzf" secondAttribute="trailing" id="whC-5H-aT6"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="caiButton" destination="gbg-BW-h6Y" id="8WK-Pz-LwF"/>
+                <outlet property="cellImageView" destination="RFc-Gp-Bzv" id="Wf1-Ra-fWi"/>
+                <outlet property="commentButton" destination="huM-qU-Ebd" id="Abm-wi-ZWv"/>
+                <outlet property="creatTimeLabel" destination="o0j-h9-ERb" id="VBw-N9-6bk"/>
+                <outlet property="dingButton" destination="qdk-O6-qvf" id="JJd-li-CN0"/>
+                <outlet property="nameLabel" destination="Joa-aU-77N" id="daR-iL-eJg"/>
+                <outlet property="shareButton" destination="vNY-Qb-z2Z" id="zcf-9W-2Qw"/>
+            </connections>
             <point key="canvasLocation" x="141.5" y="307"/>
         </tableViewCell>
     </objects>

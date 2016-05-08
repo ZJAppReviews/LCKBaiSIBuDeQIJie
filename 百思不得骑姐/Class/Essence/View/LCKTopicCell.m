@@ -7,7 +7,20 @@
 //
 
 #import "LCKTopicCell.h"
+#import "LCKTopic.h"
+#import "UIImageView+WebCache.h"
 
+@interface LCKTopicCell()
+@property (weak, nonatomic) IBOutlet UIImageView *cellImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *creatTimeLabel;
+@property (weak, nonatomic) IBOutlet UIButton *dingButton;
+@property (weak, nonatomic) IBOutlet UIButton *caiButton;
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
+@property (weak, nonatomic) IBOutlet UIButton *commentButton;
+
+
+@end
 @implementation LCKTopicCell
 
 -(void)awakeFromNib{
@@ -18,6 +31,18 @@
 
 -(void)setTopic:(LCKTopic *)topic{
     _topic = topic;
+    
+    //设置Cell中的数据
+    self.nameLabel.text = topic.name;
+    self.creatTimeLabel.text = topic.create_time;
+    NSString *url = topic.profile_image;
+    [self.cellImageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    [self.dingButton setTitle:[NSString stringWithFormat:@"%zd",topic.ding] forState:UIControlStateNormal];
+    [self.caiButton setTitle:[NSString stringWithFormat:@"%zd",topic.cai] forState:UIControlStateNormal];
+    [self.shareButton setTitle:[NSString stringWithFormat:@"%zd",topic.repost] forState:UIControlStateNormal];
+    [self.commentButton setTitle:[NSString stringWithFormat:@"%zd",topic.comment] forState:UIControlStateNormal];
+    
 }
 
 -(void)setFrame:(CGRect)frame{
