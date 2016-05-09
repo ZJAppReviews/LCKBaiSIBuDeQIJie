@@ -10,15 +10,6 @@
 
 #import <UIKit/UIKit.h>
 
-//为了防止数据的外露，定义一个枚举
-typedef enum {
-    LCKTopicTypeAll = 1,
-    LCKTopicTypePicture = 10,
-    LCKTopicTypeWord = 29,
-    LCKTopicTypeVoice = 31,
-    LCKTopicTypeVideo = 41
-} LCKTopicType;
-
 @interface LCKTopicViewController : UITableViewController
 /**
  *  帖子类型

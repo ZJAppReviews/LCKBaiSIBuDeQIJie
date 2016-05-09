@@ -15,6 +15,7 @@
 //当属性声明为readonly这只会生成get方法，但如果自己实现了get方法那么就不会生成带下划线的成员变量
 {
     CGFloat _cellHeight;
+    CGRect _pictureF;
 }
 
 //重写:自定义时间
@@ -54,17 +55,38 @@
     if (!_cellHeight) {
         // 文字的最大尺寸
         CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * LCKTopicCellMargin, MAXFLOAT);
-        //    CGFloat textH = [topic.text sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:maxSize].height;
+        //计算文字的高度
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
         
         // cell的高度
-        _cellHeight = LCKTopicCellTextY + textH + LCKTopicCellBottomBarH + 2 * LCKTopicCellMargin + self.height + 40;//40是为了避开文章中的特殊符号，而导致cell出现异样
+        //文字部分的高度
+        _cellHeight = LCKTopicCellTextY + textH + LCKTopicCellMargin ;
+        
+        // 根据段子的类型来计算cell的高度
+        if (self.type == LCKTopicTypePicture) { // 图片帖子
+            // 图片显示出来的宽度
+            CGFloat pictureW = maxSize.width;
+            // 显示显示出来的高度
+            CGFloat pictureH = pictureW * self.height / self.width;
+            if (pictureH >= LCKTopicCellPictureMaxH) { // 图片高度过长
+                pictureH = LCKTopicCellPictureBreakH;
+                self.bigPicture = YES; // 大图
+            }
+            
+            // 计算图片控件的frame
+            CGFloat pictureX = LCKTopicCellMargin;
+            CGFloat pictureY = LCKTopicCellTextY + textH + LCKTopicCellMargin;
+            _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            _cellHeight += pictureH + LCKTopicCellMargin;
+            
+        }
+        
+        _cellHeight += LCKTopicCellMargin+ LCKTopicCellMargin + 50;
     }
+
     
     return _cellHeight;
 }
-
-
 //字典中和服务器不同的字典进行替换
 +(NSDictionary *)mj_replacedKeyFromPropertyName{
     return @{

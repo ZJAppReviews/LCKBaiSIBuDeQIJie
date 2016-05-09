@@ -39,11 +39,33 @@
 @property (nonatomic , copy) NSString *middle_image;
 /** 大图像 */
 @property (nonatomic , copy) NSString *large_image;
+/** 帖子类型 */
+@property (nonatomic , assign) LCKTopicType type;
+
+/** 最热评论 */
+//@property (nonatomic, strong) LCKComment *top_cmt;
+/** 音频时长 */
+@property (nonatomic, assign) NSInteger voicetime;
+/** 视频时长 */
+@property (nonatomic, assign) NSInteger videotime;
+/** 播放次数 */
+@property (nonatomic, assign) NSInteger playcount;
 
 /**
  *  额外的辅助属性
  */
 /** Cell的高度 */
 @property (nonatomic , assign,readonly) CGFloat cellHeight;
+/** 图片控件的frame */
+@property (nonatomic, assign, readonly) CGRect pictureF;
+/** 图片是否太大 */
+@property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
+/** 图片的下载进度 */
+@property (nonatomic, assign) CGFloat pictureProgress;
 
+/** 声音控件的frame */
+@property (nonatomic, assign, readonly) CGRect voiceF;
+
+/** 视频控件的frame */
+@property (nonatomic, assign, readonly) CGRect videoF;
 @end

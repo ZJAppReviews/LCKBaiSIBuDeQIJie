@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		83022CA81CE0312600BCC710 /* NSDate+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 83022CA71CE0312600BCC710 /* NSDate+XMGExtension.m */; };
 		83022CAB1CE03F1000BCC710 /* LCKTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83022CAA1CE03F1000BCC710 /* LCKTopicViewController.m */; };
+		83022CAE1CE096D200BCC710 /* LCKTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83022CAD1CE096D200BCC710 /* LCKTopicPictureView.m */; };
+		83022CB01CE096F900BCC710 /* LCKTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83022CAF1CE096F900BCC710 /* LCKTopicPictureView.xib */; };
 		8314E3461CDF7E1700706C8F /* LCKConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314E3451CDF7E1700706C8F /* LCKConst.m */; };
 		8314E34A1CDF88DF00706C8F /* LCKTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314E3481CDF88DF00706C8F /* LCKTopicCell.m */; };
 		8314E34B1CDF88DF00706C8F /* LCKTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8314E3491CDF88DF00706C8F /* LCKTopicCell.xib */; };
@@ -125,6 +127,9 @@
 		83022CA71CE0312600BCC710 /* NSDate+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+XMGExtension.m"; sourceTree = "<group>"; };
 		83022CA91CE03F1000BCC710 /* LCKTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTopicViewController.h; sourceTree = "<group>"; };
 		83022CAA1CE03F1000BCC710 /* LCKTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTopicViewController.m; sourceTree = "<group>"; };
+		83022CAC1CE096D200BCC710 /* LCKTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTopicPictureView.h; sourceTree = "<group>"; };
+		83022CAD1CE096D200BCC710 /* LCKTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTopicPictureView.m; sourceTree = "<group>"; };
+		83022CAF1CE096F900BCC710 /* LCKTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKTopicPictureView.xib; sourceTree = "<group>"; };
 		8314E3441CDF7E1700706C8F /* LCKConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKConst.h; sourceTree = "<group>"; };
 		8314E3451CDF7E1700706C8F /* LCKConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKConst.m; sourceTree = "<group>"; };
 		8314E3471CDF88DF00706C8F /* LCKTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTopicCell.h; sourceTree = "<group>"; };
@@ -447,6 +452,9 @@
 				8314E3471CDF88DF00706C8F /* LCKTopicCell.h */,
 				8314E3481CDF88DF00706C8F /* LCKTopicCell.m */,
 				8314E3491CDF88DF00706C8F /* LCKTopicCell.xib */,
+				83022CAC1CE096D200BCC710 /* LCKTopicPictureView.h */,
+				83022CAD1CE096D200BCC710 /* LCKTopicPictureView.m */,
+				83022CAF1CE096F900BCC710 /* LCKTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -978,6 +986,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83022CB01CE096F900BCC710 /* LCKTopicPictureView.xib in Resources */,
 				838FB4E41CDA3BCF00917F90 /* SVProgressHUD.bundle in Resources */,
 				838FB4EF1CDA472700917F90 /* LCKRecommendCategoryCell.xib in Resources */,
 				83AD49E31CDA312500B1A884 /* LCKRecommendViewController.xib in Resources */,
@@ -1055,6 +1064,7 @@
 				838FB4C01CDA3BCF00917F90 /* MJRefreshAutoFooter.m in Sources */,
 				8323940F1CD9D8A100F5A511 /* LCKFriendTrendsViewController.m in Sources */,
 				832394171CD9D8A100F5A511 /* LCKTabBar.m in Sources */,
+				83022CAE1CE096D200BCC710 /* LCKTopicPictureView.m in Sources */,
 				838FB4B51CDA3BCF00917F90 /* AFURLSessionManager.m in Sources */,
 				838FB4BD1CDA3BCF00917F90 /* NSObject+MJKeyValue.m in Sources */,
 				838FB4B41CDA3BCF00917F90 /* AFURLResponseSerialization.m in Sources */,

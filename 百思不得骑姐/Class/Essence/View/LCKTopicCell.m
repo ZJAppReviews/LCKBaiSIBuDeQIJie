@@ -9,6 +9,7 @@
 #import "LCKTopicCell.h"
 #import "LCKTopic.h"
 #import "UIImageView+WebCache.h"
+#import "LCKTopicPictureView.h"
 
 @interface LCKTopicCell()
 @property (weak, nonatomic) IBOutlet UIImageView *cellImageView;
@@ -21,9 +22,13 @@
 @property (weak, nonatomic) IBOutlet UIImageView *xinaVVIew;
 @property (weak, nonatomic) IBOutlet UILabel *topicTextLabel;
 
+/** 图片帖子中间的内容 */
+@property (nonatomic, weak) LCKTopicPictureView *pictureView;
 
 
 @end
+
+
 @implementation LCKTopicCell
 
 -(void)awakeFromNib{
@@ -32,12 +37,24 @@
     self.backgroundView = bgView;
 }
 
+//懒加载
+-(LCKTopicPictureView *)pictureView{
+    if (!_pictureView) {
+        LCKTopicPictureView *pictureView = [LCKTopicPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
+
 -(void)setTopic:(LCKTopic *)topic{
     
 //    //测试新浪V
 //    topic.sina_v = (int)(arc4random_uniform(10) / 2);
-//    
+//
+    
     _topic = topic;
+    
     //是否为新浪会员
     self.xinaVVIew.hidden = !topic.sina_v;
     //设置Cell中的数据
@@ -58,6 +75,13 @@
     [self setupButtonTitle:self.caiButton count:topic.cai placeholder:@"踩"];
     [self setupButtonTitle:self.shareButton count:topic.repost placeholder:@"分享"];
     [self setupButtonTitle:self.commentButton count:topic.comment placeholder:@"评论"];
+    
+    // 根据模型类型(帖子类型)添加对应的内容到cell的中间
+    if (topic.type == LCKTopicTypePicture){
+        self.pictureView.hidden = NO;
+        self.pictureView.topic = topic;//这里没有位置，需要设置
+        self.pictureView.frame = topic.pictureF;
+    }
 
 }
 

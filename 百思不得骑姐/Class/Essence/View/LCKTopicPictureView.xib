@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LCKTopicPictureView">
+            <rect key="frame" x="0.0" y="0.0" width="285" height="259"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J1L-tx-3dz">
+                    <rect key="frame" x="0.0" y="0.0" width="285" height="259"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="1Rv-V6-jLa">
+                    <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="31" id="QH9-5c-Fyw"/>
+                        <constraint firstAttribute="height" constant="31" id="j2a-aC-aZr"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ho9-NV-OCO">
+                    <rect key="frame" x="0.0" y="216" width="285" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="K54-3h-gCN"/>
+                    </constraints>
+                    <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="点击查看全图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="1Rv-V6-jLa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9HZ-Yq-9ct"/>
+                <constraint firstItem="J1L-tx-3dz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YeS-j5-P7h"/>
+                <constraint firstItem="J1L-tx-3dz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="n9E-zW-CeY"/>
+                <constraint firstAttribute="bottom" secondItem="ho9-NV-OCO" secondAttribute="bottom" id="sNh-jZ-ZLL"/>
+                <constraint firstItem="ho9-NV-OCO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="snq-rA-Evg"/>
+                <constraint firstAttribute="bottom" secondItem="J1L-tx-3dz" secondAttribute="bottom" id="uDC-kF-LPz"/>
+                <constraint firstItem="1Rv-V6-jLa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vxl-aT-Pjb"/>
+                <constraint firstAttribute="trailing" secondItem="J1L-tx-3dz" secondAttribute="trailing" id="zbs-ax-Vcg"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="gifImageView" destination="1Rv-V6-jLa" id="AHr-pU-10j"/>
+                <outlet property="imageView" destination="J1L-tx-3dz" id="Pu3-MS-Lxv"/>
+                <outlet property="seeBigButton" destination="ho9-NV-OCO" id="AI8-hE-uyh"/>
+            </connections>
+            <point key="canvasLocation" x="485.5" y="421.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common-gif" width="31" height="31"/>
+        <image name="see-big-picture" width="19" height="19"/>
+        <image name="see-big-picture-background" width="285" height="43"/>
+    </resources>
+</document>

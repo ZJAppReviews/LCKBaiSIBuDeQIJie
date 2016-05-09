@@ -12,3 +12,38 @@ UIKIT_EXTERN CGFloat const LCKTopicCellMargin;
 UIKIT_EXTERN CGFloat const LCKTopicCellTextY;
 /** 精华-cell-底部工具条的高度 */
 UIKIT_EXTERN CGFloat const LCKTopicCellBottomBarH;
+
+
+//为了防止数据的外露，定义一个枚举
+typedef enum {
+    LCKTopicTypeAll = 1,
+    LCKTopicTypePicture = 10,
+    LCKTopicTypeWord = 29,
+    LCKTopicTypeVoice = 31,
+    LCKTopicTypeVideo = 41
+} LCKTopicType;
+
+
+/** 精华-cell-图片帖子的最大高度 */
+UIKIT_EXTERN CGFloat const LCKTopicCellPictureMaxH;
+/** 精华-cell-图片帖子一旦超过最大高度,就是用Break */
+UIKIT_EXTERN CGFloat const LCKTopicCellPictureBreakH;
+
+/** LCKUser模型-性别属性值 */
+UIKIT_EXTERN NSString * const LCKUserSexMale;
+UIKIT_EXTERN NSString * const LCKUserSexFemale;
+
+/** 精华-cell-最热评论标题的高度 */
+UIKIT_EXTERN CGFloat const LCKTopicCellTopCmtTitleH;
+
+/** tabBar被选中的通知名字 */
+UIKIT_EXTERN NSString * const LCKTabBarDidSelectNotification;
+/** tabBar被选中的通知 - 被选中的控制器的index key */
+UIKIT_EXTERN NSString * const LCKSelectedControllerIndexKey;
+/** tabBar被选中的通知 - 被选中的控制器 key */
+UIKIT_EXTERN NSString * const LCKSelectedControllerKey;
+
+/** 标签-间距 */
+UIKIT_EXTERN CGFloat const LCKTagMargin;
+/** 标签-高度 */
+UIKIT_EXTERN CGFloat const LCKTagH;
