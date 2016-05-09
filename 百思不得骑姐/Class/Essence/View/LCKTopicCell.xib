@@ -52,7 +52,7 @@
                                 <state key="normal" title="52" image="mainCellDing">
                                     <color key="titleColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <state key="highlighted" title="52" image="mainCellDingClick">
+                                <state key="highlighted" image="mainCellDingClick">
                                     <color key="titleColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -74,7 +74,7 @@
                                 <state key="normal" title="240" image="mainCellComment">
                                     <color key="titleColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <state key="highlighted" title="52" image="mainCellCommentClick">
+                                <state key="highlighted" image="mainCellCommentClick">
                                     <color key="titleColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -85,7 +85,7 @@
                                 <state key="normal" title="102" image="mainCellShare">
                                     <color key="titleColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <state key="highlighted" title="102" image="mainCellShareClick">
+                                <state key="highlighted" image="mainCellShareClick">
                                     <color key="titleColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -152,9 +152,17 @@
                             <constraint firstAttribute="height" constant="1" id="OyD-DS-hRK"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_AddV_authen" translatesAutoresizingMaskIntoConstraints="NO" id="Y1S-oN-VIw" userLabel="新浪会员">
+                        <rect key="frame" x="36" y="44" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="14" id="JIF-gz-fyM"/>
+                            <constraint firstAttribute="height" constant="14" id="yPy-gP-T2y"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="RFc-Gp-Bzv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="2XN-wu-Bj9"/>
+                    <constraint firstItem="Y1S-oN-VIw" firstAttribute="bottom" secondItem="RFc-Gp-Bzv" secondAttribute="bottom" constant="5" id="59O-ao-n7A"/>
                     <constraint firstItem="RFc-Gp-Bzv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="7qD-PC-If1"/>
                     <constraint firstAttribute="bottom" secondItem="NbG-LV-nDP" secondAttribute="bottom" id="8Su-mk-Vko"/>
                     <constraint firstAttribute="trailing" secondItem="NbG-LV-nDP" secondAttribute="trailing" id="Bxs-z2-EOZ"/>
@@ -164,6 +172,7 @@
                     <constraint firstItem="RFc-Gp-Bzv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Okc-yr-jWu"/>
                     <constraint firstItem="NbG-LV-nDP" firstAttribute="top" secondItem="Xi7-cX-Wzf" secondAttribute="bottom" id="hFS-52-bWE"/>
                     <constraint firstItem="NbG-LV-nDP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jPI-tc-gFr"/>
+                    <constraint firstItem="Y1S-oN-VIw" firstAttribute="trailing" secondItem="RFc-Gp-Bzv" secondAttribute="trailing" constant="5" id="lGo-o2-2Uc"/>
                     <constraint firstAttribute="trailingMargin" secondItem="vsz-2m-He5" secondAttribute="trailing" constant="13" id="pX4-aS-4m6"/>
                     <constraint firstItem="Joa-aU-77N" firstAttribute="leading" secondItem="RFc-Gp-Bzv" secondAttribute="trailing" constant="10" id="qmy-c8-eds"/>
                     <constraint firstItem="o0j-h9-ERb" firstAttribute="leading" secondItem="RFc-Gp-Bzv" secondAttribute="trailing" constant="10" id="va3-Mf-2Mg"/>
@@ -179,11 +188,13 @@
                 <outlet property="dingButton" destination="qdk-O6-qvf" id="JJd-li-CN0"/>
                 <outlet property="nameLabel" destination="Joa-aU-77N" id="daR-iL-eJg"/>
                 <outlet property="shareButton" destination="vNY-Qb-z2Z" id="zcf-9W-2Qw"/>
+                <outlet property="xinaVVIew" destination="Y1S-oN-VIw" id="r3z-q0-6vw"/>
             </connections>
             <point key="canvasLocation" x="141.5" y="307"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Profile_AddV_authen" width="14" height="14"/>
         <image name="cell-button-line" width="1" height="29"/>
         <image name="cellFollowClickIcon" width="19" height="20"/>
         <image name="cellFollowDisableIcon" width="19" height="20"/>

@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *caiButton;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
+@property (weak, nonatomic) IBOutlet UIImageView *xinaVVIew;
 
 
 @end
@@ -30,20 +31,24 @@
 }
 
 -(void)setTopic:(LCKTopic *)topic{
-    _topic = topic;
     
+//    //测试新浪V
+//    topic.sina_v = (int)(arc4random_uniform(10) / 2);
+//    
+    _topic = topic;
+    //是否为新浪会员
+    self.xinaVVIew.hidden = !topic.sina_v;
     //设置Cell中的数据
     self.nameLabel.text = topic.name;
+    
+    //日期格式化
     self.creatTimeLabel.text = topic.create_time;
+    
+    //头像
     NSString *url = topic.profile_image;
     [self.cellImageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
-
-//    [self.dingButton setTitle:[NSString stringWithFormat:@"%zd",topic.ding] forState:UIControlStateNormal];
-//    [self.caiButton setTitle:[NSString stringWithFormat:@"%zd",topic.cai] forState:UIControlStateNormal];
-//    [self.shareButton setTitle:[NSString stringWithFormat:@"%zd",topic.repost] forState:UIControlStateNormal];
-//    [self.commentButton setTitle:[NSString stringWithFormat:@"%zd",topic.comment] forState:UIControlStateNormal];
     
-    // 设置按钮文字
+    // 按钮数字格式化
     [self setupButtonTitle:self.dingButton count:topic.ding placeholder:@"顶"];
     [self setupButtonTitle:self.caiButton count:topic.cai placeholder:@"踩"];
     [self setupButtonTitle:self.shareButton count:topic.repost placeholder:@"分享"];
@@ -52,7 +57,7 @@
 }
 
 /**
- * 设置底部按钮文字
+ * 按钮数字格式化
  */
 - (void)setupButtonTitle:(UIButton *)button count:(NSInteger)count placeholder:(NSString *)placeholder
 {
