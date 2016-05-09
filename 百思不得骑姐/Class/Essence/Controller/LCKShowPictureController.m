@@ -16,7 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
-@property (weak, nonatomic) LCKProgressView *progressView;
+@property (weak, nonatomic) IBOutlet LCKProgressView *progressView;
 
 @property (weak, nonatomic) UIImageView *imageView;
 
@@ -44,16 +44,19 @@
         imageView.centerY = LCKScreenH * 0.5;
     }
     
-    // 马上显示当前图片的下载进度
+    // 马上显示当前图片的下载进度（模型更新的最新图片下载的值）
     [self.progressView setProgress:self.topic.pictureProgress animated:YES];
 //    
 //    // 下载图片
 //    [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image]];
     
-    // 下载图片
+    // 下载图片（与之前未下载完就点入的下载图片是同一个下载，不会重复下载）
     [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        
         [self.progressView setProgress:1.0 * receivedSize / expectedSize animated:NO];
+        
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        
         self.progressView.hidden = YES;
     }];
 }

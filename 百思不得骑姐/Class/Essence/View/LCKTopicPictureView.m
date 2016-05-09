@@ -40,7 +40,7 @@
     // 设置图片
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         self.progressView.hidden = NO;
-        // 计算进度值
+        // 计算进度值（保存图片的下载进度）
         topic.pictureProgress = 1.0 * receivedSize / expectedSize;
         // 显示进度值
         [self.progressView setProgress:topic.pictureProgress animated:NO];
