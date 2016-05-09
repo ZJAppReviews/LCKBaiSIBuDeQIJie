@@ -82,7 +82,7 @@
 - (void)showPicture
 {
     LCKShowPictureController *showPicture = [[LCKShowPictureController alloc] init];
-//    showPicture.topic = self.topic;
+    showPicture.topic = self.topic;
     
     //UIView（也就是self）不是控制器是没有present方法的，因此使用下面的方法来推出控制器View
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:showPicture animated:YES completion:nil];

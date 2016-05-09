@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@class XMGTopic;
+@class LCKTopic;
 
 @interface LCKShowPictureController : UIViewController
 /** 帖子 */
-@property (nonatomic, strong) XMGTopic *topic;
+@property (nonatomic, strong) LCKTopic *topic;
 @end

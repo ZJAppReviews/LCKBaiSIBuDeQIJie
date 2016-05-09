@@ -31,4 +31,8 @@
 #define LCKGlobalBackground LCKRGBColor(223, 223, 223)
 
 #define LCKSelectedCategory self.categories[self.categoryTableView.indexPathForSelectedRow.row]
+
+#define LCKScreenW [UIScreen mainScreen].bounds.size.width
+#define LCKScreenH [UIScreen mainScreen].bounds.size.height
+
 #endif /* PrefixHeader_pch */
