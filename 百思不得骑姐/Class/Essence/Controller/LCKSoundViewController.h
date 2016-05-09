@@ -6,8 +6,8 @@
 //  Copyright © 2016年 黄海良. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "LCKTopicViewController.h"
 
-@interface LCKSoundViewController : UITableViewController
+@interface LCKSoundViewController : LCKTopicViewController
 
 @end

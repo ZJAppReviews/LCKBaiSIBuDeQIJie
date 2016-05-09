@@ -6,8 +6,8 @@
 //  Copyright © 2016年 黄海良. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "LCKTopicViewController.h"
 
-@interface LCKAllViewController : UITableViewController
+@interface LCKAllViewController : LCKTopicViewController
 
 @end

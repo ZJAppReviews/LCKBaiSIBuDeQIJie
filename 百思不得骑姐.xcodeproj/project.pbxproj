@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		83022CA81CE0312600BCC710 /* NSDate+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 83022CA71CE0312600BCC710 /* NSDate+XMGExtension.m */; };
+		83022CAB1CE03F1000BCC710 /* LCKTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83022CAA1CE03F1000BCC710 /* LCKTopicViewController.m */; };
 		8314E3461CDF7E1700706C8F /* LCKConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314E3451CDF7E1700706C8F /* LCKConst.m */; };
 		8314E34A1CDF88DF00706C8F /* LCKTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314E3481CDF88DF00706C8F /* LCKTopicCell.m */; };
 		8314E34B1CDF88DF00706C8F /* LCKTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8314E3491CDF88DF00706C8F /* LCKTopicCell.xib */; };
@@ -127,6 +128,8 @@
 /* Begin PBXFileReference section */
 		83022CA61CE0312600BCC710 /* NSDate+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+XMGExtension.h"; sourceTree = "<group>"; };
 		83022CA71CE0312600BCC710 /* NSDate+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+XMGExtension.m"; sourceTree = "<group>"; };
+		83022CA91CE03F1000BCC710 /* LCKTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTopicViewController.h; sourceTree = "<group>"; };
+		83022CAA1CE03F1000BCC710 /* LCKTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTopicViewController.m; sourceTree = "<group>"; };
 		8314E3441CDF7E1700706C8F /* LCKConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKConst.h; sourceTree = "<group>"; };
 		8314E3451CDF7E1700706C8F /* LCKConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKConst.m; sourceTree = "<group>"; };
 		8314E3471CDF88DF00706C8F /* LCKTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTopicCell.h; sourceTree = "<group>"; };
@@ -443,6 +446,8 @@
 				83B3A1381CDF1C3400773786 /* LCKPictureViewController.m */,
 				83B3A13A1CDF1C5900773786 /* LCKWordViewController.h */,
 				83B3A13B1CDF1C5900773786 /* LCKWordViewController.m */,
+				83022CA91CE03F1000BCC710 /* LCKTopicViewController.h */,
+				83022CAA1CE03F1000BCC710 /* LCKTopicViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1052,6 +1057,7 @@
 				838FB4B01CDA3BCF00917F90 /* AFHTTPSessionManager.m in Sources */,
 				83B3A1301CDF1BE600773786 /* LCKAllViewController.m in Sources */,
 				838FB4D21CDA3BCF00917F90 /* UIView+MJExtension.m in Sources */,
+				83022CAB1CE03F1000BCC710 /* LCKTopicViewController.m in Sources */,
 				838FB4CF1CDA3BCF00917F90 /* MJRefreshConst.m in Sources */,
 				838FB4E11CDA3BCF00917F90 /* UIImageView+WebCache.m in Sources */,
 				838FB4D01CDA3BCF00917F90 /* UIScrollView+MJExtension.m in Sources */,
