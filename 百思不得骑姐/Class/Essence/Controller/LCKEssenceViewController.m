@@ -8,11 +8,7 @@
 
 #import "LCKEssenceViewController.h"
 #import "LCKRecommendTagViewController.h"
-#import "LCKAllViewController.h"
-#import "LCKVideoViewController.h"
-#import "LCKSoundViewController.h"
-#import "LCKPictureViewController.h"
-#import "LCKWordViewController.h"
+#import "LCKTopicViewController.h"
 
 @interface LCKEssenceViewController ()<UIScrollViewDelegate>
 /** 底部标签栏的指示器 */
@@ -48,26 +44,30 @@
 
 -(void)setupChildViewController{
     
-    LCKWordViewController *wordVC = [[LCKWordViewController alloc] init];
-    [self addChildViewController:wordVC];
-    wordVC.title = @"段子";
-    
-    LCKAllViewController *allVC = [[LCKAllViewController alloc] init];
+    LCKTopicViewController *allVC = [[LCKTopicViewController alloc] init];
     allVC.title = @"全部";
+    allVC.type =LCKTopicTypeAll;
     [self addChildViewController:allVC];
     
-    LCKVideoViewController *videoVC = [[LCKVideoViewController alloc] init];
-    [self addChildViewController:videoVC];
-    videoVC.title = @"视频";
-    
-    LCKSoundViewController *soundVC = [[LCKSoundViewController alloc] init];
-    [self addChildViewController:soundVC];
-    soundVC.title = @"声音";
-    
-    LCKPictureViewController *pictureVC = [[LCKPictureViewController alloc] init];
-    [self addChildViewController:pictureVC];
+    LCKTopicViewController *pictureVC = [[LCKTopicViewController alloc] init];
     pictureVC.title = @"图片";
+    pictureVC.type =LCKTopicTypePicture;
+    [self addChildViewController:pictureVC];
     
+    LCKTopicViewController *wordVC = [[LCKTopicViewController alloc] init];
+    wordVC.title = @"段子";
+    wordVC.type =LCKTopicTypeWord;
+    [self addChildViewController:wordVC];
+    
+    LCKTopicViewController *soundVC = [[LCKTopicViewController alloc] init];
+    soundVC.title = @"声音";
+    soundVC.type =LCKTopicTypeVoice;
+    [self addChildViewController:soundVC];
+    
+    LCKTopicViewController *videoVC = [[LCKTopicViewController alloc] init];
+    videoVC.title = @"视频";
+    videoVC.type =LCKTopicTypeVideo;
+    [self addChildViewController:videoVC];
 
 }
 

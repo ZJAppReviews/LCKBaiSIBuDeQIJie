@@ -29,9 +29,7 @@
 @end
 
 @implementation LCKTopicViewController
--(NSString *)type{
-    return nil;
-}
+
 
 -(NSMutableArray *)topics{
     if (!_topics) {
@@ -77,7 +75,7 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = self.type;
+    params[@"type"] = @(self.type);
     
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
@@ -129,7 +127,7 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = self.type;
+    params[@"type"] = @(self.type);
     self.params = params;
     
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -169,7 +167,7 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = self.type;
+    params[@"type"] =@(self.type);
     params[@"page"] = @(self.page);
     params[@"maxtime"] = self.maxtime;
     self.params = params;
