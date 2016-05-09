@@ -48,7 +48,7 @@
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.progressView.hidden = YES;
         
-        // 如果是大图片, 才需要进行绘图处理
+        // 如果是大图片, 才需要进行绘图处理（使用2D绘图的方式来对大图片进行处理）
         if (topic.isBigPicture == NO) return;
         
         // 开启图形上下文
