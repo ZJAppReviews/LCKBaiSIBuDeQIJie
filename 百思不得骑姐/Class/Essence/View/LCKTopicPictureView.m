@@ -12,7 +12,6 @@
 #import "SVProgressHUD.h"
 #import "LCKProgressView.h"
 #import "LCKShowPictureController.h"
-#import "DALabeledCircularProgressView.h"
 
 @interface LCKTopicPictureView()
 /** 图片 */
@@ -79,10 +78,13 @@
     }
 }
 
+//要想点击按钮能干显示就需要将user interaction 设置为disable。或者不要设置为void而是返回IBOutlet，这样就可以连线
 - (void)showPicture
 {
     LCKShowPictureController *showPicture = [[LCKShowPictureController alloc] init];
 //    showPicture.topic = self.topic;
+    
+    //UIView（也就是self）不是控制器是没有present方法的，因此使用下面的方法来推出控制器View
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:showPicture animated:YES completion:nil];
 }
 

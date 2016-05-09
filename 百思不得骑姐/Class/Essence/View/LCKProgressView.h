@@ -8,6 +8,7 @@
 
 #import "DALabeledCircularProgressView.h"
 
+//使用继承来减轻第三方框架带来的潜在的压力
 @interface LCKProgressView : DALabeledCircularProgressView
 
 @end

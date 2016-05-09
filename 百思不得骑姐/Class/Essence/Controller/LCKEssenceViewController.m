@@ -44,6 +44,11 @@
 
 -(void)setupChildViewController{
     
+    LCKTopicViewController *pictureVC = [[LCKTopicViewController alloc] init];
+    pictureVC.title = @"图片";
+    pictureVC.type =LCKTopicTypePicture;
+    [self addChildViewController:pictureVC];
+    
     LCKTopicViewController *wordVC = [[LCKTopicViewController alloc] init];
     wordVC.title = @"段子";
     wordVC.type =LCKTopicTypeWord;
@@ -53,11 +58,7 @@
     allVC.title = @"全部";
     allVC.type =LCKTopicTypeAll;
     [self addChildViewController:allVC];
-    
-    LCKTopicViewController *pictureVC = [[LCKTopicViewController alloc] init];
-    pictureVC.title = @"图片";
-    pictureVC.type =LCKTopicTypePicture;
-    [self addChildViewController:pictureVC];
+
     
     
     LCKTopicViewController *soundVC = [[LCKTopicViewController alloc] init];

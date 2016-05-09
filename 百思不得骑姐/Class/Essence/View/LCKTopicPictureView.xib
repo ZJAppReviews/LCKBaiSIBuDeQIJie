@@ -27,7 +27,7 @@
                         <constraint firstAttribute="height" constant="31" id="j2a-aC-aZr"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ho9-NV-OCO">
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ho9-NV-OCO">
                     <rect key="frame" x="0.0" y="216" width="285" height="43"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="43" id="K54-3h-gCN"/>
@@ -35,7 +35,7 @@
                     <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <state key="normal" title="点击查看全图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpX-uB-61l" customClass="DACircularProgressView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpX-uB-61l" customClass="LCKProgressView">
                     <rect key="frame" x="118" y="105" width="50" height="50"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -68,7 +68,7 @@
                 <outlet property="progressView" destination="IpX-uB-61l" id="DXR-af-ZeB"/>
                 <outlet property="seeBigButton" destination="ho9-NV-OCO" id="AI8-hE-uyh"/>
             </connections>
-            <point key="canvasLocation" x="485.5" y="421.5"/>
+            <point key="canvasLocation" x="642.5" y="517.5"/>
         </view>
     </objects>
     <resources>
