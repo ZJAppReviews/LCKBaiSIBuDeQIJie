@@ -6,7 +6,7 @@
 //  Copyright © 2016年 黄海良. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface LCKTopic : NSObject
 /** 头像 */
@@ -28,5 +28,22 @@
 
 /** 是否为新浪加V用户 */
 @property (nonatomic, assign, getter=isSina_v) BOOL sina_v;
+
+/** 图片的宽度 */
+@property (nonatomic , assign) CGFloat width;
+/** 图片的高度 */
+@property (nonatomic , assign) CGFloat height;
+/** 小图像 */
+@property (nonatomic , copy) NSString *small_image;
+/** 中图像 */
+@property (nonatomic , copy) NSString *middle_image;
+/** 大图像 */
+@property (nonatomic , copy) NSString *large_image;
+
+/**
+ *  额外的辅助属性
+ */
+/** Cell的高度 */
+@property (nonatomic , assign,readonly) CGFloat cellHeight;
 
 @end

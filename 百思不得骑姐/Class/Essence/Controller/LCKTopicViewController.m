@@ -41,20 +41,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //初始化表格
+    
+    // 初始化表格
     [self setupTableView];
     
-    //请求加载数据
-    [self loadDatas];
-    
-    //添加刷新控件
+    // 添加刷新控件
     [self setupRefresh];
-    
 }
--(void)setupTableView{
+
+
+static NSString * const LCKTopicCellId = @"Topic";
+
+- (void)setupTableView
+{
     // 设置内边距
     CGFloat bottom = self.tabBarController.tabBar.height;
-    CGFloat top = LCKTitleViewH + LCKTitleViewY;
+    CGFloat top = LCKTitlesViewH + LCKTitlesViewY;
     self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
     // 设置滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
@@ -62,9 +64,8 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor clearColor];
     
-    //注册nib
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LCKTopicCell class]) bundle:nil] forCellReuseIdentifier:@"Topic"];
-    
+    // 注册
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LCKTopicCell class]) bundle:nil] forCellReuseIdentifier:LCKTopicCellId];
 }
 
 /**
@@ -121,15 +122,17 @@
  *  下拉刷新，加载更多最新的资源
  */
 -(void)loadNewTopics{
-    //结束上拉
+    // 结束上啦
     [self.tableView.mj_footer endRefreshing];
     
+    // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     self.params = params;
     
+    // 发送请求
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
         
@@ -153,7 +156,13 @@
         //结束刷新
         [self.tableView.mj_header endRefreshing];
     }];
+
 }
+
+// 先下拉刷新, 再上拉刷新第5页数据
+
+// 下拉刷新成功回来: 只有一页数据, page == 0
+// 上啦刷新成功回来: 最前面那页 + 第5页数据
 
 /**
  *  加载更多的帖子
@@ -162,15 +171,16 @@
     //结束下拉
     [self.tableView.mj_header endRefreshing];
     
-    self.page++;
-    
+    // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] =@(self.type);
-    params[@"page"] = @(self.page);
+    params[@"type"] = @(self.type);
+    NSInteger page = self.page + 1;
+    params[@"page"] = @(page);
     params[@"maxtime"] = self.maxtime;
     self.params = params;
+
     
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
@@ -181,18 +191,24 @@
         //存储maxtime
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
-        self.topics = [LCKTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        //刷新表格
+        // 字典 -> 模型
+        NSArray *newTopics = [LCKTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        [self.topics addObjectsFromArray:newTopics];
+        
+        // 刷新表格
         [self.tableView reloadData];
-        //结束刷新
+        
+        // 结束刷新
         [self.tableView.mj_footer endRefreshing];
+        
+        // 设置页码
+        self.page = page;
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (self.params != params) return;
         [SVProgressHUD showErrorWithStatus:@"加载用户数据失败！"];
         //结束刷新
         [self.tableView.mj_header endRefreshing];
-        self.page--;//当网络发送错误时需要将页码该回来
     }];
 }
 
@@ -200,24 +216,17 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    self.tableView.mj_footer.hidden = self.topics.count == 0;
+    self.tableView.mj_footer.hidden = (self.topics.count == 0);
     return self.topics.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString * const CellID = @"Topic";
-    LCKTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
-    
-    if (cell == nil) {
-        cell = [[LCKTopicCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellID];
-    }
-    
-    //    LCKTopic *topic = self.topics[indexPath.row];
-    //    cell.textLabel.text = topic.name;
-    //    cell.detailTextLabel.text = topic.text;
-    //    NSString *url = topic.profile_image;
-    //    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+
+    LCKTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:LCKTopicCellId];\
+//    if (cell == nil) {
+//        cell = [[LCKTopicCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:LCKTopicCellId];
+//    }
     
     cell.topic = self.topics[indexPath.row];
     return cell;
@@ -225,7 +234,11 @@
 
 #pragma mark ---代理方法
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 200;
+    // 取出帖子模型(获得文字模型从而得到高度)
+   LCKTopic *topic = self.topics[indexPath.row];
+
+    //返回这个模型对应的高度
+    return topic.cellHeight;
 }
 
 @end

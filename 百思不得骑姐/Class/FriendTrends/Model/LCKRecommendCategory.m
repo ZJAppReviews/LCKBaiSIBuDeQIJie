@@ -7,6 +7,7 @@
 //
 
 #import "LCKRecommendCategory.h"
+#import "MJExtension.h"
 
 @implementation LCKRecommendCategory
 /**
@@ -20,4 +21,11 @@
     }
     return _users;
 }
+
++(NSDictionary *)mj_replacedKeyFromPropertyName{
+    return @{
+             @"ID" :@"id"
+             };
+}
+
 @end

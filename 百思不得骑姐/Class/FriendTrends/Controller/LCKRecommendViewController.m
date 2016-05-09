@@ -146,7 +146,7 @@ static NSString *const LCKUserId = @"user";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";
-    params[@"category_id"] = @(rc.id);
+    params[@"category_id"] = @(rc.ID);
     params[@"page"] = @(rc.currentPage);
     self.params = params;
     
@@ -196,7 +196,7 @@ static NSString *const LCKUserId = @"user";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";
-    params[@"category_id"] = @([LCKSelectedCategory id]);
+    params[@"category_id"] = @([LCKSelectedCategory ID]);
     params[@"page"] = @(++category.currentPage);
     
     self.params = params;//缺失这段代码会导致不能上拉刷新，因为params永远都不同，那么下面的那句将一直return，不能执行到下面的代码

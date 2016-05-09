@@ -44,6 +44,11 @@
 
 -(void)setupChildViewController{
     
+    LCKTopicViewController *wordVC = [[LCKTopicViewController alloc] init];
+    wordVC.title = @"段子";
+    wordVC.type =LCKTopicTypeWord;
+    [self addChildViewController:wordVC];
+    
     LCKTopicViewController *allVC = [[LCKTopicViewController alloc] init];
     allVC.title = @"全部";
     allVC.type =LCKTopicTypeAll;
@@ -54,10 +59,6 @@
     pictureVC.type =LCKTopicTypePicture;
     [self addChildViewController:pictureVC];
     
-    LCKTopicViewController *wordVC = [[LCKTopicViewController alloc] init];
-    wordVC.title = @"段子";
-    wordVC.type =LCKTopicTypeWord;
-    [self addChildViewController:wordVC];
     
     LCKTopicViewController *soundVC = [[LCKTopicViewController alloc] init];
     soundVC.title = @"声音";
@@ -77,9 +78,9 @@
     //标签栏分类的整体
     UIView *categoryView = [[UIView alloc] init];
     categoryView.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.5];
-    categoryView.y = LCKTitleViewY;
+    categoryView.y = LCKTitlesViewY;
     categoryView.width = self.view.width;
-    categoryView.height = LCKTitleViewH;
+    categoryView.height = LCKTitlesViewH;
     [self.view addSubview:categoryView];
     self.categoryView = categoryView;
     

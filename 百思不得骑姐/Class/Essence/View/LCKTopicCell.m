@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 @property (weak, nonatomic) IBOutlet UIImageView *xinaVVIew;
+@property (weak, nonatomic) IBOutlet UILabel *topicTextLabel;
+
 
 
 @end
@@ -43,6 +45,9 @@
     
     //日期格式化
     self.creatTimeLabel.text = topic.create_time;
+    
+    //正文
+    self.topicTextLabel.text = topic.text;
     
     //头像
     NSString *url = topic.profile_image;
@@ -70,12 +75,11 @@
 }
 
 -(void)setFrame:(CGRect)frame{
-    static CGFloat margin = 10;
     
-    frame.origin.x = margin;
-    frame.size.width -= margin * 2;
-    frame.size.height -=margin;
-    frame.origin.y += margin;
+    frame.origin.x = LCKTopicCellMargin;
+    frame.size.width -= LCKTopicCellMargin * 2;
+    frame.size.height -= LCKTopicCellMargin;
+    frame.origin.y += LCKTopicCellMargin;
     
     [super setFrame:frame];
 }

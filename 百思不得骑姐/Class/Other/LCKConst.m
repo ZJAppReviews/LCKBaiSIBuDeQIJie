@@ -1,4 +1,13 @@
 #import <UIKit/UIKit.h>
 
-CGFloat const LCKTitleViewH =35;
-CGFloat const LCKTitleViewY =64;
+/** 精华-顶部标题的高度 */
+CGFloat const LCKTitlesViewH = 35;
+/** 精华-顶部标题的Y */
+CGFloat const LCKTitlesViewY = 64;
+
+/** 精华-cell-间距 */
+CGFloat const LCKTopicCellMargin = 10;
+/** 精华-cell-文字内容的Y值 */
+CGFloat const LCKTopicCellTextY = 55;
+/** 精华-cell-底部工具条的高度 */
+CGFloat const LCKTopicCellBottomBarH = 44;

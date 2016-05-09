@@ -11,6 +11,8 @@
 
 #import "UIView+LCKExtention.h" //分类一般都是放在pch中的，因为放在这里的东西在整个项目中都可以引用得到,需要在prefix head中设置
 #import "UIBarButtonItem+LCKExtention.h"
+#import "NSDate+XMGExtension.h"
+
 
 #import "LCKConst.h"
 
