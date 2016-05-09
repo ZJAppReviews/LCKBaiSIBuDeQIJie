@@ -37,12 +37,31 @@
     self.creatTimeLabel.text = topic.create_time;
     NSString *url = topic.profile_image;
     [self.cellImageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+
+//    [self.dingButton setTitle:[NSString stringWithFormat:@"%zd",topic.ding] forState:UIControlStateNormal];
+//    [self.caiButton setTitle:[NSString stringWithFormat:@"%zd",topic.cai] forState:UIControlStateNormal];
+//    [self.shareButton setTitle:[NSString stringWithFormat:@"%zd",topic.repost] forState:UIControlStateNormal];
+//    [self.commentButton setTitle:[NSString stringWithFormat:@"%zd",topic.comment] forState:UIControlStateNormal];
     
-    [self.dingButton setTitle:[NSString stringWithFormat:@"%zd",topic.ding] forState:UIControlStateNormal];
-    [self.caiButton setTitle:[NSString stringWithFormat:@"%zd",topic.cai] forState:UIControlStateNormal];
-    [self.shareButton setTitle:[NSString stringWithFormat:@"%zd",topic.repost] forState:UIControlStateNormal];
-    [self.commentButton setTitle:[NSString stringWithFormat:@"%zd",topic.comment] forState:UIControlStateNormal];
-    
+    // 设置按钮文字
+    [self setupButtonTitle:self.dingButton count:topic.ding placeholder:@"顶"];
+    [self setupButtonTitle:self.caiButton count:topic.cai placeholder:@"踩"];
+    [self setupButtonTitle:self.shareButton count:topic.repost placeholder:@"分享"];
+    [self setupButtonTitle:self.commentButton count:topic.comment placeholder:@"评论"];
+
+}
+
+/**
+ * 设置底部按钮文字
+ */
+- (void)setupButtonTitle:(UIButton *)button count:(NSInteger)count placeholder:(NSString *)placeholder
+{
+    if (count > 10000) {
+        placeholder = [NSString stringWithFormat:@"%.1f万", count / 10000.0];
+    } else if (count > 0) {
+        placeholder = [NSString stringWithFormat:@"%zd", count];
+    }
+    [button setTitle:placeholder forState:UIControlStateNormal];
 }
 
 -(void)setFrame:(CGRect)frame{

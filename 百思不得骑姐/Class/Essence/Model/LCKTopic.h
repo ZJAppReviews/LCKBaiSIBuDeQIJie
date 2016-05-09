@@ -18,11 +18,12 @@
 /** 创建时间 */
 @property (nonatomic , copy) NSString *create_time;
 /** 顶的数量 */
-@property (nonatomic , assign) NSInteger *ding;
+@property (nonatomic , assign) NSInteger ding;
 /** 踩的数量 */
-@property (nonatomic , assign) NSInteger *cai;
+@property (nonatomic , assign) NSInteger cai;
 /** 转发的数量 */
-@property (nonatomic , assign) NSInteger *repost;
+@property (nonatomic , assign) NSInteger repost;
 /** 帖子的被评论数量 */
-@property (nonatomic , assign) NSInteger *comment;
+@property (nonatomic , assign) NSInteger comment;
+
 @end
