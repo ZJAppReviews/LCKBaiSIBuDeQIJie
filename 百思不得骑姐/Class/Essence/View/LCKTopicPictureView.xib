@@ -11,7 +11,13 @@
             <rect key="frame" x="0.0" y="0.0" width="285" height="259"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J1L-tx-3dz">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="VOP-0I-Mna">
+                    <rect key="frame" x="0.0" y="0.0" width="285" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="e5F-rW-cQp"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J1L-tx-3dz">
                     <rect key="frame" x="0.0" y="0.0" width="285" height="259"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="1Rv-V6-jLa">
@@ -29,11 +35,24 @@
                     <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <state key="normal" title="点击查看全图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpX-uB-61l" customClass="DACircularProgressView">
+                    <rect key="frame" x="118" y="105" width="50" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="5HP-6V-MRG"/>
+                        <constraint firstAttribute="height" constant="50" id="vPa-bb-9C4"/>
+                    </constraints>
+                </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="VOP-0I-Mna" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5ik-I9-A5C"/>
+                <constraint firstItem="IpX-uB-61l" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7Oa-EK-uPY"/>
                 <constraint firstItem="1Rv-V6-jLa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9HZ-Yq-9ct"/>
+                <constraint firstAttribute="trailing" secondItem="VOP-0I-Mna" secondAttribute="trailing" id="C3U-I8-Rua"/>
+                <constraint firstItem="VOP-0I-Mna" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ELn-WG-USz"/>
                 <constraint firstItem="J1L-tx-3dz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YeS-j5-P7h"/>
+                <constraint firstItem="IpX-uB-61l" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="fBv-dp-pIk"/>
                 <constraint firstItem="J1L-tx-3dz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="n9E-zW-CeY"/>
                 <constraint firstAttribute="bottom" secondItem="ho9-NV-OCO" secondAttribute="bottom" id="sNh-jZ-ZLL"/>
                 <constraint firstItem="ho9-NV-OCO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="snq-rA-Evg"/>
@@ -46,6 +65,7 @@
             <connections>
                 <outlet property="gifImageView" destination="1Rv-V6-jLa" id="AHr-pU-10j"/>
                 <outlet property="imageView" destination="J1L-tx-3dz" id="Pu3-MS-Lxv"/>
+                <outlet property="progressView" destination="IpX-uB-61l" id="DXR-af-ZeB"/>
                 <outlet property="seeBigButton" destination="ho9-NV-OCO" id="AI8-hE-uyh"/>
             </connections>
             <point key="canvasLocation" x="485.5" y="421.5"/>
@@ -53,6 +73,7 @@
     </objects>
     <resources>
         <image name="common-gif" width="31" height="31"/>
+        <image name="imageBackground" width="75" height="15"/>
         <image name="see-big-picture" width="19" height="19"/>
         <image name="see-big-picture-background" width="285" height="43"/>
     </resources>

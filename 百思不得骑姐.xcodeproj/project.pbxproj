@@ -11,6 +11,11 @@
 		83022CAB1CE03F1000BCC710 /* LCKTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83022CAA1CE03F1000BCC710 /* LCKTopicViewController.m */; };
 		83022CAE1CE096D200BCC710 /* LCKTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83022CAD1CE096D200BCC710 /* LCKTopicPictureView.m */; };
 		83022CB01CE096F900BCC710 /* LCKTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83022CAF1CE096F900BCC710 /* LCKTopicPictureView.xib */; };
+		83022CB31CE0B8F700BCC710 /* LCKProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83022CB21CE0B8F700BCC710 /* LCKProgressView.m */; };
+		83022CBC1CE0BA1000BCC710 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83022CB91CE0BA1000BCC710 /* DACircularProgressView.m */; };
+		83022CBD1CE0BA1000BCC710 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83022CBB1CE0BA1000BCC710 /* DALabeledCircularProgressView.m */; };
+		83022CC11CE0BC2B00BCC710 /* LCKShowPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83022CBF1CE0BC2B00BCC710 /* LCKShowPictureController.m */; };
+		83022CC21CE0BC2B00BCC710 /* LCKShowPictureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83022CC01CE0BC2B00BCC710 /* LCKShowPictureController.xib */; };
 		8314E3461CDF7E1700706C8F /* LCKConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314E3451CDF7E1700706C8F /* LCKConst.m */; };
 		8314E34A1CDF88DF00706C8F /* LCKTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8314E3481CDF88DF00706C8F /* LCKTopicCell.m */; };
 		8314E34B1CDF88DF00706C8F /* LCKTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8314E3491CDF88DF00706C8F /* LCKTopicCell.xib */; };
@@ -130,6 +135,15 @@
 		83022CAC1CE096D200BCC710 /* LCKTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTopicPictureView.h; sourceTree = "<group>"; };
 		83022CAD1CE096D200BCC710 /* LCKTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTopicPictureView.m; sourceTree = "<group>"; };
 		83022CAF1CE096F900BCC710 /* LCKTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKTopicPictureView.xib; sourceTree = "<group>"; };
+		83022CB11CE0B8F700BCC710 /* LCKProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKProgressView.h; sourceTree = "<group>"; };
+		83022CB21CE0B8F700BCC710 /* LCKProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKProgressView.m; sourceTree = "<group>"; };
+		83022CB81CE0BA1000BCC710 /* DACircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DACircularProgressView.h; sourceTree = "<group>"; };
+		83022CB91CE0BA1000BCC710 /* DACircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACircularProgressView.m; sourceTree = "<group>"; };
+		83022CBA1CE0BA1000BCC710 /* DALabeledCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DALabeledCircularProgressView.h; sourceTree = "<group>"; };
+		83022CBB1CE0BA1000BCC710 /* DALabeledCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALabeledCircularProgressView.m; sourceTree = "<group>"; };
+		83022CBE1CE0BC2B00BCC710 /* LCKShowPictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKShowPictureController.h; sourceTree = "<group>"; };
+		83022CBF1CE0BC2B00BCC710 /* LCKShowPictureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKShowPictureController.m; sourceTree = "<group>"; };
+		83022CC01CE0BC2B00BCC710 /* LCKShowPictureController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKShowPictureController.xib; sourceTree = "<group>"; };
 		8314E3441CDF7E1700706C8F /* LCKConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKConst.h; sourceTree = "<group>"; };
 		8314E3451CDF7E1700706C8F /* LCKConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKConst.m; sourceTree = "<group>"; };
 		8314E3471CDF88DF00706C8F /* LCKTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTopicCell.h; sourceTree = "<group>"; };
@@ -337,6 +351,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83022CB71CE0BA1000BCC710 /* DACircularProgress */ = {
+			isa = PBXGroup;
+			children = (
+				83022CB81CE0BA1000BCC710 /* DACircularProgressView.h */,
+				83022CB91CE0BA1000BCC710 /* DACircularProgressView.m */,
+				83022CBA1CE0BA1000BCC710 /* DALabeledCircularProgressView.h */,
+				83022CBB1CE0BA1000BCC710 /* DALabeledCircularProgressView.m */,
+			);
+			path = DACircularProgress;
+			sourceTree = "<group>";
+		};
 		832393461CD979F600F5A511 = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +453,9 @@
 				83DB8F7C1CDB805700A22D75 /* LCKRecommendTagViewController.m */,
 				83022CA91CE03F1000BCC710 /* LCKTopicViewController.h */,
 				83022CAA1CE03F1000BCC710 /* LCKTopicViewController.m */,
+				83022CBE1CE0BC2B00BCC710 /* LCKShowPictureController.h */,
+				83022CBF1CE0BC2B00BCC710 /* LCKShowPictureController.m */,
+				83022CC01CE0BC2B00BCC710 /* LCKShowPictureController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -455,6 +483,8 @@
 				83022CAC1CE096D200BCC710 /* LCKTopicPictureView.h */,
 				83022CAD1CE096D200BCC710 /* LCKTopicPictureView.m */,
 				83022CAF1CE096F900BCC710 /* LCKTopicPictureView.xib */,
+				83022CB11CE0B8F700BCC710 /* LCKProgressView.h */,
+				83022CB21CE0B8F700BCC710 /* LCKProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -680,6 +710,7 @@
 		838FB4361CDA3BCF00917F90 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				83022CB71CE0BA1000BCC710 /* DACircularProgress */,
 				838FB4371CDA3BCF00917F90 /* AFNetworking */,
 				838FB4451CDA3BCF00917F90 /* MJExtension */,
 				838FB45B1CDA3BCF00917F90 /* MJRefresh */,
@@ -989,6 +1020,7 @@
 				83022CB01CE096F900BCC710 /* LCKTopicPictureView.xib in Resources */,
 				838FB4E41CDA3BCF00917F90 /* SVProgressHUD.bundle in Resources */,
 				838FB4EF1CDA472700917F90 /* LCKRecommendCategoryCell.xib in Resources */,
+				83022CC21CE0BC2B00BCC710 /* LCKShowPictureController.xib in Resources */,
 				83AD49E31CDA312500B1A884 /* LCKRecommendViewController.xib in Resources */,
 				83AEE06B1CDAE040002E9C63 /* LCKRecommendUserCell.xib in Resources */,
 				8323935F1CD979F800F5A511 /* Assets.xcassets in Resources */,
@@ -1041,6 +1073,7 @@
 				838FB4B01CDA3BCF00917F90 /* AFHTTPSessionManager.m in Sources */,
 				838FB4D21CDA3BCF00917F90 /* UIView+MJExtension.m in Sources */,
 				83022CAB1CE03F1000BCC710 /* LCKTopicViewController.m in Sources */,
+				83022CBD1CE0BA1000BCC710 /* DALabeledCircularProgressView.m in Sources */,
 				838FB4CF1CDA3BCF00917F90 /* MJRefreshConst.m in Sources */,
 				838FB4E11CDA3BCF00917F90 /* UIImageView+WebCache.m in Sources */,
 				838FB4D01CDA3BCF00917F90 /* UIScrollView+MJExtension.m in Sources */,
@@ -1069,12 +1102,14 @@
 				838FB4BD1CDA3BCF00917F90 /* NSObject+MJKeyValue.m in Sources */,
 				838FB4B41CDA3BCF00917F90 /* AFURLResponseSerialization.m in Sources */,
 				838FB4DC1CDA3BCF00917F90 /* UIButton+WebCache.m in Sources */,
+				83022CC11CE0BC2B00BCC710 /* LCKShowPictureController.m in Sources */,
 				838FB4D61CDA3BCF00917F90 /* SDWebImageCompat.m in Sources */,
 				832394131CD9D8A100F5A511 /* UIBarButtonItem+LCKExtention.m in Sources */,
 				838FB4BF1CDA3BCF00917F90 /* NSString+MJExtension.m in Sources */,
 				838FB4CC1CDA3BCF00917F90 /* MJRefreshNormalHeader.m in Sources */,
 				838FB4CD1CDA3BCF00917F90 /* MJRefreshStateHeader.m in Sources */,
 				83B3A12B1CDEC7C000773786 /* LCKPushGuideView.m in Sources */,
+				83022CB31CE0B8F700BCC710 /* LCKProgressView.m in Sources */,
 				838FB4CB1CDA3BCF00917F90 /* MJRefreshGifHeader.m in Sources */,
 				838FB4C91CDA3BCF00917F90 /* MJRefreshBackNormalFooter.m in Sources */,
 				838FB4D81CDA3BCF00917F90 /* SDWebImageDownloader.m in Sources */,
@@ -1082,6 +1117,7 @@
 				832394121CD9D8A100F5A511 /* LCKNewViewController.m in Sources */,
 				838FB4C51CDA3BCF00917F90 /* MJRefreshAutoGifFooter.m in Sources */,
 				83DB8F801CDB855700A22D75 /* LCKRecommendTags.m in Sources */,
+				83022CBC1CE0BA1000BCC710 /* DACircularProgressView.m in Sources */,
 				838FB4DD1CDA3BCF00917F90 /* UIImage+GIF.m in Sources */,
 				838FB4B31CDA3BCF00917F90 /* AFURLRequestSerialization.m in Sources */,
 				83B3A13F1CDF4BFD00773786 /* LCKTopic.m in Sources */,
