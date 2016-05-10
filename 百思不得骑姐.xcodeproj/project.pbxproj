@@ -36,6 +36,8 @@
 		832394221CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832394211CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib */; };
 		833303D41CE230690025587B /* LCKTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 833303D31CE230690025587B /* LCKTopicVoiceView.m */; };
 		833303D61CE230800025587B /* LCKTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 833303D51CE230800025587B /* LCKTopicVoiceView.xib */; };
+		833303D91CE24AF10025587B /* LCKTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 833303D81CE24AF10025587B /* LCKTopicVideoView.m */; };
+		833303DB1CE24B100025587B /* LCKTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 833303DA1CE24B100025587B /* LCKTopicVideoView.xib */; };
 		838FB4B01CDA3BCF00917F90 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FB4391CDA3BCF00917F90 /* AFHTTPSessionManager.m */; };
 		838FB4B11CDA3BCF00917F90 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FB43C1CDA3BCF00917F90 /* AFNetworkReachabilityManager.m */; };
 		838FB4B21CDA3BCF00917F90 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FB43E1CDA3BCF00917F90 /* AFSecurityPolicy.m */; };
@@ -188,6 +190,9 @@
 		833303D21CE230690025587B /* LCKTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTopicVoiceView.h; sourceTree = "<group>"; };
 		833303D31CE230690025587B /* LCKTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTopicVoiceView.m; sourceTree = "<group>"; };
 		833303D51CE230800025587B /* LCKTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKTopicVoiceView.xib; sourceTree = "<group>"; };
+		833303D71CE24AF10025587B /* LCKTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTopicVideoView.h; sourceTree = "<group>"; };
+		833303D81CE24AF10025587B /* LCKTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTopicVideoView.m; sourceTree = "<group>"; };
+		833303DA1CE24B100025587B /* LCKTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKTopicVideoView.xib; sourceTree = "<group>"; };
 		838FB4381CDA3BCF00917F90 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		838FB4391CDA3BCF00917F90 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		838FB43A1CDA3BCF00917F90 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -498,6 +503,9 @@
 				833303D21CE230690025587B /* LCKTopicVoiceView.h */,
 				833303D31CE230690025587B /* LCKTopicVoiceView.m */,
 				833303D51CE230800025587B /* LCKTopicVoiceView.xib */,
+				833303D71CE24AF10025587B /* LCKTopicVideoView.h */,
+				833303D81CE24AF10025587B /* LCKTopicVideoView.m */,
+				833303DA1CE24B100025587B /* LCKTopicVideoView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1034,6 +1042,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				833303D61CE230800025587B /* LCKTopicVoiceView.xib in Resources */,
+				833303DB1CE24B100025587B /* LCKTopicVideoView.xib in Resources */,
 				83022CB01CE096F900BCC710 /* LCKTopicPictureView.xib in Resources */,
 				838FB4E41CDA3BCF00917F90 /* SVProgressHUD.bundle in Resources */,
 				838FB4EF1CDA472700917F90 /* LCKRecommendCategoryCell.xib in Resources */,
@@ -1086,6 +1095,7 @@
 				838FB4DF1CDA3BCF00917F90 /* UIImage+WebP.m in Sources */,
 				838FB4C61CDA3BCF00917F90 /* MJRefreshAutoNormalFooter.m in Sources */,
 				83C99A6E1CDE13DB00FC5638 /* LCKLoginRegisterViewController.m in Sources */,
+				833303D91CE24AF10025587B /* LCKTopicVideoView.m in Sources */,
 				838FB4EE1CDA472700917F90 /* LCKRecommendCategoryCell.m in Sources */,
 				8314E34A1CDF88DF00706C8F /* LCKTopicCell.m in Sources */,
 				838FB4EA1CDA43C000917F90 /* LCKRecommendCategory.m in Sources */,

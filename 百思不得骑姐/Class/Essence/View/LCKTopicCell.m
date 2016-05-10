@@ -11,6 +11,7 @@
 #import "UIImageView+WebCache.h"
 #import "LCKTopicPictureView.h"
 #import "LCKTopicVoiceView.h"
+#import "LCKTopicVideoView.h"
 
 @interface LCKTopicCell()
 @property (weak, nonatomic) IBOutlet UIImageView *cellImageView;
@@ -27,6 +28,8 @@
 @property (nonatomic, weak) LCKTopicPictureView *pictureView;
 /** 声音帖子中间的内容 */
 @property (nonatomic, weak) LCKTopicVoiceView *voiceView;
+/** 视频帖子中间的内容 */
+@property (nonatomic, weak) LCKTopicVideoView *videoView;
 
 @end
 
@@ -57,6 +60,18 @@
     }
     return _voiceView;
 }
+
+-(LCKTopicVideoView *)videoView{
+    if (!_videoView) {
+        LCKTopicVideoView *videoView = [LCKTopicVideoView videoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
+}
+
+
+
 -(void)setTopic:(LCKTopic *)topic{
     
 //    //测试新浪V
@@ -96,7 +111,14 @@
         self.voiceView.topic = topic;
         //设置声音中间控件的位置（这需要到模型［LCKTopic］中设置）
         self.voiceView.frame = topic.voiceF;
+    }else if(topic.type == LCKTopicTypeVideo){
+        self.videoView.topic = topic;
+        self.videoView.frame = topic.videoF;
+    }else{
         
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
     }
 
 }

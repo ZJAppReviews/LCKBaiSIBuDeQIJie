@@ -87,6 +87,15 @@
             _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
             //Cell的高度
             _cellHeight += voiceH + LCKTopicCellMargin;
+        }else if (self.type == LCKTopicTypeVideo){
+            CGFloat videoX = LCKTopicCellMargin;
+            CGFloat videoY = LCKTopicCellTextY + textH + LCKTopicCellMargin;
+            CGFloat videoW = maxSize.width;
+            CGFloat videoH = videoW * self.height / self.width;
+            _videoF = CGRectMake(videoX, videoY, videoW, videoH);
+            //Cell的高度
+            _cellHeight += videoH + LCKTopicCellMargin;
+
         }
         
         _cellHeight += LCKTopicCellMargin+ LCKTopicCellMargin + 50;
