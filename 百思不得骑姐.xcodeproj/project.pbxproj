@@ -104,6 +104,8 @@
 		83C99A6F1CDE13DB00FC5638 /* LCKLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C99A6D1CDE13DB00FC5638 /* LCKLoginRegisterViewController.xib */; };
 		83C99A721CDE2C5400FC5638 /* LCKVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C99A711CDE2C5400FC5638 /* LCKVerticalButton.m */; };
 		83C99A751CDE3E6200FC5638 /* LCKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C99A741CDE3E6200FC5638 /* LCKTextField.m */; };
+		83D907B71CE17BF60091F278 /* LCKPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D907B51CE17BF60091F278 /* LCKPublishViewController.m */; };
+		83D907B81CE17BF60091F278 /* LCKPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D907B61CE17BF60091F278 /* LCKPublishViewController.xib */; };
 		83DB8F7D1CDB805700A22D75 /* LCKRecommendTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB8F7C1CDB805700A22D75 /* LCKRecommendTagViewController.m */; };
 		83DB8F801CDB855700A22D75 /* LCKRecommendTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB8F7F1CDB855700A22D75 /* LCKRecommendTags.m */; };
 		83DB8F841CDB8CDC00A22D75 /* LCKRecommendTagViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB8F821CDB8CDC00A22D75 /* LCKRecommendTagViewCell.m */; };
@@ -317,6 +319,9 @@
 		83C99A711CDE2C5400FC5638 /* LCKVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKVerticalButton.m; sourceTree = "<group>"; };
 		83C99A731CDE3E6200FC5638 /* LCKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTextField.h; sourceTree = "<group>"; };
 		83C99A741CDE3E6200FC5638 /* LCKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTextField.m; sourceTree = "<group>"; };
+		83D907B41CE17BF60091F278 /* LCKPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKPublishViewController.h; sourceTree = "<group>"; };
+		83D907B51CE17BF60091F278 /* LCKPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKPublishViewController.m; sourceTree = "<group>"; };
+		83D907B61CE17BF60091F278 /* LCKPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKPublishViewController.xib; sourceTree = "<group>"; };
 		83DB8F7B1CDB805700A22D75 /* LCKRecommendTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKRecommendTagViewController.h; sourceTree = "<group>"; };
 		83DB8F7C1CDB805700A22D75 /* LCKRecommendTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKRecommendTagViewController.m; sourceTree = "<group>"; };
 		83DB8F7E1CDB855700A22D75 /* LCKRecommendTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKRecommendTags.h; sourceTree = "<group>"; };
@@ -689,6 +694,9 @@
 		8323940B1CD9D8A100F5A511 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				83D907B41CE17BF60091F278 /* LCKPublishViewController.h */,
+				83D907B51CE17BF60091F278 /* LCKPublishViewController.m */,
+				83D907B61CE17BF60091F278 /* LCKPublishViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1024,6 +1032,7 @@
 				83AD49E31CDA312500B1A884 /* LCKRecommendViewController.xib in Resources */,
 				83AEE06B1CDAE040002E9C63 /* LCKRecommendUserCell.xib in Resources */,
 				8323935F1CD979F800F5A511 /* Assets.xcassets in Resources */,
+				83D907B81CE17BF60091F278 /* LCKPublishViewController.xib in Resources */,
 				83C99A6F1CDE13DB00FC5638 /* LCKLoginRegisterViewController.xib in Resources */,
 				83B3A12D1CDEC7DA00773786 /* LCKPushGuideView.xib in Resources */,
 				838FB4CE1CDA3BCF00917F90 /* MJRefresh.bundle in Resources */,
@@ -1064,6 +1073,7 @@
 				838FB4C11CDA3BCF00917F90 /* MJRefreshBackFooter.m in Sources */,
 				83AD49E21CDA312500B1A884 /* LCKRecommendViewController.m in Sources */,
 				832394151CD9D8A100F5A511 /* LCKtabBarController.m in Sources */,
+				83D907B71CE17BF60091F278 /* LCKPublishViewController.m in Sources */,
 				838FB4DF1CDA3BCF00917F90 /* UIImage+WebP.m in Sources */,
 				838FB4C61CDA3BCF00917F90 /* MJRefreshAutoNormalFooter.m in Sources */,
 				83C99A6E1CDE13DB00FC5638 /* LCKLoginRegisterViewController.m in Sources */,

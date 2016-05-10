@@ -26,11 +26,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // 添加图片
     UIImageView *imageView = [[UIImageView alloc] init];
     imageView.userInteractionEnabled = YES;//图片可以点击
-    [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)]];
+    [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backVC)]];
     [self.scrollView addSubview:imageView];
+ 
     self.imageView = imageView;
     
     // 图片尺寸
@@ -61,7 +63,7 @@
     }];
 }
 
-- (IBAction)back
+- (IBAction)backVC
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }

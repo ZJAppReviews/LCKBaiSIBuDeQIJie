@@ -17,17 +17,36 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGl-Ko-GV1" userLabel="返回">
-                    <rect key="frame" x="10" y="20" width="35" height="35"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="esL-Lz-Dib">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGl-Ko-GV1" userLabel="返回">
+                            <rect key="frame" x="10" y="20" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="Pap-tp-nh5"/>
+                                <constraint firstAttribute="height" constant="35" id="vrI-fC-MhD"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="show_image_back_icon"/>
+                            <connections>
+                                <action selector="backVC" destination="-1" eventType="touchUpInside" id="KdG-Ux-kpX"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwI-ki-R4s" userLabel="进度条" customClass="LCKProgressView">
+                            <rect key="frame" x="250" y="250" width="100" height="100"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="UPI-jM-6ui"/>
+                                <constraint firstAttribute="width" constant="100" id="WQR-HX-WdW"/>
+                            </constraints>
+                        </view>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="width" constant="35" id="N8C-gO-vUZ"/>
-                        <constraint firstAttribute="height" constant="35" id="tq5-Pn-Ecf"/>
+                        <constraint firstItem="bGl-Ko-GV1" firstAttribute="leading" secondItem="esL-Lz-Dib" secondAttribute="leading" constant="10" id="5uC-ds-XuF"/>
+                        <constraint firstItem="wwI-ki-R4s" firstAttribute="centerY" secondItem="esL-Lz-Dib" secondAttribute="centerY" id="7Jc-7w-DlV"/>
+                        <constraint firstItem="wwI-ki-R4s" firstAttribute="centerX" secondItem="esL-Lz-Dib" secondAttribute="centerX" id="phX-wG-BJd"/>
+                        <constraint firstItem="bGl-Ko-GV1" firstAttribute="top" secondItem="esL-Lz-Dib" secondAttribute="top" constant="20" id="qkB-vV-xgB"/>
                     </constraints>
-                    <state key="normal" backgroundImage="show_image_back_icon"/>
-                    <connections>
-                        <action selector="back" destination="-1" eventType="touchUpInside" id="A7k-59-3wH"/>
-                    </connections>
-                </button>
+                </scrollView>
                 <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ura-8F-wkZ">
                     <rect key="frame" x="530" y="555" width="50" height="25"/>
                     <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,14 +61,6 @@
                         <action selector="save" destination="-1" eventType="touchUpInside" id="1uG-dw-jpD"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwI-ki-R4s" userLabel="进度条" customClass="LCKProgressView">
-                    <rect key="frame" x="250" y="250" width="100" height="100"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="100" id="0OT-kC-Q6g"/>
-                        <constraint firstAttribute="width" constant="100" id="BmV-Xl-ogD"/>
-                    </constraints>
-                </view>
                 <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCb-YJ-2yz">
                     <rect key="frame" x="450" y="555" width="50" height="25"/>
                     <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -57,21 +68,14 @@
                         <color key="titleColor" red="0.1698380173" green="0.22277034060000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="esL-Lz-Dib">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                </scrollView>
             </subviews>
             <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="Ura-8F-wkZ" firstAttribute="width" secondItem="MCb-YJ-2yz" secondAttribute="width" id="28h-6O-wex"/>
                 <constraint firstAttribute="bottom" secondItem="Ura-8F-wkZ" secondAttribute="bottom" constant="20" id="6Oy-tb-qRV"/>
                 <constraint firstItem="Ura-8F-wkZ" firstAttribute="leading" secondItem="MCb-YJ-2yz" secondAttribute="trailing" constant="30" id="Onk-s3-rZo"/>
-                <constraint firstItem="wwI-ki-R4s" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Op0-UT-SbX"/>
-                <constraint firstItem="bGl-Ko-GV1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="R0q-vX-XSp"/>
                 <constraint firstItem="esL-Lz-Dib" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RW5-cj-wdC"/>
-                <constraint firstItem="wwI-ki-R4s" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UMQ-2M-xYx"/>
                 <constraint firstItem="Ura-8F-wkZ" firstAttribute="height" secondItem="MCb-YJ-2yz" secondAttribute="height" id="fdr-HN-0Mz"/>
-                <constraint firstItem="bGl-Ko-GV1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="iY5-0y-W4L"/>
                 <constraint firstAttribute="bottom" secondItem="esL-Lz-Dib" secondAttribute="bottom" id="j3I-NW-cPX"/>
                 <constraint firstItem="MCb-YJ-2yz" firstAttribute="bottom" secondItem="Ura-8F-wkZ" secondAttribute="bottom" id="lmU-vk-vgf"/>
                 <constraint firstAttribute="trailing" secondItem="esL-Lz-Dib" secondAttribute="trailing" id="ySc-Qq-c1K"/>
