@@ -79,11 +79,18 @@
             _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
             _cellHeight += pictureH + LCKTopicCellMargin;
             
+        }else if (self.type == LCKTopicTypeVoice){
+             CGFloat voiceX = LCKTopicCellMargin;
+             CGFloat voiceY = LCKTopicCellTextY + textH + LCKTopicCellMargin;
+             CGFloat voiceW = maxSize.width;
+             CGFloat voiceH = voiceW * self.height / self.width;
+            _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
+            //Cell的高度
+            _cellHeight += voiceH + LCKTopicCellMargin;
         }
         
         _cellHeight += LCKTopicCellMargin+ LCKTopicCellMargin + 50;
     }
-
     
     return _cellHeight;
 }

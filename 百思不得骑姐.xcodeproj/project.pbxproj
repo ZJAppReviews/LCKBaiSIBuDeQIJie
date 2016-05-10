@@ -34,6 +34,8 @@
 		832394171CD9D8A100F5A511 /* LCKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 832394091CD9D8A100F5A511 /* LCKTabBar.m */; };
 		8323941B1CD9E1DC00F5A511 /* LCKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8323941A1CD9E1DC00F5A511 /* LCKNavigationController.m */; };
 		832394221CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832394211CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib */; };
+		833303D41CE230690025587B /* LCKTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 833303D31CE230690025587B /* LCKTopicVoiceView.m */; };
+		833303D61CE230800025587B /* LCKTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 833303D51CE230800025587B /* LCKTopicVoiceView.xib */; };
 		838FB4B01CDA3BCF00917F90 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FB4391CDA3BCF00917F90 /* AFHTTPSessionManager.m */; };
 		838FB4B11CDA3BCF00917F90 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FB43C1CDA3BCF00917F90 /* AFNetworkReachabilityManager.m */; };
 		838FB4B21CDA3BCF00917F90 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FB43E1CDA3BCF00917F90 /* AFSecurityPolicy.m */; };
@@ -183,6 +185,9 @@
 		832394191CD9E1DC00F5A511 /* LCKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKNavigationController.h; sourceTree = "<group>"; };
 		8323941A1CD9E1DC00F5A511 /* LCKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKNavigationController.m; sourceTree = "<group>"; };
 		832394211CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		833303D21CE230690025587B /* LCKTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTopicVoiceView.h; sourceTree = "<group>"; };
+		833303D31CE230690025587B /* LCKTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTopicVoiceView.m; sourceTree = "<group>"; };
+		833303D51CE230800025587B /* LCKTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKTopicVoiceView.xib; sourceTree = "<group>"; };
 		838FB4381CDA3BCF00917F90 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		838FB4391CDA3BCF00917F90 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		838FB43A1CDA3BCF00917F90 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -490,6 +495,9 @@
 				83022CAF1CE096F900BCC710 /* LCKTopicPictureView.xib */,
 				83022CB11CE0B8F700BCC710 /* LCKProgressView.h */,
 				83022CB21CE0B8F700BCC710 /* LCKProgressView.m */,
+				833303D21CE230690025587B /* LCKTopicVoiceView.h */,
+				833303D31CE230690025587B /* LCKTopicVoiceView.m */,
+				833303D51CE230800025587B /* LCKTopicVoiceView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1025,6 +1033,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				833303D61CE230800025587B /* LCKTopicVoiceView.xib in Resources */,
 				83022CB01CE096F900BCC710 /* LCKTopicPictureView.xib in Resources */,
 				838FB4E41CDA3BCF00917F90 /* SVProgressHUD.bundle in Resources */,
 				838FB4EF1CDA472700917F90 /* LCKRecommendCategoryCell.xib in Resources */,
@@ -1087,6 +1096,7 @@
 				838FB4CF1CDA3BCF00917F90 /* MJRefreshConst.m in Sources */,
 				838FB4E11CDA3BCF00917F90 /* UIImageView+WebCache.m in Sources */,
 				838FB4D01CDA3BCF00917F90 /* UIScrollView+MJExtension.m in Sources */,
+				833303D41CE230690025587B /* LCKTopicVoiceView.m in Sources */,
 				838FB4DA1CDA3BCF00917F90 /* SDWebImageManager.m in Sources */,
 				838FB4D41CDA3BCF00917F90 /* NSData+ImageContentType.m in Sources */,
 				838FB4C71CDA3BCF00917F90 /* MJRefreshAutoStateFooter.m in Sources */,

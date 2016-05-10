@@ -44,6 +44,12 @@
 
 -(void)setupChildViewController{
     
+    
+    LCKTopicViewController *soundVC = [[LCKTopicViewController alloc] init];
+    soundVC.title = @"声音";
+    soundVC.type =LCKTopicTypeVoice;
+    [self addChildViewController:soundVC];
+    
     LCKTopicViewController *pictureVC = [[LCKTopicViewController alloc] init];
     pictureVC.title = @"图片";
     pictureVC.type =LCKTopicTypePicture;
@@ -58,13 +64,6 @@
     allVC.title = @"全部";
     allVC.type =LCKTopicTypeAll;
     [self addChildViewController:allVC];
-
-    
-    
-    LCKTopicViewController *soundVC = [[LCKTopicViewController alloc] init];
-    soundVC.title = @"声音";
-    soundVC.type =LCKTopicTypeVoice;
-    [self addChildViewController:soundVC];
     
     LCKTopicViewController *videoVC = [[LCKTopicViewController alloc] init];
     videoVC.title = @"视频";
