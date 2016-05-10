@@ -62,15 +62,10 @@
         button.y = buttonStartY + row * buttonH;
         
         [self.view addSubview:button];
-        // 按钮动画
+        // 按钮动画（推荐是用facebook开发的pop框架）
         
-//        POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
-//        anim.fromValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonBeginY, buttonW, buttonH)];
-//        anim.toValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonEndY, buttonW, buttonH)];
-//        anim.springBounciness = XMGSpringFactor;
-//        anim.springSpeed = XMGSpringFactor;
-//        anim.beginTime = CACurrentMediaTime() + XMGAnimationDelay * i;
-//        [button pop_addAnimation:anim forKey:nil];
+        
+
         
        
     }
