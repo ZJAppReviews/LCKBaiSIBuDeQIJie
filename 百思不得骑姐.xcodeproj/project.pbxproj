@@ -114,6 +114,10 @@
 		83DB8F801CDB855700A22D75 /* LCKRecommendTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB8F7F1CDB855700A22D75 /* LCKRecommendTags.m */; };
 		83DB8F841CDB8CDC00A22D75 /* LCKRecommendTagViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DB8F821CDB8CDC00A22D75 /* LCKRecommendTagViewCell.m */; };
 		83DB8F851CDB8CDC00A22D75 /* LCKRecommendTagViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83DB8F831CDB8CDC00A22D75 /* LCKRecommendTagViewCell.xib */; };
+		83F548021CE2C2BD0023A265 /* LCKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F548011CE2C2BD0023A265 /* LCKUser.m */; };
+		83F548051CE2C41C0023A265 /* LCKComent.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F548041CE2C41C0023A265 /* LCKComent.m */; };
+		83F548091CE2E6A80023A265 /* LCKCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F548071CE2E6A80023A265 /* LCKCommentViewController.m */; };
+		83F5480A1CE2E6A80023A265 /* LCKCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F548081CE2E6A80023A265 /* LCKCommentViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -339,6 +343,13 @@
 		83DB8F811CDB8CDC00A22D75 /* LCKRecommendTagViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKRecommendTagViewCell.h; sourceTree = "<group>"; };
 		83DB8F821CDB8CDC00A22D75 /* LCKRecommendTagViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKRecommendTagViewCell.m; sourceTree = "<group>"; };
 		83DB8F831CDB8CDC00A22D75 /* LCKRecommendTagViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKRecommendTagViewCell.xib; sourceTree = "<group>"; };
+		83F548001CE2C2BD0023A265 /* LCKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKUser.h; sourceTree = "<group>"; };
+		83F548011CE2C2BD0023A265 /* LCKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKUser.m; sourceTree = "<group>"; };
+		83F548031CE2C41C0023A265 /* LCKComent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKComent.h; sourceTree = "<group>"; };
+		83F548041CE2C41C0023A265 /* LCKComent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKComent.m; sourceTree = "<group>"; };
+		83F548061CE2E6A80023A265 /* LCKCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKCommentViewController.h; sourceTree = "<group>"; };
+		83F548071CE2E6A80023A265 /* LCKCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKCommentViewController.m; sourceTree = "<group>"; };
+		83F548081CE2E6A80023A265 /* LCKCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKCommentViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -471,6 +482,9 @@
 				83022CBE1CE0BC2B00BCC710 /* LCKShowPictureController.h */,
 				83022CBF1CE0BC2B00BCC710 /* LCKShowPictureController.m */,
 				83022CC01CE0BC2B00BCC710 /* LCKShowPictureController.xib */,
+				83F548061CE2E6A80023A265 /* LCKCommentViewController.h */,
+				83F548071CE2E6A80023A265 /* LCKCommentViewController.m */,
+				83F548081CE2E6A80023A265 /* LCKCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -482,6 +496,10 @@
 				83DB8F7F1CDB855700A22D75 /* LCKRecommendTags.m */,
 				83B3A13D1CDF4BFD00773786 /* LCKTopic.h */,
 				83B3A13E1CDF4BFD00773786 /* LCKTopic.m */,
+				83F548031CE2C41C0023A265 /* LCKComent.h */,
+				83F548041CE2C41C0023A265 /* LCKComent.m */,
+				83F548001CE2C2BD0023A265 /* LCKUser.h */,
+				83F548011CE2C2BD0023A265 /* LCKUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1043,6 +1061,7 @@
 			files = (
 				833303D61CE230800025587B /* LCKTopicVoiceView.xib in Resources */,
 				833303DB1CE24B100025587B /* LCKTopicVideoView.xib in Resources */,
+				83F5480A1CE2E6A80023A265 /* LCKCommentViewController.xib in Resources */,
 				83022CB01CE096F900BCC710 /* LCKTopicPictureView.xib in Resources */,
 				838FB4E41CDA3BCF00917F90 /* SVProgressHUD.bundle in Resources */,
 				838FB4EF1CDA472700917F90 /* LCKRecommendCategoryCell.xib in Resources */,
@@ -1124,6 +1143,7 @@
 				83022CA81CE0312600BCC710 /* NSDate+XMGExtension.m in Sources */,
 				83DB8F841CDB8CDC00A22D75 /* LCKRecommendTagViewCell.m in Sources */,
 				838FB4D11CDA3BCF00917F90 /* UIScrollView+MJRefresh.m in Sources */,
+				83F548021CE2C2BD0023A265 /* LCKUser.m in Sources */,
 				838FB4C01CDA3BCF00917F90 /* MJRefreshAutoFooter.m in Sources */,
 				8323940F1CD9D8A100F5A511 /* LCKFriendTrendsViewController.m in Sources */,
 				832394171CD9D8A100F5A511 /* LCKTabBar.m in Sources */,
@@ -1137,6 +1157,7 @@
 				832394131CD9D8A100F5A511 /* UIBarButtonItem+LCKExtention.m in Sources */,
 				838FB4BF1CDA3BCF00917F90 /* NSString+MJExtension.m in Sources */,
 				838FB4CC1CDA3BCF00917F90 /* MJRefreshNormalHeader.m in Sources */,
+				83F548091CE2E6A80023A265 /* LCKCommentViewController.m in Sources */,
 				838FB4CD1CDA3BCF00917F90 /* MJRefreshStateHeader.m in Sources */,
 				83B3A12B1CDEC7C000773786 /* LCKPushGuideView.m in Sources */,
 				83022CB31CE0B8F700BCC710 /* LCKProgressView.m in Sources */,
@@ -1163,6 +1184,7 @@
 				838FB4BE1CDA3BCF00917F90 /* NSObject+MJProperty.m in Sources */,
 				832394161CD9D8A100F5A511 /* main.m in Sources */,
 				838FB4CA1CDA3BCF00917F90 /* MJRefreshBackStateFooter.m in Sources */,
+				83F548051CE2C41C0023A265 /* LCKComent.m in Sources */,
 				8314E3461CDF7E1700706C8F /* LCKConst.m in Sources */,
 				832394111CD9D8A100F5A511 /* LCKMeViewController.m in Sources */,
 				838FB4BB1CDA3BCF00917F90 /* NSObject+MJClass.m in Sources */,

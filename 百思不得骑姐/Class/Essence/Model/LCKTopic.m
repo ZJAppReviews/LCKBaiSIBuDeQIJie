@@ -9,6 +9,8 @@
 #import "LCKTopic.h"
 #import "NSDate+XMGExtension.h"
 #import "MJExtension.h"
+#import "LCKComent.h"
+#import "LCKUser.h"
 
 @implementation LCKTopic
 
@@ -98,7 +100,16 @@
 
         }
         
-        _cellHeight += LCKTopicCellMargin+ LCKTopicCellMargin + 50;
+        // 如果有最热评论
+        if (self.top_cmt) {
+            NSString *content = [NSString stringWithFormat:@"%@ : %@", self.top_cmt.user.username, self.top_cmt.content];
+            CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+            _cellHeight += LCKTopicCellTopCmtTitleH + contentH + LCKTopicCellMargin;
+        }
+        
+        // 底部工具条的高度
+        _cellHeight += LCKTopicCellBottomBarH + LCKTopicCellMargin + 20;
+
     }
     
     return _cellHeight;
@@ -109,7 +120,16 @@
              @"small_image" : @"image0",
              @"middle_image" : @"image2",
              @"large_image" : @"image1",
+             @"top_cmt" : @"top_cmt[0]"// 这条代码对于后面的最热评论至关重要
              };
 }
+
+//这个方法是将返回的字典转换为我们定义的模型
++(NSDictionary *)mj_objectClassInArray{
+
+    return @{@"top_cmt" : [LCKComent class]};
+    
+}
+
 
 @end

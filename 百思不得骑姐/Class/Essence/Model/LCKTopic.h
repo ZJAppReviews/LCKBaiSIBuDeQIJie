@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LCKComent;
 
 @interface LCKTopic : NSObject
 /** 头像 */
@@ -43,7 +44,7 @@
 @property (nonatomic , assign) LCKTopicType type;
 
 /** 最热评论 */
-//@property (nonatomic, strong) LCKComment *top_cmt;
+@property (nonatomic, strong) LCKComent *top_cmt;
 /** 音频时长 */
 @property (nonatomic, assign) NSInteger voicetime;
 /** 视频时长 */

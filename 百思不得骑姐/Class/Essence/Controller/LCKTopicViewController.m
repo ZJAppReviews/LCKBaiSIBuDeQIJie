@@ -15,6 +15,8 @@
 #import "MJRefresh.h"
 #import "LCKTopicCell.h"
 
+#import "LCKCommentViewController.h"
+
 @interface LCKTopicViewController ()
 /** 帖子到数目 */
 @property(nonatomic,strong) NSMutableArray *topics;
@@ -239,6 +241,12 @@ static NSString * const LCKTopicCellId = @"Topic";
 
     //返回这个模型对应的高度
     return topic.cellHeight;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    LCKCommentViewController *cmtVC = [[LCKCommentViewController alloc] init];
+    
+    [self.navigationController pushViewController:cmtVC animated:YES];
 }
 
 @end

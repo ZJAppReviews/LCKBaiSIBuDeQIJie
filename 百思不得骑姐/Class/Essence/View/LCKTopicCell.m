@@ -12,6 +12,8 @@
 #import "LCKTopicPictureView.h"
 #import "LCKTopicVoiceView.h"
 #import "LCKTopicVideoView.h"
+#import "LCKUser.h"
+#import "LCKComent.h"
 
 @interface LCKTopicCell()
 @property (weak, nonatomic) IBOutlet UIImageView *cellImageView;
@@ -31,6 +33,8 @@
 /** 视频帖子中间的内容 */
 @property (nonatomic, weak) LCKTopicVideoView *videoView;
 
+@property (weak, nonatomic) IBOutlet UILabel *topCommentLabel;
+@property (weak, nonatomic) IBOutlet UIView *topCommentView;
 @end
 
 
@@ -106,20 +110,47 @@
         self.pictureView.hidden = NO;
         self.pictureView.topic = topic;//这里没有位置，需要设置
         self.pictureView.frame = topic.pictureF;
+        
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
+        
     }else if (topic.type == LCKTopicTypeVoice){
+        self.voiceView.hidden = NO;
         //传递模型
         self.voiceView.topic = topic;
         //设置声音中间控件的位置（这需要到模型［LCKTopic］中设置）
         self.voiceView.frame = topic.voiceF;
+        
+        self.videoView.hidden = YES;
+        self.pictureView.hidden = YES;
+        
     }else if(topic.type == LCKTopicTypeVideo){
+        self.videoView.hidden = NO;
+        
         self.videoView.topic = topic;
         self.videoView.frame = topic.videoF;
+        
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
+        
     }else{
         
+        //cell循环利用时出现问题解决方法如下(下面的代码隐藏后，在新建的时候要设置为显示)
         self.videoView.hidden = YES;
         self.voiceView.hidden = YES;
         self.pictureView.hidden = YES;
     }
+    
+//    LCKLog(@"%@", topic.top_cmt);//判断模型是否转化成功
+    
+    // 处理最热评论
+    if (topic.top_cmt) {
+        self.topCommentView.hidden = NO;
+        self.topCommentLabel.text = [NSString stringWithFormat:@"%@ : %@", topic.top_cmt.user.username, topic.top_cmt.content];
+    } else {
+        self.topCommentView.hidden = YES;
+    }
+
 
 }
 
