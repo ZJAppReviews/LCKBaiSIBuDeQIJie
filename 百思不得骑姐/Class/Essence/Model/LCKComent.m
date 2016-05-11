@@ -7,7 +7,13 @@
 //
 
 #import "LCKComent.h"
+#import "MJExtension.h"
 
 @implementation LCKComent
 
++(NSDictionary *)mj_replacedKeyFromPropertyName{
+    return @{
+             @"ID" : @"id"
+             };
+}
 @end

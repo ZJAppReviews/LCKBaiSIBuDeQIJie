@@ -118,6 +118,11 @@
 		83F548051CE2C41C0023A265 /* LCKComent.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F548041CE2C41C0023A265 /* LCKComent.m */; };
 		83F548091CE2E6A80023A265 /* LCKCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F548071CE2E6A80023A265 /* LCKCommentViewController.m */; };
 		83F5480A1CE2E6A80023A265 /* LCKCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F548081CE2E6A80023A265 /* LCKCommentViewController.xib */; };
+		83F5480D1CE32C880023A265 /* LCKCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F5480C1CE32C880023A265 /* LCKCommentHeaderView.m */; };
+		83F548111CE32EBA0023A265 /* LCKCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F5480F1CE32EBA0023A265 /* LCKCommentCell.m */; };
+		83F548121CE32EBA0023A265 /* LCKCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F548101CE32EBA0023A265 /* LCKCommentCell.xib */; };
+		83F548151CE340510023A265 /* UIImage+LCKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F548141CE340510023A265 /* UIImage+LCKExtension.m */; };
+		83F548181CE3409C0023A265 /* UIImageView+LCKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F548171CE3409C0023A265 /* UIImageView+LCKExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -350,6 +355,15 @@
 		83F548061CE2E6A80023A265 /* LCKCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKCommentViewController.h; sourceTree = "<group>"; };
 		83F548071CE2E6A80023A265 /* LCKCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKCommentViewController.m; sourceTree = "<group>"; };
 		83F548081CE2E6A80023A265 /* LCKCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKCommentViewController.xib; sourceTree = "<group>"; };
+		83F5480B1CE32C880023A265 /* LCKCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKCommentHeaderView.h; sourceTree = "<group>"; };
+		83F5480C1CE32C880023A265 /* LCKCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKCommentHeaderView.m; sourceTree = "<group>"; };
+		83F5480E1CE32EBA0023A265 /* LCKCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKCommentCell.h; sourceTree = "<group>"; };
+		83F5480F1CE32EBA0023A265 /* LCKCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKCommentCell.m; sourceTree = "<group>"; };
+		83F548101CE32EBA0023A265 /* LCKCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKCommentCell.xib; sourceTree = "<group>"; };
+		83F548131CE340510023A265 /* UIImage+LCKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LCKExtension.h"; sourceTree = "<group>"; };
+		83F548141CE340510023A265 /* UIImage+LCKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LCKExtension.m"; sourceTree = "<group>"; };
+		83F548161CE3409C0023A265 /* UIImageView+LCKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LCKExtension.h"; sourceTree = "<group>"; };
+		83F548171CE3409C0023A265 /* UIImageView+LCKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LCKExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -524,6 +538,11 @@
 				833303D71CE24AF10025587B /* LCKTopicVideoView.h */,
 				833303D81CE24AF10025587B /* LCKTopicVideoView.m */,
 				833303DA1CE24B100025587B /* LCKTopicVideoView.xib */,
+				83F5480B1CE32C880023A265 /* LCKCommentHeaderView.h */,
+				83F5480C1CE32C880023A265 /* LCKCommentHeaderView.m */,
+				83F5480E1CE32EBA0023A265 /* LCKCommentCell.h */,
+				83F5480F1CE32EBA0023A265 /* LCKCommentCell.m */,
+				83F548101CE32EBA0023A265 /* LCKCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -681,6 +700,10 @@
 				832393FE1CD9D8A100F5A511 /* UIBarButtonItem+LCKExtention.m */,
 				832393FF1CD9D8A100F5A511 /* UIView+LCKExtention.h */,
 				832394001CD9D8A100F5A511 /* UIView+LCKExtention.m */,
+				83F548131CE340510023A265 /* UIImage+LCKExtension.h */,
+				83F548141CE340510023A265 /* UIImage+LCKExtension.m */,
+				83F548161CE3409C0023A265 /* UIImageView+LCKExtension.h */,
+				83F548171CE3409C0023A265 /* UIImageView+LCKExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1063,6 +1086,7 @@
 				833303DB1CE24B100025587B /* LCKTopicVideoView.xib in Resources */,
 				83F5480A1CE2E6A80023A265 /* LCKCommentViewController.xib in Resources */,
 				83022CB01CE096F900BCC710 /* LCKTopicPictureView.xib in Resources */,
+				83F548121CE32EBA0023A265 /* LCKCommentCell.xib in Resources */,
 				838FB4E41CDA3BCF00917F90 /* SVProgressHUD.bundle in Resources */,
 				838FB4EF1CDA472700917F90 /* LCKRecommendCategoryCell.xib in Resources */,
 				83022CC21CE0BC2B00BCC710 /* LCKShowPictureController.xib in Resources */,
@@ -1113,6 +1137,7 @@
 				83D907B71CE17BF60091F278 /* LCKPublishViewController.m in Sources */,
 				838FB4DF1CDA3BCF00917F90 /* UIImage+WebP.m in Sources */,
 				838FB4C61CDA3BCF00917F90 /* MJRefreshAutoNormalFooter.m in Sources */,
+				83F548151CE340510023A265 /* UIImage+LCKExtension.m in Sources */,
 				83C99A6E1CDE13DB00FC5638 /* LCKLoginRegisterViewController.m in Sources */,
 				833303D91CE24AF10025587B /* LCKTopicVideoView.m in Sources */,
 				838FB4EE1CDA472700917F90 /* LCKRecommendCategoryCell.m in Sources */,
@@ -1162,6 +1187,7 @@
 				83B3A12B1CDEC7C000773786 /* LCKPushGuideView.m in Sources */,
 				83022CB31CE0B8F700BCC710 /* LCKProgressView.m in Sources */,
 				838FB4CB1CDA3BCF00917F90 /* MJRefreshGifHeader.m in Sources */,
+				83F548111CE32EBA0023A265 /* LCKCommentCell.m in Sources */,
 				838FB4C91CDA3BCF00917F90 /* MJRefreshBackNormalFooter.m in Sources */,
 				838FB4D81CDA3BCF00917F90 /* SDWebImageDownloader.m in Sources */,
 				83AEE06E1CDAE81A002E9C63 /* LCKRecommendUser.m in Sources */,
@@ -1172,6 +1198,7 @@
 				838FB4DD1CDA3BCF00917F90 /* UIImage+GIF.m in Sources */,
 				838FB4B31CDA3BCF00917F90 /* AFURLRequestSerialization.m in Sources */,
 				83B3A13F1CDF4BFD00773786 /* LCKTopic.m in Sources */,
+				83F5480D1CE32C880023A265 /* LCKCommentHeaderView.m in Sources */,
 				838FB4B71CDA3BCF00917F90 /* MJFoundation.m in Sources */,
 				838FB4C31CDA3BCF00917F90 /* MJRefreshFooter.m in Sources */,
 				838FB4D91CDA3BCF00917F90 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -1180,6 +1207,7 @@
 				838FB4E21CDA3BCF00917F90 /* UIView+WebCacheOperation.m in Sources */,
 				838FB4B61CDA3BCF00917F90 /* MJExtensionConst.m in Sources */,
 				838FB4BC1CDA3BCF00917F90 /* NSObject+MJCoding.m in Sources */,
+				83F548181CE3409C0023A265 /* UIImageView+LCKExtension.m in Sources */,
 				832394101CD9D8A100F5A511 /* AppDelegate.m in Sources */,
 				838FB4BE1CDA3BCF00917F90 /* NSObject+MJProperty.m in Sources */,
 				832394161CD9D8A100F5A511 /* main.m in Sources */,

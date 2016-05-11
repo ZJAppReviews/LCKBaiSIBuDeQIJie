@@ -1,0 +1,16 @@
+//
+//  LCKCommentHeaderView.h
+//  百思不得骑姐
+//
+//  Created by 黄海良 on 16/5/11.
+//  Copyright © 2016年 黄海良. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface LCKCommentHeaderView : UITableViewHeaderFooterView
+/** 文字数据 */
+@property (nonatomic, copy) NSString *title;
+
++ (instancetype)headerViewWithTableView:(UITableView *)tableView;
+@end

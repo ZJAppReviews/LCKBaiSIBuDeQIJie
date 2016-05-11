@@ -123,16 +123,17 @@
              @"small_image" : @"image0",
              @"middle_image" : @"image2",
              @"large_image" : @"image1",
+             @"ID" : @"id",
              @"top_cmt" : @"top_cmt[0]"// 这条代码对于后面的最热评论至关重要
              };
 }
-
-//这个方法是将返回的字典转换为我们定义的模型
-+(NSDictionary *)mj_objectClassInArray{
-
-    return @{@"top_cmt" : [LCKComent class]};
-    
-}
+//上面的@"top_cmt" : @"top_cmt[0]"可以替代下面的方法
+////这个方法是将返回的字典转换为我们定义的模型
+//+(NSDictionary *)mj_objectClassInArray{
+//
+//    return @{@"top_cmt" : [LCKComent class]};
+//    
+//}
 
 
 @end

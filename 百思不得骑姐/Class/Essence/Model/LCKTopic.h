@@ -10,6 +10,8 @@
 @class LCKComent;
 
 @interface LCKTopic : NSObject
+/** id */
+@property (nonatomic, copy) NSString *ID;
 /** 头像 */
 @property (nonatomic , copy) NSString *profile_image;
 /** 文本段落 */
