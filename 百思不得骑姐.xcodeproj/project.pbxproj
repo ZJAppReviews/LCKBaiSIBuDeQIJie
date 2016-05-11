@@ -123,6 +123,7 @@
 		83F548121CE32EBA0023A265 /* LCKCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F548101CE32EBA0023A265 /* LCKCommentCell.xib */; };
 		83F548151CE340510023A265 /* UIImage+LCKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F548141CE340510023A265 /* UIImage+LCKExtension.m */; };
 		83F548181CE3409C0023A265 /* UIImageView+LCKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F548171CE3409C0023A265 /* UIImageView+LCKExtension.m */; };
+		83F5481B1CE36E4A0023A265 /* LCKTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F5481A1CE36E4A0023A265 /* LCKTopWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -364,6 +365,8 @@
 		83F548141CE340510023A265 /* UIImage+LCKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LCKExtension.m"; sourceTree = "<group>"; };
 		83F548161CE3409C0023A265 /* UIImageView+LCKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LCKExtension.h"; sourceTree = "<group>"; };
 		83F548171CE3409C0023A265 /* UIImageView+LCKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LCKExtension.m"; sourceTree = "<group>"; };
+		83F548191CE36E4A0023A265 /* LCKTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTopWindow.h; sourceTree = "<group>"; };
+		83F5481A1CE36E4A0023A265 /* LCKTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTopWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -734,6 +737,8 @@
 				83B3A1291CDEC7C000773786 /* LCKPushGuideView.h */,
 				83B3A12A1CDEC7C000773786 /* LCKPushGuideView.m */,
 				83B3A12C1CDEC7DA00773786 /* LCKPushGuideView.xib */,
+				83F548191CE36E4A0023A265 /* LCKTopWindow.h */,
+				83F5481A1CE36E4A0023A265 /* LCKTopWindow.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1151,6 +1156,7 @@
 				838FB4E11CDA3BCF00917F90 /* UIImageView+WebCache.m in Sources */,
 				838FB4D01CDA3BCF00917F90 /* UIScrollView+MJExtension.m in Sources */,
 				833303D41CE230690025587B /* LCKTopicVoiceView.m in Sources */,
+				83F5481B1CE36E4A0023A265 /* LCKTopWindow.m in Sources */,
 				838FB4DA1CDA3BCF00917F90 /* SDWebImageManager.m in Sources */,
 				838FB4D41CDA3BCF00917F90 /* NSData+ImageContentType.m in Sources */,
 				838FB4C71CDA3BCF00917F90 /* MJRefreshAutoStateFooter.m in Sources */,

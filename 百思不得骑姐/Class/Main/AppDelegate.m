@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LCKtabBarController.h"
 #import "LCKPushGuideView.h"
+#import "LCKTopWindow.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //创建窗口
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
     //设置窗口的根控制器
     self.window.rootViewController = [[LCKtabBarController alloc] init];
     //显示窗口
@@ -46,7 +48,9 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    // 添加一个window, 点击这个window, 可以让屏幕上的scrollView滚到最顶部
+//    [LCKTopWindow show];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
