@@ -191,14 +191,6 @@ LCKTopicCell *cell;
     
 }
 
-//-(void)setupBasic{
-//    
-//    self.title = @"最新评论";
-
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChageFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
-//    //设置tableView的全局色
-//    self.tableView.backgroundColor = LCKGlobalBackground;
-//}
 - (void)setupBasic
 {
     self.title = @"评论";

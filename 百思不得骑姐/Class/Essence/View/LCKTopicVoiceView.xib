@@ -17,6 +17,9 @@
                         <constraint firstAttribute="height" constant="25" id="LSb-XI-NqM"/>
                     </constraints>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FqR-lM-XnT" userLabel="背景">
+                    <rect key="frame" x="0.0" y="0.0" width="301" height="326"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxI-hM-Ve5" userLabel="播放次数">
                     <rect key="frame" x="221" y="0.0" width="80" height="25"/>
                     <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,9 +49,6 @@
                     <state key="normal" image="playButtonPlay" backgroundImage="playButton"/>
                     <state key="highlighted" backgroundImage="playButtonClick"/>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FqR-lM-XnT" userLabel="背景">
-                    <rect key="frame" x="0.0" y="0.0" width="301" height="326"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>

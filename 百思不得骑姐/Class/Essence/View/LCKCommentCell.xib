@@ -34,8 +34,11 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITa-t2-Z4M" userLabel="内容">
-                        <rect key="frame" x="55" y="40" width="235" height="93"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITa-t2-Z4M" userLabel="内容">
+                        <rect key="frame" x="55" y="40" width="235" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="hav-6Y-1qf"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -54,9 +57,24 @@
                         <color key="textColor" red="0.47657380860776" green="0.64408099193298196" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjR-ru-khe">
+                        <rect key="frame" x="55" y="40" width="62" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="1Jh-vH-NeR"/>
+                            <constraint firstAttribute="width" constant="62" id="3kv-EX-5Wi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="imageEdgeInsets" minX="40" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="12&quot;" image="play-voice-stop" backgroundImage="play-voice-bg">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="highlighted" backgroundImage="play-voice-bg-select"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ITa-t2-Z4M" firstAttribute="leading" secondItem="gHT-Y8-hzw" secondAttribute="trailing" constant="10" id="5cK-9H-cih"/>
+                    <constraint firstItem="HjR-ru-khe" firstAttribute="leading" secondItem="gHT-Y8-hzw" secondAttribute="trailing" constant="10" id="8aR-eE-piL"/>
                     <constraint firstItem="gHT-Y8-hzw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="AOa-vf-c3R"/>
                     <constraint firstItem="Rza-kz-dve" firstAttribute="leading" secondItem="oJq-Dc-bJM" secondAttribute="trailing" id="Gzw-sr-vfa"/>
                     <constraint firstItem="YMj-ks-gGX" firstAttribute="trailing" secondItem="nfH-I5-19f" secondAttribute="trailing" id="JZD-tC-xPu"/>
@@ -64,6 +82,7 @@
                     <constraint firstItem="nfH-I5-19f" firstAttribute="centerY" secondItem="gHT-Y8-hzw" secondAttribute="centerY" id="VqX-Jk-cBm"/>
                     <constraint firstAttribute="bottom" secondItem="ITa-t2-Z4M" secondAttribute="bottom" constant="10" id="YJy-m3-wcC"/>
                     <constraint firstItem="YMj-ks-gGX" firstAttribute="leading" secondItem="ITa-t2-Z4M" secondAttribute="trailing" constant="10" id="YoV-e9-1m7"/>
+                    <constraint firstItem="HjR-ru-khe" firstAttribute="top" secondItem="ITa-t2-Z4M" secondAttribute="top" id="bkx-x9-97d"/>
                     <constraint firstItem="oJq-Dc-bJM" firstAttribute="top" secondItem="gHT-Y8-hzw" secondAttribute="top" id="dY3-Ga-jQm"/>
                     <constraint firstItem="oJq-Dc-bJM" firstAttribute="leading" secondItem="gHT-Y8-hzw" secondAttribute="trailing" id="fUy-lA-8xq"/>
                     <constraint firstItem="ITa-t2-Z4M" firstAttribute="top" secondItem="Rza-kz-dve" secondAttribute="bottom" constant="10" id="iSt-Vv-ou6"/>
@@ -79,6 +98,7 @@
                 <outlet property="profileImageView" destination="gHT-Y8-hzw" id="tZF-6X-osD"/>
                 <outlet property="sexView" destination="oJq-Dc-bJM" id="qcZ-MM-ehL"/>
                 <outlet property="usernameLabel" destination="Rza-kz-dve" id="92Y-PQ-fm5"/>
+                <outlet property="voiceButton" destination="HjR-ru-khe" id="6hd-fK-s52"/>
             </connections>
             <point key="canvasLocation" x="383" y="380"/>
         </tableViewCell>
@@ -87,5 +107,8 @@
         <image name="Profile_manIcon" width="13" height="13"/>
         <image name="commentLikeButton" width="18" height="18"/>
         <image name="commentLikeButtonClick" width="19" height="19"/>
+        <image name="play-voice-bg" width="62" height="22"/>
+        <image name="play-voice-bg-select" width="74" height="24"/>
+        <image name="play-voice-stop" width="12" height="12"/>
     </resources>
 </document>

@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *likeCountLabel;
-
+@property (weak, nonatomic) IBOutlet UIButton *voiceButton;
 
 @end
 
@@ -56,12 +56,18 @@
     self.usernameLabel.text = comment.user.username;
     self.likeCountLabel.text = [NSString stringWithFormat:@"%zd", comment.like_count];
     
-//    if (comment.voiceuri.length) {
-//        self.voiceButton.hidden = NO;
-//        [self.voiceButton setTitle:[NSString stringWithFormat:@"%zd''", comment.voicetime] forState:UIControlStateNormal];
-//    } else {
-//        self.voiceButton.hidden = YES;
-//    }
+    if (comment.voiceuri.length) {
+        self.voiceButton.hidden = NO;
+        [self.voiceButton setTitle:[NSString stringWithFormat:@"%zd''", comment.voicetime] forState:UIControlStateNormal];
+    } else {
+        self.voiceButton.hidden = YES;
+    }
+}
+
+-(void)setFrame:(CGRect)frame{
+    frame.origin.x = LCKTopicCellMargin;
+    frame.size.width -= 2 * LCKTopicCellMargin;
+    [super setFrame:frame];//必须写上，否则会出现不可预测的bug
 }
 
 
