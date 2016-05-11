@@ -20,6 +20,9 @@
     CGRect _pictureF;
 }
 
+
+
+
 //重写:自定义时间
 -(NSString *)create_time{
     // 日期格式化类

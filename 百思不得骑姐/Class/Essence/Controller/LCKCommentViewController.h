@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LCKTopic;
 
 @interface LCKCommentViewController : UIViewController
-
+/**
+ *  帖子模型
+ */
+@property (nonatomic , strong) LCKTopic *topic;
 @end

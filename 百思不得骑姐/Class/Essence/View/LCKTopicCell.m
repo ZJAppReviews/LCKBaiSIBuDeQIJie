@@ -40,6 +40,10 @@
 
 @implementation LCKTopicCell
 
++(instancetype)cell{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
+}
+
 -(void)awakeFromNib{
     UIImageView *bgView = [[UIImageView alloc] init];
     bgView.image = [UIImage imageNamed:@"mainCellBackground"];
@@ -171,7 +175,9 @@
     
     frame.origin.x = LCKTopicCellMargin;
     frame.size.width -= LCKTopicCellMargin * 2;
-    frame.size.height -= LCKTopicCellMargin;
+//    frame.size.height -= LCKTopicCellMargin;
+    //使用算出来的cellheight来进行相减可以解决headerView改变的问题（每次上拉cell，都会调用这个setFrame方法）
+    frame.size.height = self.topic.cellHeight - LCKTopicCellMargin;
     frame.origin.y += LCKTopicCellMargin;
     
     [super setFrame:frame];

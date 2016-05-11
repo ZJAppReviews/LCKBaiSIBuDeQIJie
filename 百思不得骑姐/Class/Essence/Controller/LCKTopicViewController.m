@@ -245,7 +245,8 @@ static NSString * const LCKTopicCellId = @"Topic";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     LCKCommentViewController *cmtVC = [[LCKCommentViewController alloc] init];
-    
+    //传模型给控制器，并且点击哪个传送哪个
+    cmtVC.topic = self.topics[indexPath.row];
     [self.navigationController pushViewController:cmtVC animated:YES];
 }
 

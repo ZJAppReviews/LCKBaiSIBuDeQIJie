@@ -10,6 +10,8 @@
 @class LCKTopic;
 
 @interface LCKTopicCell : UITableViewCell
+
++(instancetype)cell;
 /**
  *  帖子数据
  */
