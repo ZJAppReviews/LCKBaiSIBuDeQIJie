@@ -38,6 +38,7 @@ static NSString * const LCKCommentId = @"comment";
 
 
 
+
 @end
 
 @implementation LCKCommentViewController
@@ -322,45 +323,48 @@ LCKTopicCell *cell;
     [[UIMenuController sharedMenuController] setMenuVisible:NO animated:YES];
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    UIMenuController *menu = [UIMenuController sharedMenuController];
-//    if (menu.isMenuVisible) {
-//        [menu setMenuVisible:NO animated:YES];
-//    } else {
-//        // 被点击的cell
-//        LCKCommentCell *cell = (LCKCommentCell *)[tableView cellForRowAtIndexPath:indexPath];
-//        // 出现一个第一响应者
-//        [cell becomeFirstResponder];
-//        
-//        // 显示MenuController
-//        UIMenuItem *ding = [[UIMenuItem alloc] initWithTitle:@"顶" action:@selector(ding:)];
-//        UIMenuItem *replay = [[UIMenuItem alloc] initWithTitle:@"回复" action:@selector(replay:)];
-//        UIMenuItem *report = [[UIMenuItem alloc] initWithTitle:@"举报" action:@selector(report:)];
-//        menu.menuItems = @[ding, replay, report];
-//        CGRect rect = CGRectMake(0, cell.height * 0.5, cell.width, cell.height * 0.5);
-//        [menu setTargetRect:rect inView:cell];
-//        [menu setMenuVisible:YES animated:YES];
-//    }
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
 
-//#pragma mark - MenuItem处理
-//- (void)ding:(UIMenuController *)menu
-//{
-//    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//    NSLog(@"%s %@", __func__, [self commentInIndexPath:indexPath].content);
-//}
-//
-//- (void)replay:(UIMenuController *)menu
-//{
-//    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//    NSLog(@"%s %@", __func__, [self commentInIndexPath:indexPath].content);
-//}
-//
-//- (void)report:(UIMenuController *)menu
-//{
-//    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//    NSLog(@"%s %@", __func__, [self commentInIndexPath:indexPath].content);
-//}
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    if (menu.isMenuVisible) {
+        [menu setMenuVisible:NO animated:YES];
+    } else {
+        // 被点击的cell
+        LCKCommentCell *cell = (LCKCommentCell *)[tableView cellForRowAtIndexPath:indexPath];
+        // 出现一个第一响应者
+        [cell becomeFirstResponder];
+        
+        // 显示MenuController
+        UIMenuItem *ding = [[UIMenuItem alloc] initWithTitle:@"顶" action:@selector(ding:)];
+        UIMenuItem *replay = [[UIMenuItem alloc] initWithTitle:@"回复" action:@selector(replay:)];
+        UIMenuItem *report = [[UIMenuItem alloc] initWithTitle:@"举报" action:@selector(report:)];
+        menu.menuItems = @[ding, replay, report];
+        CGRect rect = CGRectMake(0, cell.height * 0.5, cell.width, cell.height * 0.5);
+        [menu setTargetRect:rect inView:cell];
+        [menu setMenuVisible:YES animated:YES];
+    }
+}
+
+#pragma mark - MenuItem处理
+- (void)ding:(UIMenuController *)menu
+{
+    //当前被选中的行
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    //选中行的内容
+    NSLog(@"%s %@", __func__, [self commentInIndexPath:indexPath].content);
+}
+
+- (void)replay:(UIMenuController *)menu
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    NSLog(@"%s %@", __func__, [self commentInIndexPath:indexPath].content);
+}
+
+- (void)report:(UIMenuController *)menu
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    NSLog(@"%s %@", __func__, [self commentInIndexPath:indexPath].content);
+}
 @end
 
