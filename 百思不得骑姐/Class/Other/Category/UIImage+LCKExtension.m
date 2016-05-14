@@ -9,6 +9,9 @@
 #import "UIImage+LCKExtension.h"
 
 @implementation UIImage (LCKExtension)
+/**
+ *  使用图层绘画的方式来处理圆角
+ */
 - (UIImage *)circleImage
 {
     // NO代表透明

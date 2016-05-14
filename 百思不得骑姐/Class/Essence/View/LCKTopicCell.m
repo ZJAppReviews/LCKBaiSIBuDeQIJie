@@ -50,6 +50,13 @@
     UIImageView *bgView = [[UIImageView alloc] init];
     bgView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgView;
+    
+//    //设置头像图片圆角
+//    self.cellImageView.layer.cornerRadius = self.cellImageView.size.height * 0.5;
+//    //A Boolean indicating whether sublayers are clipped to the layer’s bounds.
+//    //指明子子图层是否剪切图层
+//    self.cellImageView.layer.masksToBounds = YES;
+    
 }
 
 //懒加载
@@ -103,7 +110,12 @@
     
     //头像
     NSString *url = topic.profile_image;
-    [self.cellImageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+//    [self.cellImageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//        //将image的圆角处理方法放到一个circleImage方法中
+//        self.cellImageView.image = [image circleImage];
+//    }];
+    
+    [self.cellImageView setHeader:url];
     
     // 按钮数字格式化
     [self setupButtonTitle:self.dingButton count:topic.ding placeholder:@"顶"];

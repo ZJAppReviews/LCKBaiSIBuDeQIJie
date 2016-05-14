@@ -41,8 +41,13 @@
     bgView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgView;
     
-    //    self.profileImageView.layer.cornerRadius = self.profileImageView.width * 0.5;
-    //    self.profileImageView.layer.masksToBounds = YES;
+    //对于图层的操作，会显得程序特别卡（解决方法：从服务器中返回的正方形的图片，转变为圆角图片直接显示在imageView中即可）
+//    //设置头像图片圆角
+//    self.profileImageView.layer.cornerRadius = self.profileImageView.size.height * 0.5;
+//    //A Boolean indicating whether sublayers are clipped to the layer’s bounds.
+//    //指明子子图层是否剪切图层
+//    self.profileImageView.layer.masksToBounds = YES;
+    
 }
 
 - (void)setComment:(LCKComent *)comment

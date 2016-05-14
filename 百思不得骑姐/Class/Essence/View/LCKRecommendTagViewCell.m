@@ -23,7 +23,11 @@
 -(void)setRecommendTag:(LCKRecommendTags *)recommendTag{
     _recommendTag = recommendTag;
     
-    [self.imageListView sd_setImageWithURL:[NSURL URLWithString:recommendTag.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+//    [self.imageListView sd_setImageWithURL:[NSURL URLWithString:recommendTag.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    //设置推荐订阅的头像为圆形
+    NSURL *URL = [NSURL URLWithString:recommendTag.image_list];
+    NSString *url = [NSString stringWithFormat:@"%@",URL];
+    [self.imageListView setHeader:url];
     self.themeNameLabel.text = recommendTag.theme_name;
     
     //订阅数的简写

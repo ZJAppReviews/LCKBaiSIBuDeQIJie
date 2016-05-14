@@ -40,7 +40,10 @@
     }
     
     self.fansCountLabel.text = fansCount;
-    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+//    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    //设置头像为圆形头像
+    NSString *url = [NSString stringWithFormat:@"%@",[NSURL URLWithString:user.header]];
+    [self.headerImageView setHeader:url];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
