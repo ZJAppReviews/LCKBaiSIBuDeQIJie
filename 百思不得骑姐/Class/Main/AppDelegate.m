@@ -30,6 +30,7 @@
     //显示推送引导(在相关类中封装起来)
     [LCKPushGuideView showGuideView];
     
+    
     return YES;
 }
 
@@ -51,6 +52,7 @@
     
     // 添加一个window, 点击这个window, 可以让屏幕上的scrollView滚到最顶部
 //    [LCKTopWindow show];
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

@@ -28,8 +28,6 @@ static UIWindow *window_;
 + (void)show
 {
     window_.hidden = NO;
-    [window_ makeKeyAndVisible];
-    [window_ rootViewController];
     
 }
 

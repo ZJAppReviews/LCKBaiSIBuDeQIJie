@@ -45,8 +45,6 @@
 /** 帖子类型 */
 @property (nonatomic , assign) LCKTopicType type;
 
-/** 最热评论 */
-@property (nonatomic, strong) LCKComent *top_cmt;
 /** 音频时长 */
 @property (nonatomic, assign) NSInteger voicetime;
 /** 视频时长 */
@@ -54,6 +52,10 @@
 /** 播放次数 */
 @property (nonatomic, assign) NSInteger playcount;
 
+/** 最热评论 */
+@property (nonatomic, strong) LCKComent *top_cmt;
+
+ 
 /**
  *  额外的辅助属性
  */
