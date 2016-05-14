@@ -58,6 +58,8 @@
     [self setValue:[[LCKTabBar alloc] init] forKey:@"tabBar"];
     //设置tabbar的背景颜色
     [self.tabBar setBackgroundImage:[UIImage imageNamed:@"tabbar-light"]];
+    
+
 
 }
 
@@ -86,5 +88,8 @@
     
     [self addChildViewController:nav];
 }
+
+
+
 
 @end

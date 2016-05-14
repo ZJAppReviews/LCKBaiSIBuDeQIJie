@@ -27,6 +27,9 @@
 
 /** 上一次请求的参数 */
 @property(nonatomic,strong) NSDictionary *params;
+/** 上一次选中的索引 */
+@property(nonatomic,assign) NSInteger lastSelectedIndex;
+
 
 @end
 
@@ -68,6 +71,19 @@ static NSString * const LCKTopicCellId = @"Topic";
     
     // 注册
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LCKTopicCell class]) bundle:nil] forCellReuseIdentifier:LCKTopicCellId];
+    
+    //监听tarbar点击的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarClick:) name:LCKTabBarDidSelectNotification object:nil];
+}
+
+-(void)tabBarClick:(NSString *)selectedIndex{
+    //如果选中的不是当前的导航控制器，直接返回
+    //如果不是两次连续点击，直接返回
+    if(self.lastSelectedIndex == self.tabBarController.selectedIndex && self.tabBarController.selectedViewController == self.navigationController && self.view.isShowingOnKeyWindow){
+        [self.tableView.mj_header beginRefreshing];
+    }
+    //记录此次的选中的索引
+    self.lastSelectedIndex = self.tabBarController.selectedIndex;
 }
 
 /**
@@ -249,5 +265,6 @@ static NSString * const LCKTopicCellId = @"Topic";
     cmtVC.topic = self.topics[indexPath.row];
     [self.navigationController pushViewController:cmtVC animated:YES];
 }
+
 
 @end

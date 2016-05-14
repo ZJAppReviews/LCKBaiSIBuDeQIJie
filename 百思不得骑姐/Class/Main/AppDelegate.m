@@ -11,7 +11,7 @@
 #import "LCKPushGuideView.h"
 #import "LCKTopWindow.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -23,7 +23,10 @@
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     //设置窗口的根控制器
-    self.window.rootViewController = [[LCKtabBarController alloc] init];
+    UITabBarController *tarBarController = [[LCKtabBarController alloc] init];
+    tarBarController.delegate = self;
+    self.window.rootViewController = tarBarController;
+    
     //显示窗口
     [self.window makeKeyAndVisible];
     
@@ -32,6 +35,18 @@
     
     
     return YES;
+}
+
+#pragma mark --- UITabBarControllerDelegate
+
+//进行点击刷新（一般不会让自己来实现自己的代理）
+-(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    //使用通知来通知ViewController来更新视图（相距太远，通知最合适）
+    NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
+    userInfo[LCKSelectedControllerKey] = viewController;
+    //对象要用（）
+    userInfo[LCKSelectedControllerIndexKey] = @(tabBarController.selectedIndex);
+    [[NSNotificationCenter defaultCenter] postNotificationName:LCKTabBarDidSelectNotification object:nil userInfo:userInfo];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -6,8 +6,9 @@
 //  Copyright © 2016年 黄海良. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "LCKEssenceViewController.h"
 
-@interface LCKNewViewController : UIViewController
+//由于新帖和精华差不多，因此可以使用继承的方法来快速实现
+@interface LCKNewViewController : LCKEssenceViewController
 
 @end
