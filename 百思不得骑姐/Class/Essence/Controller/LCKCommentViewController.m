@@ -133,6 +133,7 @@ static NSString * const LCKCommentId = @"comment";
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //判断是否在哪个帖子中，因为其中会报一个NSArray当成是NSDictionary来使用了
         if (![responseObject isKindOfClass:[NSDictionary class]]) {
             [self.tableView.mj_header endRefreshing];
             return;

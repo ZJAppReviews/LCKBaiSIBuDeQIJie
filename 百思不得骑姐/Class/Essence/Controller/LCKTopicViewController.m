@@ -14,6 +14,7 @@
 #import "MJExtension.h"
 #import "MJRefresh.h"
 #import "LCKTopicCell.h"
+#import "LCKNewViewController.h"
 
 #import "LCKCommentViewController.h"
 
@@ -89,35 +90,35 @@ static NSString * const LCKTopicCellId = @"Topic";
 /**
  *  请求加载数据
  */
--(void)loadDatas{
-    
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
-    params[@"c"] = @"data";
-    params[@"type"] = @(self.type);
-    
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        //将数据写入到硬盘中
-        //        [responseObject writeToFile:@"/Users/AppleDeveloper/Desktop/Word.plist" atomically:YES];
-        
-        NSArray *newTopics = [LCKTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        [self.topics addObjectsFromArray:newTopics];
-        
-        [self.tableView reloadData];
-        
-        [self.tableView.mj_footer endRefreshing];
-        
-        //当重新加载时需要重置为第0页
-        self.page = 0;
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [SVProgressHUD showErrorWithStatus:@"加载段子数据错误"];
-        [self.tableView.mj_footer endRefreshing];
-    }];
-}
+//-(void)loadDatas{
+//    
+//    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+//    params[@"a"] = @"list";
+//    params[@"c"] = @"data";
+//    params[@"type"] = @(self.type);
+//    
+//    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+//        
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        
+//        //将数据写入到硬盘中
+//        //        [responseObject writeToFile:@"/Users/AppleDeveloper/Desktop/Word.plist" atomically:YES];
+//        
+//        NSArray *newTopics = [LCKTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+//        [self.topics addObjectsFromArray:newTopics];
+//        
+//        [self.tableView reloadData];
+//        
+//        [self.tableView.mj_footer endRefreshing];
+//        
+//        //当重新加载时需要重置为第0页
+//        self.page = 0;
+//        
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        [SVProgressHUD showErrorWithStatus:@"加载段子数据错误"];
+//        [self.tableView.mj_footer endRefreshing];
+//    }];
+//}
 
 
 #pragma mark -- 刷新更新数据
@@ -135,6 +136,12 @@ static NSString * const LCKTopicCellId = @"Topic";
     [self.tableView.mj_header beginRefreshing];
     
 }
+#pragma mark -- a参数
+//新帖和精华的参数只是相差一个a参数
+-(NSString *)a{
+    return [self.parentViewController isKindOfClass:[LCKNewViewController class]] ? @"newList" : @"list";
+}
+
 #pragma mark --- 数据处理
 /**
  *  下拉刷新，加载更多最新的资源
@@ -145,7 +152,7 @@ static NSString * const LCKTopicCellId = @"Topic";
     
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.a;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     self.params = params;
@@ -191,7 +198,7 @@ static NSString * const LCKTopicCellId = @"Topic";
     
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.a;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     NSInteger page = self.page + 1;
