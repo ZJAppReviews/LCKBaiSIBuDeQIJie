@@ -34,10 +34,18 @@
 		832394171CD9D8A100F5A511 /* LCKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 832394091CD9D8A100F5A511 /* LCKTabBar.m */; };
 		8323941B1CD9E1DC00F5A511 /* LCKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8323941A1CD9E1DC00F5A511 /* LCKNavigationController.m */; };
 		832394221CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832394211CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib */; };
+		8324FC411CEB043800B30DC9 /* LCKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8324FC3F1CEB043800B30DC9 /* LCKWebViewController.m */; };
+		8324FC421CEB043800B30DC9 /* LCKWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8324FC401CEB043800B30DC9 /* LCKWebViewController.xib */; };
 		833303D41CE230690025587B /* LCKTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 833303D31CE230690025587B /* LCKTopicVoiceView.m */; };
 		833303D61CE230800025587B /* LCKTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 833303D51CE230800025587B /* LCKTopicVoiceView.xib */; };
 		833303D91CE24AF10025587B /* LCKTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 833303D81CE24AF10025587B /* LCKTopicVideoView.m */; };
 		833303DB1CE24B100025587B /* LCKTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 833303DA1CE24B100025587B /* LCKTopicVideoView.xib */; };
+		833D14541CEAC30B006BAA30 /* LCKMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833D14531CEAC30B006BAA30 /* LCKMeCell.m */; };
+		833D14571CEAC8B1006BAA30 /* LCKMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 833D14561CEAC8B1006BAA30 /* LCKMeFooterView.m */; };
+		833D145A1CEACE80006BAA30 /* LCKSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 833D14591CEACE80006BAA30 /* LCKSquare.m */; };
+		833D145D1CEAD126006BAA30 /* LCKSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 833D145C1CEAD126006BAA30 /* LCKSquareButton.m */; };
+		833D14661CEAD499006BAA30 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 833D14631CEAD499006BAA30 /* NJKWebViewProgress.m */; };
+		833D14671CEAD499006BAA30 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 833D14651CEAD499006BAA30 /* NJKWebViewProgressView.m */; };
 		838FB4B01CDA3BCF00917F90 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FB4391CDA3BCF00917F90 /* AFHTTPSessionManager.m */; };
 		838FB4B11CDA3BCF00917F90 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FB43C1CDA3BCF00917F90 /* AFNetworkReachabilityManager.m */; };
 		838FB4B21CDA3BCF00917F90 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 838FB43E1CDA3BCF00917F90 /* AFSecurityPolicy.m */; };
@@ -197,12 +205,27 @@
 		832394191CD9E1DC00F5A511 /* LCKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKNavigationController.h; sourceTree = "<group>"; };
 		8323941A1CD9E1DC00F5A511 /* LCKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKNavigationController.m; sourceTree = "<group>"; };
 		832394211CDA0A8300F5A511 /* LCKFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		8324FC3E1CEB043800B30DC9 /* LCKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKWebViewController.h; sourceTree = "<group>"; };
+		8324FC3F1CEB043800B30DC9 /* LCKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKWebViewController.m; sourceTree = "<group>"; };
+		8324FC401CEB043800B30DC9 /* LCKWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKWebViewController.xib; sourceTree = "<group>"; };
 		833303D21CE230690025587B /* LCKTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTopicVoiceView.h; sourceTree = "<group>"; };
 		833303D31CE230690025587B /* LCKTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTopicVoiceView.m; sourceTree = "<group>"; };
 		833303D51CE230800025587B /* LCKTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKTopicVoiceView.xib; sourceTree = "<group>"; };
 		833303D71CE24AF10025587B /* LCKTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKTopicVideoView.h; sourceTree = "<group>"; };
 		833303D81CE24AF10025587B /* LCKTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKTopicVideoView.m; sourceTree = "<group>"; };
 		833303DA1CE24B100025587B /* LCKTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCKTopicVideoView.xib; sourceTree = "<group>"; };
+		833D14521CEAC30B006BAA30 /* LCKMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMeCell.h; sourceTree = "<group>"; };
+		833D14531CEAC30B006BAA30 /* LCKMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMeCell.m; sourceTree = "<group>"; };
+		833D14551CEAC8B1006BAA30 /* LCKMeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKMeFooterView.h; sourceTree = "<group>"; };
+		833D14561CEAC8B1006BAA30 /* LCKMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKMeFooterView.m; sourceTree = "<group>"; };
+		833D14581CEACE80006BAA30 /* LCKSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKSquare.h; sourceTree = "<group>"; };
+		833D14591CEACE80006BAA30 /* LCKSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKSquare.m; sourceTree = "<group>"; };
+		833D145B1CEAD126006BAA30 /* LCKSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCKSquareButton.h; sourceTree = "<group>"; };
+		833D145C1CEAD126006BAA30 /* LCKSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCKSquareButton.m; sourceTree = "<group>"; };
+		833D14621CEAD499006BAA30 /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
+		833D14631CEAD499006BAA30 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
+		833D14641CEAD499006BAA30 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
+		833D14651CEAD499006BAA30 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
 		838FB4381CDA3BCF00917F90 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		838FB4391CDA3BCF00917F90 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		838FB43A1CDA3BCF00917F90 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -628,6 +651,9 @@
 			children = (
 				832393F11CD9D8A100F5A511 /* LCKMeViewController.h */,
 				832393F21CD9D8A100F5A511 /* LCKMeViewController.m */,
+				8324FC3E1CEB043800B30DC9 /* LCKWebViewController.h */,
+				8324FC3F1CEB043800B30DC9 /* LCKWebViewController.m */,
+				8324FC401CEB043800B30DC9 /* LCKWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -635,6 +661,8 @@
 		832393F31CD9D8A100F5A511 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				833D14581CEACE80006BAA30 /* LCKSquare.h */,
+				833D14591CEACE80006BAA30 /* LCKSquare.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -642,6 +670,12 @@
 		832393F41CD9D8A100F5A511 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				833D14521CEAC30B006BAA30 /* LCKMeCell.h */,
+				833D14531CEAC30B006BAA30 /* LCKMeCell.m */,
+				833D14551CEAC8B1006BAA30 /* LCKMeFooterView.h */,
+				833D14561CEAC8B1006BAA30 /* LCKMeFooterView.m */,
+				833D145B1CEAD126006BAA30 /* LCKSquareButton.h */,
+				833D145C1CEAD126006BAA30 /* LCKSquareButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -777,9 +811,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		833D14611CEAD499006BAA30 /* NJKWebViewProgress */ = {
+			isa = PBXGroup;
+			children = (
+				833D14621CEAD499006BAA30 /* NJKWebViewProgress.h */,
+				833D14631CEAD499006BAA30 /* NJKWebViewProgress.m */,
+				833D14641CEAD499006BAA30 /* NJKWebViewProgressView.h */,
+				833D14651CEAD499006BAA30 /* NJKWebViewProgressView.m */,
+			);
+			path = NJKWebViewProgress;
+			sourceTree = "<group>";
+		};
 		838FB4361CDA3BCF00917F90 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				833D14611CEAD499006BAA30 /* NJKWebViewProgress */,
 				83022CB71CE0BA1000BCC710 /* DACircularProgress */,
 				838FB4371CDA3BCF00917F90 /* AFNetworking */,
 				838FB4451CDA3BCF00917F90 /* MJExtension */,
@@ -1093,6 +1139,7 @@
 				83022CB01CE096F900BCC710 /* LCKTopicPictureView.xib in Resources */,
 				83F548121CE32EBA0023A265 /* LCKCommentCell.xib in Resources */,
 				838FB4E41CDA3BCF00917F90 /* SVProgressHUD.bundle in Resources */,
+				8324FC421CEB043800B30DC9 /* LCKWebViewController.xib in Resources */,
 				838FB4EF1CDA472700917F90 /* LCKRecommendCategoryCell.xib in Resources */,
 				83022CC21CE0BC2B00BCC710 /* LCKShowPictureController.xib in Resources */,
 				83AD49E31CDA312500B1A884 /* LCKRecommendViewController.xib in Resources */,
@@ -1136,6 +1183,7 @@
 				8323940E1CD9D8A100F5A511 /* LCKEssenceViewController.m in Sources */,
 				838FB4E71CDA3C8200917F90 /* Foundation+Log.m in Sources */,
 				83C99A721CDE2C5400FC5638 /* LCKVerticalButton.m in Sources */,
+				833D14671CEAD499006BAA30 /* NJKWebViewProgressView.m in Sources */,
 				838FB4C11CDA3BCF00917F90 /* MJRefreshBackFooter.m in Sources */,
 				83AD49E21CDA312500B1A884 /* LCKRecommendViewController.m in Sources */,
 				832394151CD9D8A100F5A511 /* LCKtabBarController.m in Sources */,
@@ -1159,6 +1207,7 @@
 				83F5481B1CE36E4A0023A265 /* LCKTopWindow.m in Sources */,
 				838FB4DA1CDA3BCF00917F90 /* SDWebImageManager.m in Sources */,
 				838FB4D41CDA3BCF00917F90 /* NSData+ImageContentType.m in Sources */,
+				833D14541CEAC30B006BAA30 /* LCKMeCell.m in Sources */,
 				838FB4C71CDA3BCF00917F90 /* MJRefreshAutoStateFooter.m in Sources */,
 				8323941B1CD9E1DC00F5A511 /* LCKNavigationController.m in Sources */,
 				838FB4C21CDA3BCF00917F90 /* MJRefreshComponent.m in Sources */,
@@ -1167,6 +1216,7 @@
 				838FB4E51CDA3BCF00917F90 /* SVProgressHUD.m in Sources */,
 				838FB4B91CDA3BCF00917F90 /* MJPropertyKey.m in Sources */,
 				838FB4B11CDA3BCF00917F90 /* AFNetworkReachabilityManager.m in Sources */,
+				833D14661CEAD499006BAA30 /* NJKWebViewProgress.m in Sources */,
 				838FB4D31CDA3BCF00917F90 /* MKAnnotationView+WebCache.m in Sources */,
 				838FB4C41CDA3BCF00917F90 /* MJRefreshHeader.m in Sources */,
 				838FB4BA1CDA3BCF00917F90 /* MJPropertyType.m in Sources */,
@@ -1187,6 +1237,7 @@
 				838FB4D61CDA3BCF00917F90 /* SDWebImageCompat.m in Sources */,
 				832394131CD9D8A100F5A511 /* UIBarButtonItem+LCKExtention.m in Sources */,
 				838FB4BF1CDA3BCF00917F90 /* NSString+MJExtension.m in Sources */,
+				833D14571CEAC8B1006BAA30 /* LCKMeFooterView.m in Sources */,
 				838FB4CC1CDA3BCF00917F90 /* MJRefreshNormalHeader.m in Sources */,
 				83F548091CE2E6A80023A265 /* LCKCommentViewController.m in Sources */,
 				838FB4CD1CDA3BCF00917F90 /* MJRefreshStateHeader.m in Sources */,
@@ -1208,6 +1259,7 @@
 				838FB4B71CDA3BCF00917F90 /* MJFoundation.m in Sources */,
 				838FB4C31CDA3BCF00917F90 /* MJRefreshFooter.m in Sources */,
 				838FB4D91CDA3BCF00917F90 /* SDWebImageDownloaderOperation.m in Sources */,
+				833D145D1CEAD126006BAA30 /* LCKSquareButton.m in Sources */,
 				838FB4B21CDA3BCF00917F90 /* AFSecurityPolicy.m in Sources */,
 				838FB4DE1CDA3BCF00917F90 /* UIImage+MultiFormat.m in Sources */,
 				838FB4E21CDA3BCF00917F90 /* UIView+WebCacheOperation.m in Sources */,
@@ -1220,10 +1272,12 @@
 				838FB4CA1CDA3BCF00917F90 /* MJRefreshBackStateFooter.m in Sources */,
 				83F548051CE2C41C0023A265 /* LCKComent.m in Sources */,
 				8314E3461CDF7E1700706C8F /* LCKConst.m in Sources */,
+				8324FC411CEB043800B30DC9 /* LCKWebViewController.m in Sources */,
 				832394111CD9D8A100F5A511 /* LCKMeViewController.m in Sources */,
 				838FB4BB1CDA3BCF00917F90 /* NSObject+MJClass.m in Sources */,
 				838FB4B81CDA3BCF00917F90 /* MJProperty.m in Sources */,
 				83AEE06A1CDAE040002E9C63 /* LCKRecommendUserCell.m in Sources */,
+				833D145A1CEACE80006BAA30 /* LCKSquare.m in Sources */,
 				838FB4D51CDA3BCF00917F90 /* SDImageCache.m in Sources */,
 				83DB8F7D1CDB805700A22D75 /* LCKRecommendTagViewController.m in Sources */,
 			);

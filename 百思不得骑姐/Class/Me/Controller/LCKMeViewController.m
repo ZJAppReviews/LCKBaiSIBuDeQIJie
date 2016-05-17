@@ -7,12 +7,16 @@
 //
 
 #import "LCKMeViewController.h"
+#import "LCKMeCell.h"
+#import "LCKMeFooterView.h"
 
-@interface LCKMeViewController ()
+@interface LCKMeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
 @implementation LCKMeViewController
+
+static NSString * const CellID = @"me";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,6 +31,21 @@
     
     //设置背景颜色
     self.view.backgroundColor = LCKGlobalBackground;
+    
+    //注册
+    [self.tableView registerClass:[LCKMeCell class] forCellReuseIdentifier:CellID];
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+   //调整header和footer
+    self.tableView.sectionHeaderHeight = 0;
+    self.tableView.sectionFooterHeight = LCKTopicCellMargin;
+    //使得整cell往上挪动，可避免重写setFrame方法
+    self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, -44, 0);
+    
+    
+    //加载foorerView
+    self.tableView.tableFooterView = [[LCKMeFooterView alloc] init];
+    
 }
 
 -(void)settingClick{
@@ -40,5 +59,35 @@
 -(void)momenyClick{
     LCKLogFunc;
 }
+
+#pragma mark -- UITableViewDataSource
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    LCKMeCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
+    
+    if (cell == nil) {
+        cell = [[LCKMeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
+    }
+    
+    if (indexPath.section == 0) {
+        cell.textLabel.text = @"登录／注册";
+        cell.imageView.image = [UIImage imageNamed:@"defaultUserIcon"];
+    }else if (indexPath.section == 1){
+        cell.textLabel.text = @"离线下载";
+    }
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    return cell;
+}
+
 
 @end
