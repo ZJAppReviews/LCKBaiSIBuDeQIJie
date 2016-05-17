@@ -40,13 +40,15 @@ static NSString * const CellID = @"me";
     self.tableView.sectionHeaderHeight = 0;
     self.tableView.sectionFooterHeight = LCKTopicCellMargin;
     //使得整cell往上挪动，可避免重写setFrame方法
-    self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, -44, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, 0, 0);
     
     
     //加载foorerView
     self.tableView.tableFooterView = [[LCKMeFooterView alloc] init];
     
 }
+
+
 
 -(void)settingClick{
     LCKLogFunc;
@@ -88,6 +90,8 @@ static NSString * const CellID = @"me";
     
     return cell;
 }
-
+-(void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section{
+    [self.tableView.tableFooterView setNeedsDisplay];
+}
 
 @end

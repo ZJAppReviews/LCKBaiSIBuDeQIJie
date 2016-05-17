@@ -74,16 +74,9 @@
 
 - (void)buttonClick:(UIButton *)button
 {
-//    [self cancelWithCompletionBlock:^{
-//        if (button.tag == 2) {
-//            XMGPostWordViewController *postWord = [[XMGPostWordViewController alloc] init];
-//            XMGNavigationController *nav = [[XMGNavigationController alloc] initWithRootViewController:postWord];
-//            
-//            // 这里不能使用self来弹出其他控制器, 因为self执行了dismiss操作
-//            UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
-//            [root presentViewController:nav animated:YES completion:nil];
-//        }
-//    }];
+    if (button.tag == 2) {
+        LCKLogFunc;
+    }
 }
 
 - (IBAction)cancelVC:(id)sender {

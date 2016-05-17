@@ -24,14 +24,15 @@
         NSMutableDictionary *params = [NSMutableDictionary dictionary];
         params[@"a"]=@"square";
         params[@"c"]=@"topic";
+        
+        
         [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSArray *squares = [LCKSquare mj_objectArrayWithKeyValuesArray:responseObject[@"square_list"]];
             //创建方块
-            LCKLog(@"%@",responseObject);
+//            LCKLog(@"%@",responseObject);
             [self createSquares:squares];
-            
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             
         }];
@@ -100,18 +101,19 @@
 
 - (void)buttonClick:(LCKSquareButton *)button
 {
-    LCKLogFunc;
+//    LCKLogFunc;
     
     if (![button.square.url hasPrefix:@"http"]) return;
     
     LCKWebViewController *web = [[LCKWebViewController alloc] init];
     web.url = button.square.url;
     web.title = button.square.name;
-    
+
     // 取出当前的导航控制器
     UITabBarController *tabBarVc = (UITabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
     UINavigationController *nav = (UINavigationController *)tabBarVc.selectedViewController;
     [nav pushViewController:web animated:YES];
+
 }
 
 ////由于UIView没有image，imageView属性，因此需要背景图片就需要重写此方法
