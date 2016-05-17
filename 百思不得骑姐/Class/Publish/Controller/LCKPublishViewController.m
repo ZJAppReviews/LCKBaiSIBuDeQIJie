@@ -8,6 +8,8 @@
 
 #import "LCKPublishViewController.h"
 #import "LCKVerticalButton.h"
+#import "LCKPublishWordViewController.h"
+#import "LCKNavigationController.h"
 
 
 @interface LCKPublishViewController ()
@@ -63,10 +65,7 @@
         
         [self.view addSubview:button];
         // 按钮动画（推荐是用facebook开发的pop框架）
-        
-        
-
-        
+   
        
     }
  
@@ -75,13 +74,29 @@
 - (void)buttonClick:(UIButton *)button
 {
     if (button.tag == 2) {
-        LCKLogFunc;
+//        LCKLogFunc;
+        LCKPublishWordViewController *publishWord = [[LCKPublishWordViewController alloc] init];
+        LCKNavigationController *nav = [[LCKNavigationController alloc] initWithRootViewController:publishWord];
+        // 这里不能使用self来弹出其他控制器, 因为self执行了dismiss操作
+//        UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
+//        [root presentViewController:nav animated:YES completion:nil];
+        [self presentViewController:nav animated:YES completion:nil];
     }
 }
 
 - (IBAction)cancelVC:(id)sender {
+    
     [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
+/**
+ pop和Core Animation的区别
+ 1.Core Animation的动画只能添加到layer上
+ 2.pop的动画能添加到任何对象
+ 3.pop的底层并非基于Core Animation, 是基于CADisplayLink
+ 4.Core Animation的动画仅仅是表象, 并不会真正修改对象的frame\size等值
+ 5.pop的动画实时修改对象的属性, 真正地修改了对象的属性
+ */
 
 @end
